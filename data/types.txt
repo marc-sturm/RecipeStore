@@ -1,0 +1,10 @@
+Suppe
+Salat
+Vorspeise
+Hauptgang
+Beilage
+Dessert
+Dip
+Backen
+Cocktail
+Kuchen

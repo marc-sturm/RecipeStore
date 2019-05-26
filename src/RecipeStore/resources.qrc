@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Resources/Icon.png</file>
+        <file>Resources/receipes.xsd</file>
+    </qresource>
+</RCC>

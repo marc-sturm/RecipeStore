@@ -1,0 +1,13 @@
+Features:
+- Type editor
+- Unit editor
+- View
+- Search
+- Export to HTML
+- Import from Chefkoch via the API
+- Recipe editor
+
+Neue Rezepte:
+- Burger
+- Kartoffelsuppe - Kartoffel, Karottem, Brühe, Sahne/Schmand, Curcuma, Kreuzkümmel
+- Falafel
