@@ -7,7 +7,7 @@
 #c++11 support
 CONFIG += c++11
 
-QT       +=  core widgets gui
+QT       +=  core widgets gui xml xmlpatterns
 
 TARGET = PhotoSort
 TEMPLATE = app
@@ -15,10 +15,14 @@ RC_FILE	 = icon.rc
 
 SOURCES += main.cpp\
         MainWindow.cpp \
-    SearchPanel.cpp
+    SearchPanel.cpp \
+    RecipeCollection.cpp \
+    Recipe.cpp
 
 HEADERS  += MainWindow.h \
-    SearchPanel.h
+    SearchPanel.h \
+    RecipeCollection.h \
+    Recipe.h
 
 FORMS    += MainWindow.ui \
     SearchPanel.ui
@@ -26,6 +30,10 @@ FORMS    += MainWindow.ui \
 #include cppCORE library
 INCLUDEPATH += $$PWD/../../src/cppCORE
 LIBS += -L$$PWD/../../bin -lcppCORE
+
+#include cppXML library
+INCLUDEPATH += $$PWD/../../src/cppXML
+LIBS += -L$$PWD/../../bin -lcppXML
 
 #include cppGUI library
 INCLUDEPATH += $$PWD/../../src/cppGUI

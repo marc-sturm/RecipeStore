@@ -4,3 +4,6 @@
 [submodule "src/cppGUI"]
 	path = src/cppGUI
 	url = https://github.com/marc-sturm/cppGUI.git
+[submodule "src/cppXML"]
+	path = src/cppXML
+	url = https://github.com/marc-sturm/cppXML.git

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <recipecollection >
-	<recipe name="Asiatischer Reis" amount="6 Personen" course="Beilage" >
+	<recipe name="Asiatischer Reis" amount="6 Personen" type="Beilage" >
 		<ingr name="Reis" amount="250" unit="g" />in einen Topf mit
 		<ingr name="Wasser" amount="650" unit="ml" />geben. Mit
 		<ingr name="Salz" amount="1" unit="TL" />würzen und aufkochen lassen. Sobald es kocht, die Platte auf die kleinste Stufe stellen und den Reis mit Deckel 30 min ziehen lassen.
 	</recipe>
 	
-	<recipe name="Baguettebrötchen" amount="8 Brötchen" course="Backen" >
+	<recipe name="Baguettebrötchen" amount="8 Brötchen" type="Backen" >
 		<ingr name="Weizenmehl" amount="200" unit="g" />,
 		<ingr name="Hefe" amount="20" unit="g" />,
 		<ingr name="warmes Wasser" amount="300" unit="ml" />und eine Prise Zucker zu einem Vorteig verkneten.
@@ -14,7 +14,7 @@
 		<ingr name="Salz" amount="10" unit="g" />darauf häufen und den Vorteig 30 min gehen lassen. Dann alles durchmischen und 10 min durchkneten. Ofen auf 250°C vorheizen. Den Teig 30 min gehen lassen und die Brötchen formen. Die Brötchen mit einem feuchten Tuch abgedeckt 20 min gehen lassen. Eine Tasse Wasser in den Ofen gießen und auf 220°C runterdrehen. Die Brötchen einschneiden, einschießen und ca. 20 min ausbacken.
 	</recipe>
 	
-	<recipe name="Bauernkäsekuchen" amount="8 Personen" course="Kuchen" >
+	<recipe name="Bauernkäsekuchen" amount="8 Personen" type="Kuchen" >
 		<part name="Mürbteig" >
 			Den Ofen auf 190°C vorheizen.
 			<ingr name="Butter" amount="100" unit="g" />,
@@ -33,7 +33,7 @@
 		</part>
 	</recipe>
 	
-	<recipe name="Bauernbrot" amount="2 Brote á ???g" course="Backen" >
+	<recipe name="Bauernbrot" amount="2 Brote á ???g" type="Backen" >
 		<ingr name="Weizenmehl" amount="400" unit="g" />,
 		<ingr name="Roggenmehl" amount="500" unit="g" />,
 		<ingr name="Salz" amount="20" unit="g" />,
@@ -43,7 +43,7 @@
 	    Ofen mit Stein auf 250°C vorheizen. Wenn der Teig fertig gegangen ist, die Brote stürzen, den Backofen auf 180C drehen, einschneiden und 10 min backen. Dann etwas Wasser in den Ofen spritzen und nochmal 25 min backen.
 	</recipe>
 	
-	<recipe name="Bibbelsches Bohnesupp" amount="3 Personen" course="Suppe">
+	<recipe name="Bibbelsches Bohnesupp" amount="3 Personen" type="Suppe">
 		<ingr name="grüne Bohnen" amount="500" unit="g" />putzen und in ca. 3 cm große Stücke schneiden.
 		<ingr name="Kartoffeln (festk.)" amount="500" unit="g" />schälen und in kleine Würfel schneiden.
 		<ingr name="Gemüsebrühe" amount="1" unit="l" />zum Kochen bringen,
@@ -53,7 +53,7 @@
 		<ingr name="Saurer Sahne" amount="100" unit="g" />mischen und dazugeben. Mit Salz, Pfeffer und Petersilie würzen.
 	</recipe>
 	
-	<recipe name="Bohnen-Thunfisch-Salat" amount="3 Personen" course="Salat" >
+	<recipe name="Bohnen-Thunfisch-Salat" amount="3 Personen" type="Salat" >
 		<ingr name="Kidneybohnen" amount="1" unit="Dose" />abtropfen und waschen,
 		<ingr name="Thunfisch (im Saft)" amount="1" unit="Dose" />dazugeben,
 		<ingr name="Zwiebel" amount="1" />hacken und dazugeben.
@@ -62,7 +62,7 @@
 		<ingr name="Olivenöl" amount="2" unit="EL" />zugeben. Mit einer Prise Zucker, Salz und Pfeffer würzen und 2-3 Stunden durchziehen lassen.
 	</recipe>
 	
-	<recipe name="Bohnen-Tomaten-Gemüse" amount="4 Personen" course="Beilage" >
+	<recipe name="Bohnen-Tomaten-Gemüse" amount="4 Personen" type="Beilage" >
 		<ingr name="Bohnen" amount="1" unit="kg" />putzen und kleinschneiden.
 		<ingr name="Zwiebel" amount="1" />und
 		<ingr name="Knoblauch" amount="2" unit="Zehen" />hacken.
@@ -75,7 +75,7 @@
 		<ingr name="Zitrone" amount="1" /> mischen. Das Gemüse und die Soße in einen Topf geben, aufkochen und dann 30 min bei mittlerer Hitze kochen lassen.
 	</recipe>
 	
-	<recipe name="Browniekuchen" amount="1 Kuchen" course="Kuchen" >
+	<recipe name="Browniekuchen" amount="1 Kuchen" type="Kuchen" >
 		<ingr name="Eier" amount="5" /> trennen, Eischnee schlagen und das Eigelb mit
 		<ingr name="Zucker" amount="100" unit="g" /> schlagen bis die Masse hellgelb wird.
 		<ingr name="Blockschokolade" amount="200" unit="g" /> und
@@ -86,7 +86,7 @@
 		<ingr name="Backpulver" amount="1" unit="Msp" /> und die Eiermassen unter die Schokolade heben. Bei 160°C im Ofen ohne Vorheizen 35 min backen.
 	</recipe>
 	
-	<recipe name="Bruschetta" amount="4 Personen"  course="Vorspeise" >
+	<recipe name="Bruschetta" amount="4 Personen"  type="Vorspeise" >
 		<ingr name="Tomaten" amount="6" /> entkernen und in würfel schneiden.
 		<ingr name="Knoblauch" amount="2" unit="Zehen" /> dazu pressen.
 		<ingr name="Olivenöl" amount="1" unit="EL" />und
@@ -94,7 +94,7 @@
 		<ingr name="Baguette" amount="1" /> in scheiben schneiden, im Backofen toasten und mit den Tomaten belegen.
 	</recipe>
 	
-	<recipe name="Butter Chicken" amount="4 Personen"  course="Hauptgang" >
+	<recipe name="Butter Chicken" amount="4 Personen"  type="Hauptgang" >
 		<part name="Einlegen">
 			<ingr name="Hühnerbrust" amount="1" unit="kg"/> klein schneiden und über Nacht marinieren in folgender Marinade:
 			<ingr name="Ingwer" amount="2" unit="cm"/> und
@@ -117,7 +117,7 @@
 		</part>
 	</recipe>
 	
-	<recipe name="Chili con Carne" amount="5 Personen" course="Hauptgang"  >
+	<recipe name="Chili con Carne" amount="5 Personen" type="Hauptgang"  >
 		<ingr name="Zwiebeln" amount="6" />würfeln und anbraten.
 		<ingr name="Rinderhack" amount="500" unit="g" />mit anbraten.
 		<ingr name="Tomaten" amount="4" unit="Dosen" />,
@@ -128,14 +128,14 @@
 		<ingr name="Lorbeerblätter" amount="3" />dazugeben. Mindestens eine Stunde köcheln lassen. Mit Salz, Pfeffer und Chili abschmecken.
 	</recipe>
 	
-	<recipe name="Chorizoeintopf" amount="2 Personen" course="Hauptgang" >
+	<recipe name="Chorizoeintopf" amount="2 Personen" type="Hauptgang" >
 		<ingr name="Zwiebeln" amount="2" />und
 		<ingr name="Tomaten" amount="2" />würfeln.
 		<ingr name="Kartoffeln (mehligkochend)" amount="800" unit="g" />und
 		<ingr name="Chorizo" amount="150" unit="g" />in mundgerechte Stücke schneiden.Die Zwiebeln in Olivenöl anschwitzen, die Tomaten und Chorizo dazugeben mit anbraten. Die Kartoffeln und etwas Wasser zugeben. Mit Salz, Pfeffer, Oregano und Rosmarin würzen. Abgedeckt ca. 30 min köcheln lassen, bis die Kartoffeln gar sind.
 	</recipe>
 	
-	<recipe name="Coq au vin" amount="4 Personen" course="Alt"  >
+	<recipe name="Coq au vin" amount="4 Personen" type="Alt"  >
 		<ingr name="Champigons" amount="400" unit="g" />putzen und vierteln,
 		<ingr name="Scharlotten" amount="10" />und
 		<ingr name="Speck" amount="100" unit="g" />würfeln. Charlotten, Champignons und Speck in Butter bei mittlerer Hitze ca. 5 min anbraten.
@@ -149,13 +149,13 @@
 		<ingr name="Muskat" amount="1" unit="Msp" />, Salz und Pfeffer würzen. Zugedeckt bei schwacher Hitze ca. 45 min schmoren. Die Pilze, Zwiebeln und Speck zugeben und noch mal etwa 15 min schmoren.
 	</recipe>
 	
-	<recipe name="Crepes" amount="12 Stück" course="Dessert" >
+	<recipe name="Crepes" amount="12 Stück" type="Dessert" >
 		<ingr name="Mehl" amount="500" unit="g" />,
 		<ingr name="Eier" amount="3" />,
 		<ingr name="Milch" amount="750" unit="ml" />und eine Prise Salz mischen und eine Stunde ruhen lassen.
 	</recipe>
 	
-	<recipe name="Currywurst" amount="4 Personen" course="Hauptgang" >
+	<recipe name="Currywurst" amount="4 Personen" type="Hauptgang" >
 		<ingr name="Speck" amount="150" unit="g" /> fein würfeln und auslassen.
 		<ingr name="Zwiebeln" amount="2" /> würfeln und mit anbraten.
 		<ingr name="Paprika" amount="1" /> würfeln und zusammen mit
@@ -168,7 +168,7 @@
 		<ingr name="Grillwürste" amount="6" /> anbraten und die Soße darüber geben.
 	</recipe>
 	
-	<recipe name="Curry Mussaman-Art" amount="4 Personen" course="Hauptgang"  >
+	<recipe name="Curry Mussaman-Art" amount="4 Personen" type="Hauptgang"  >
 		<ingr name="Rindfleisch" amount="1" unit="kg" />in Würfel schneiden und in Öl anbraten bis es leicht braun ist.
 		<ingr name="Madras Currypaste" amount="3" unit="EL" />mit anbraten.
 		<ingr name="Kokosmilch" amount="900" unit="ml" />,
@@ -184,7 +184,7 @@
 		<ingr name="Kartoffeln" amount="500" unit="g" />schälen, kleinschneiden und dazugeben. Abgedeckt kochen lassen, bis das Fleisch weich ist, dann die Soße einkochen.
 	</recipe>
 	
-	<recipe name="Empanadas" amount="3 Personen" course="Alt" >
+	<recipe name="Empanadas" amount="3 Personen" type="Alt" >
 		<part name="Salsa" >
 			<ingr name="Zwiebel" amount="1" />und
 			<ingr name="Knoblauch" amount="2" unit="Zehen" />schälen, fein hacken und anbraten.
@@ -209,7 +209,7 @@
 		</part>
 	</recipe>
 	
-	<recipe name="Erdbeermargarita" amount="1 Glas" course="Cocktail" >
+	<recipe name="Erdbeermargarita" amount="1 Glas" type="Cocktail" >
 		<ingr name="Cointreau" amount="2" unit="cl" />,
 		<ingr name="Zitronensaft" amount="2" unit="cl" />,
 		<ingr name="Tequila" amount="2" unit="cl" />,
@@ -217,7 +217,7 @@
 		<ingr name="Erdbeeren" amount="6" />, Zucker und Eis mixen.
 	</recipe>
 	
-	<recipe name="Fajitas" amount="3-4 Personen" course="Hauptgang" >
+	<recipe name="Fajitas" amount="3-4 Personen" type="Hauptgang" >
 		<part name="Fleisch" >
 			<ingr name="Hähnchenbrust" amount="500" unit="g" />(in Stücken geschnitten) und
 			<ingr name="Zwiebeln" amount="2" />(in Ringe geschnitten) in
@@ -248,7 +248,7 @@
 		</part>
 	</recipe>
 	
-	<recipe name="Fisch mit Rosmarinkartoffeln" amount="2 Personen" course="Hauptgang"  >
+	<recipe name="Fisch mit Rosmarinkartoffeln" amount="2 Personen" type="Hauptgang"  >
 		<ingr name="Kartoffeln" amount="500" unit="g" />schälen, in 5 mm dicke Scheiben schneiden und in einen Topf geben.
 		<ingr name="Tomaten" amount="3" />grob würfeln und dazu geben.
 		<ingr name="Rosmarinnadeln" amount="1" unit="TL" />,Pfeffer, Salz und
@@ -257,7 +257,7 @@
 		<ingr name="Zitrone" amount="0.5" />und Olivenöl beträufeln, auf die Kartoffeln legen und zugedeckt etwa 8 Minuten garen.
 	</recipe>
 	
-	<recipe name="Fisch-Tomaten-Suppe" amount="2 Personen" course="Suppe"  >
+	<recipe name="Fisch-Tomaten-Suppe" amount="2 Personen" type="Suppe"  >
 		<ingr name="Karotte" amount="1" />,
 		<ingr name="Lauchzwiebeln" amount="1" unit="Bund" />und
 		<ingr name="Fenchel" amount="0.25" />in feine Streifen schneiden.
@@ -268,7 +268,7 @@
 		<ingr name="Fisch" amount="200" unit="g" />würfeln und in der Suppe 10 min gar ziehen lassen.
 	</recipe>
 	
-	<recipe name="Flammkuchen" amount="4 Flammkuchen" course="Hauptgang" >
+	<recipe name="Flammkuchen" amount="4 Flammkuchen" type="Hauptgang" >
 		<ingr name="Weizenmehl" amount="300" unit="g" />,
 		<ingr name="Wasser (warm)" amount="175" unit="ml" />,
 		<ingr name="Hefe" amount="20" unit="g" />,
@@ -280,16 +280,16 @@
 		<ingr name="Zwiebeln" amount="2" />klein geschnitten belegen und so heiß wie möglich, am besten auf einem Stein, backen.
 	</recipe>
 	
-	<recipe name="Gebratener Kürbis" amount="3 Personen" course="Beilage" >
+	<recipe name="Gebratener Kürbis" amount="3 Personen" type="Beilage" >
 		<ingr name="Hokaido" amount="1" />schälen, die Kerne rauskratzen und in 2 cm dicke Spalten schneiden. Auf ein Backblech geben. Mit
 		<ingr name="Zimtstangen" amount="2" />, Olivenöl, Salz und Salbei würzen und anschließend bei 160°C ca. 20 min garen.
 	</recipe>
 	
-	<recipe name="Maiskolben" amount="3 Personen" course="Beilage" >
+	<recipe name="Maiskolben" amount="3 Personen" type="Beilage" >
 		<ingr name="Maiskolben" amount="3" />von Schale und Fäden befreien. Mit reichlich Butter einreiben und mit Salz und Pfeffer würzen. Bei 180°C ca. 45 min im Backofen garen. Gelegentlich wenden.
 	</recipe>
 	
-	<recipe name="Gedämpfte Forelle mit Limonenbutter" amount="2 Personen" course="Hauptgang" >
+	<recipe name="Gedämpfte Forelle mit Limonenbutter" amount="2 Personen" type="Hauptgang" >
 		<ingr name="weiche Butter" amount="90" unit="g" />mit
 		<ingr name="Limonenschale" amount="1" unit="TL" />und
 		<ingr name="Limonensaft" amount="1" unit="EL" />mischen.
@@ -297,12 +297,12 @@
 		<ingr name="Limonensaft" amount="1" unit="EL" />und Pfeffer, Thymian, Rosmarin, Majoran und Oregano füllen. In Alufolie einwickeln, 15 min dünsten.
 	</recipe>
 	
-	<recipe name="Gekochter Karottensalat" amount="5 Personen" course="Salat"  >
+	<recipe name="Gekochter Karottensalat" amount="5 Personen" type="Salat"  >
 		<ingr name="Karotten" amount="1" unit="kg" />schälen und in gezuckertem und gesalzenem Wasser kochen bis sie weich sind. Dann abkühlen lassen und klein schneiden.
 		<ingr name="Sahne" amount="200" unit="ml" />,
 		<ingr name="Balsamico" amount="2" unit="EL" />, Salz, Pfeffer, und Schnittlauch/Petersilie vermengen und über die Karotten geben.
 	</recipe>
-	<recipe name="Gemüse-Hähnchen-Pfanne" amount="3-4 Personen" course="Hauptgang" >
+	<recipe name="Gemüse-Hähnchen-Pfanne" amount="3-4 Personen" type="Hauptgang" >
 		<part name="Fleisch" >
 			<ingr name="Hühnerbrust" amount="500" unit="g" />klein schneiden. In einer Mischung aus
 			<ingr name="Zucker" amount="4" unit="EL" />,
@@ -325,11 +325,11 @@
 		</part>
 	</recipe>
 	
-	<recipe name="Maronen" amount="2-3 Personen" course="Dessert" >Den Ofen auf 210°C vorheizen.
+	<recipe name="Maronen" amount="2-3 Personen" type="Dessert" >Den Ofen auf 210°C vorheizen.
 		<ingr name="Maronen" amount="250" unit="g" />kreuzförmig einschneiden und in eine Schüssel mit Wasser legen, bis der Ofen heiß ist. 20-25min im Ofen rösten, dann eine Minute in einer heißen Pfanne rösten für den typischen Geruch.
 	</recipe>
 	
-	<recipe name="Gewürzkuchen" amount="8 Personen" course="Kuchen" >
+	<recipe name="Gewürzkuchen" amount="8 Personen" type="Kuchen" >
 		Den Ofen auf 180°C vorheizen.
 		<ingr name="Butter" amount="175" unit="g" />,
 		<ingr name="Zucker" amount="225" unit="g" />,
@@ -345,7 +345,7 @@
 		<ingr name="Milch" amount="100" unit="ml" />zu einem Teig verrühren. Im Ofen 45-50 min backen (testen mit Holzstab).
 	</recipe>
 	
-	<recipe name="Graupensuppe" amount="4 Personen" course="Suppe" >
+	<recipe name="Graupensuppe" amount="4 Personen" type="Suppe" >
 		<ingr name="Suppenfleisch" amount="600" unit="g" />in 2 cm große Würfel schneiden und vom Fett befreien.
 		<ingr name="Suppengrün" amount="1" unit="Bund" />,
 		<ingr name="Zwiebel" amount="1" />und
@@ -355,7 +355,7 @@
 		<ingr name="Perlgraupen" amount="125" unit="g" /> hinzugeben, und weitere 30 min köcheln lassen.
 	</recipe>
 	
-	<recipe name="Grüner Salat mit Extras" amount="4 Personen" course="Salat" >
+	<recipe name="Grüner Salat mit Extras" amount="4 Personen" type="Salat" >
 		<ingr name="Eisbergsalat" amount="1" />in kleine Stücke schneiden.
 		<ingr name="Joghurt" amount="300" unit="g" />,
 		<ingr name="Gartenkräuter" amount="1.5" unit="Pkt." />,
@@ -363,14 +363,14 @@
 		<ingr name="Milch" amount="50" unit="ml" />, Salz und Pfeffer vermischen.Leckeres für drauf: 1) in Sojasoße marinierte und angebratene Putenstreifen 2) Thunfisch, Mais, Gurke 3) Schinken, Käse 4) Brot überbacken mit Feta und Honig 5) Feigen im Speckmantel angebraten
 	</recipe>
 	
-	<recipe name="Gulasch" amount="2-3 Personen" course="Hauptgang" >
+	<recipe name="Gulasch" amount="2-3 Personen" type="Hauptgang" >
 		<ingr name="Rindergulasch" amount="500" unit="g" />anbraten.
 		<ingr name="Zwiebeln" amount="500" unit="g" />schneiden, zusammen mit
 		<ingr name="Tomatenmark" amount="1" unit="EL" />zugeben und alles zusammen weiterbraten. Mit
 		<ingr name="Rotwein" amount="150" unit="ml" />ablöschen und zugedeckt 2-3 Stunden köcheln lassen (bei Bedarf etwas Wasser zugeben). Mit Salz und Pfeffer abschmecken.
 	</recipe>
 	
-	<recipe name="Gurkensalat süß-sauer-scharf" amount="3 Personen" course="Salat">
+	<recipe name="Gurkensalat süß-sauer-scharf" amount="3 Personen" type="Salat">
 		<ingr name="Salatgurke" amount="1" /> schälen, halbieren, die Kerne entfernen und in dünne scheiben schneiden.
 		<ingr name="Zucker" amount="1" unit="EL" />,
 		<ingr name="Reißessig" amount="2" unit="EL" />,
@@ -380,7 +380,7 @@
 		<ingr name="Koriandergrün" amount="1" unit="EL" /> zugeben, mischen und etwas durchziehen lassen.
 	</recipe>
 	
-	<recipe name="Gyros mit Tzaziki" amount="2-3 Personen" course="Hauptgang" >
+	<recipe name="Gyros mit Tzaziki" amount="2-3 Personen" type="Hauptgang" >
 		<part name="Fleisch" >
 			<ingr name="Fleisch (Huhn oder Schwein)" amount="400" unit="g" />in kleine Stücke schneiden.
 			<ingr name="Zwiebeln" amount="2" />in halbe Ringe schneiden und dazugeben. Mit
@@ -401,7 +401,7 @@
 		</part>
 	</recipe>
 	
-	<recipe name="Hähnchen süß-sauer" amount="3 Personen" course="Hauptgang">
+	<recipe name="Hähnchen süß-sauer" amount="3 Personen" type="Hauptgang">
 		<ingr name="Hähnchen" amount="600" unit="g" /> in kleine Stücke schneiden. Mit
 		<ingr name="Salz" amount="1" unit="TL" />,
 		<ingr name="helle Sojasoße" amount="1" unit="TL" />,
@@ -417,7 +417,7 @@
 		<ingr name="Speisestärke" amount="2" unit="EL" /> mit Wasser mischen, zugeben und aufkochen bis die Soße bindet. Zusammen mit dem Fleisch und Klebreis servieren.
 	</recipe>
 	
-	<recipe name="Hühnerfrikassee" amount="4 Personen" course="Hauptgang">
+	<recipe name="Hühnerfrikassee" amount="4 Personen" type="Hauptgang">
 		<ingr name="Hähnchen" amount="1.2" unit="kg" /> mit
 		<ingr name="Suppengrün" />,
 		<ingr name="Zwiebel" amount="1" />, 2 Lorbeerblättern, 8 Pfefferkörnern und Salz aufkochen und eine Stunde köcheln lassen. Dann das Hähnchen und die Möhren in Stücke schneinden. Die Brühe beiseite stellen.
@@ -427,7 +427,7 @@
 		<ingr name="Schnittlauch" amount="1" unit="Bund" /> dazugeben. Mit Salz, Pfeffer, Zucker, Zitronensaft und Wein abschmecken.
 	</recipe>
 	
-	<recipe name="Kaiserschmarren" amount="2 Personen" course="Hauptgang" >
+	<recipe name="Kaiserschmarren" amount="2 Personen" type="Hauptgang" >
 		<ingr name="Eier" amount="3" />teilen und das Eiweiß schlagen. Das Eigelb mit
 		<ingr name="Zucker" amount="2" unit="EL" />und
 		<ingr name="Vanillezucker" amount="1" unit="Pkt." />mischen und in einer großen Schüssel schlagen, bis der Zucker sich aufgelöst hat.
@@ -438,7 +438,7 @@
 		<ingr name="Butter" amount="25" unit="g" />auf beiden Seiten anbraten und zerrupfen. Mit Zimt und Zucker bestreuen und mit Apfelmus servieren.
 	</recipe>
 	
-	<recipe name="Käsespätzle" amount="2-3 Personen" course="Hauptgang" >
+	<recipe name="Käsespätzle" amount="2-3 Personen" type="Hauptgang" >
 		<ingr name="Mehl" amount="250" unit="g" />,
 		<ingr name="Eier" amount="5" />und
 		<ingr name="Salz" amount="1" unit="TL" />zu einem Teig verrühren und Spätzle pressen.
@@ -448,13 +448,13 @@
 		<ingr name="Gauda" amount="100" unit="g" />darin schmelzen lassen und mit frisch gemahlenem Pfeffer und bei Bedarf Salz würzen.
 	</recipe>
 	
-	<recipe name="Kartoffelgratin" amount="3 Personen" course="Beilage" >
+	<recipe name="Kartoffelgratin" amount="3 Personen" type="Beilage" >
 		<ingr name="Kartoffeln" amount="500" unit="g" />in Scheiben scheiden und in
 		<ingr name="Milch" amount="0.5" unit="l" />kochen (mit Salz, Pfeffer und Muskat / Gemüsebrühe würzen). In eine Auflaufform geben und mit
 		<ingr name="Käse" amount="250" unit="g" />überbacken.
 	</recipe>
 	
-	<recipe name="Korma Curry" amount="5 Personen" course="Hauptgang" >
+	<recipe name="Korma Curry" amount="5 Personen" type="Hauptgang" >
 		<ingr name="Hähnchenschenkel" amount="800" unit="g" /> enthäuten, ausbeinen und in 3 cm große Stücke schneiden.
 		<ingr name="Zwiebeln" amount="2" /> in feine Halbringe schneiden.
 		<ingr name="grüne Chili" amount="1" /> in feine Ringe schneiden.
@@ -469,19 +469,19 @@
 		<ingr name="Zitrone" amount="0.5" /> unterrühren. Mit Korianderblättern bestreuen.
 	</recipe>
 	
-	<recipe name="Kräuterbutter" amount="6 Personen" course="Dip"  >
+	<recipe name="Kräuterbutter" amount="6 Personen" type="Dip"  >
 		<ingr name="Butter" amount="125" unit="g" />mit
 		<ingr name="Knoblauch" amount="2" unit="Zehen" />(gehackt) mischen. Mit 2 TL Kräutern (Petersilie, Oregano, Thymian, Basilikum, Salbei), Salz und Pfeffer mischen.
 	</recipe>
 	
-	<recipe name="Tomatenbutter" amount="6 Personen" course="Dip" >
+	<recipe name="Tomatenbutter" amount="6 Personen" type="Dip" >
 		<ingr name="Butter" amount="125" unit="g" />mit
 		<ingr name="Tomatenmark" amount="20" unit="g" />,
 		<ingr name="Zwiebel" amount="0.5" />,
 		<ingr name="Knoblauch" amount="1" unit="Zehe" /> vermischen und mit Salz, Pfeffer, Thymian und Oregano würzen.
 	</recipe>
 	
-	<recipe name="Kürbiseintopf" amount="2-3 Personen" course="Hauptgang" >
+	<recipe name="Kürbiseintopf" amount="2-3 Personen" type="Hauptgang" >
 		<ingr name="Zwiebeln" amount="2" /> und
 		<ingr name="Knoblauch" amount="2" unit="Zehen" /> würfeln.
 		<ingr name="Hokaido" amount="1" /> schälen, Kerne entfernen und würfeln. 
@@ -490,7 +490,7 @@
 		<ingr name="Petersilie" amount="1" unit="Bund"/> hacken und vor dem Servieren in den Eintopf geben. Dazu Roggensauerteigbrot toasten und mit einer Knoblauchzehe einreiben.
 	</recipe>
 	
-	<recipe name="Kürbis-Kartoffel-Curry" amount="2-3 Personen" course="Hauptgang">
+	<recipe name="Kürbis-Kartoffel-Curry" amount="2-3 Personen" type="Hauptgang">
 		<ingr name="Nelken" amount="2" />,
 		<ingr name="Koriandersamen" amount="1" unit="TL" />,
 		<ingr name="Kreuzkümmel" amount="0.5" unit="TL" />,
@@ -509,7 +509,7 @@
 		<ingr name="Zitrone" amount="0.5" /> abschmecken.
 	</recipe>
 	
-	<recipe name="Lasagne" amount="3-4 Personen" course="Hauptgang" >
+	<recipe name="Lasagne" amount="3-4 Personen" type="Hauptgang" >
 		<part name="Hackfleischsoße" >
 			<ingr name="Zwiebel" amount="1" />und
 			<ingr name="Knoblauch" amount="2" unit="Zehe" />klein schneiden und in Olivenöl andünsten.
@@ -536,7 +536,7 @@
 		</part>
 	</recipe>
 		
-	<recipe name="Lauchquiche" amount="5 Personen"  course="Hauptgang" >
+	<recipe name="Lauchquiche" amount="5 Personen"  type="Hauptgang" >
 		<ingr name="Mehl" amount="270" unit="g" />,
 		<ingr name="Butter" amount="125" unit="g" /> und Salz zu einem Mürbteig verarbeiten.
 		Den Ofen auf 200°C vorheizen.
@@ -549,7 +549,7 @@
 		Den Teig in eine Springform geben und den Rand hochziehen. Den Lauch abseihen und hineingeben. Den Guss über den Lauch geben und verteilen. Die Quiche im Ofen ca. 35 min backen.
 	</recipe>
 	
-	<recipe name="Mango Chutney" amount="3 Personen" course="Dip" >
+	<recipe name="Mango Chutney" amount="3 Personen" type="Dip" >
 		<ingr name="Mango" amount="1" />,
 		<ingr name="Zwiebel" amount="1" />,
 		<ingr name="Apfel" amount="0.5" /> und
@@ -568,7 +568,7 @@
 		<ingr name="Wasser" amount="5" unit="EL" /> ablöschen. Mango und Apfel zugeben und 45 min köcheln lassen. Mit Salz, Pfeffer und Essig abschmecken.		
 	</recipe>
 	
-	<recipe name="Mango-Lassi" amount="2-3 Personen" course="Cocktail" >
+	<recipe name="Mango-Lassi" amount="2-3 Personen" type="Cocktail" >
 		<ingr name="Joghurt" amount="250" unit="g" />,
 		<ingr name="Milch" amount="130" unit="ml" />,
 		<ingr name="Mango" amount="200" unit="g" />,
@@ -576,7 +576,7 @@
 		<ingr name="Zitronensaft" amount="1" unit="TL" />mit den Zauberstab gut mixen.
 	</recipe>
 	
-	<recipe name="Mehlknödel" amount="2-3 Personen" course="Hauptgang" >
+	<recipe name="Mehlknödel" amount="2-3 Personen" type="Hauptgang" >
 		<ingr name="Kartoffeln" amount="4" />in 1cm dicke Spalten schneiden und in einem großen Topf kochen.
 		<ingr name="Speck" amount="50" unit="g" />auslassen, mit
 		<ingr name="Sahne" amount="200" unit="ml" />ablöschen, dann mit Salz, Pfeffer und Muskat würzen und auf kleiner Flamme einkochen lassen.
@@ -586,7 +586,7 @@
 		<ingr name="Weizenmehl" amount="225" unit="g" />mischen. Mit Salz, Pfeffer, Muskat und Maggi würzen und mit ins Wasser geben, wenn die Kartoffeln fast fertig sind.
 	</recipe>
 	
-	<recipe name="Mexikanischer Reis" amount="6 Personen" course="Beilage" >
+	<recipe name="Mexikanischer Reis" amount="6 Personen" type="Beilage" >
 		<ingr name="Zwiebel" amount="1" />,
 		<ingr name="Knoblauch" amount="1" unit="Zehe" />und
 		<ingr name="Tomaten" amount="450" unit="g" />klein schneiden.
@@ -595,7 +595,7 @@
 		<ingr name="Erbsen" amount="175" unit="g" />zugeben und köcheln lassen, bis die Flüssigkeit aufgesogen ist und der Reis weich ist.
 	</recipe>
 	
-	<recipe name="Mini-Pizza" amount="30 Stück" course="Hauptgang" >
+	<recipe name="Mini-Pizza" amount="30 Stück" type="Hauptgang" >
 		<ingr name="Ei" amount="2" /> trennen und das Eigelb mit mit etwas Milch verquirlen.
 		<ingr name="Schinken" amount="250" unit="g" /> und
 		<ingr name="Zwiebel" amount="2" />fein würfeln. Mit
@@ -605,7 +605,7 @@
 		ein Blech legen, flach drücken, mit dem Eigelbgemisch bestreichen und bei 170°C 15-20 min ausbacken.
 	</recipe>
 	
-	<recipe name="Misosuppe" amount="4 Personen" course="Suppe" >
+	<recipe name="Misosuppe" amount="4 Personen" type="Suppe" >
 		<ingr name="Dashibrühe" amount="1" unit="Pkt." />in 1,2l Wasser geben. aufkochen lassen.
 		<ingr name="Lauchzwiebeln" amount="1" unit="Bund" />und
 		<ingr name="Ingwer" amount="4" unit="cm" />klein schneiden und dazugeben.
@@ -614,7 +614,7 @@
 		<ingr name="rotes Miso" amount="1" unit="EL" />mir etwas Brühe vermischen, dann zur Suppe geben.
 	</recipe>
 	
-	<recipe name="Mohnkuchen" amount="8 Personen" course="Kuchen" >
+	<recipe name="Mohnkuchen" amount="8 Personen" type="Kuchen" >
 		<part name="Teig" >
 			<ingr name="Mehl" amount="430" unit="g" />in eine Schüssel geben und eine Mulde formen.
 			<ingr name="Hefe" amount="20" unit="g" />zerbröseln. Etwas Zucker und
@@ -635,7 +635,7 @@
 		</part>
 	</recipe>
 	
-	<recipe name="Mulligatawnysuppe" amount="3 Personen" course="Suppe" >
+	<recipe name="Mulligatawnysuppe" amount="3 Personen" type="Suppe" >
 		<ingr name="Hühnerbrüste" amount="2" />,
 		<ingr name="Hühnerschenkel" amount="2" />,
 		<ingr name="Zwiebel" amount="1" />,
@@ -649,7 +649,7 @@
 		<ingr name="Sahne" amount="125" unit="ml" />abschmecken.
 	</recipe>
 	
-	<recipe name="Pad Thai" amount="3-4 Personen" course="Hauptgang" >
+	<recipe name="Pad Thai" amount="3-4 Personen" type="Hauptgang" >
 		<ingr name="Erdnüsse" amount="80" unit="g" />ohne Öl unter ständigem Rühren rösten und im Mixer zerkleinern.
 		<ingr name="Lauchzwiebeln" amount="2" unit="Bund" />in kleine Ringe schneiden.
 		<ingr name="Reisnudeln" amount="300" unit="g" />kochen.
@@ -664,7 +664,7 @@
 		<ingr name="Koriander" />bestreuen.
 	</recipe>
 	
-	<recipe name="Pekingente mit Pfannkuchen" amount="3 Personen" course="Alt" >
+	<recipe name="Pekingente mit Pfannkuchen" amount="3 Personen" type="Alt" >
 		<part name="Ente" >
 			<ingr name="Entenbrüste" amount="3" />waschen und dann die Haut in Rauten einschneiden.
 			<ingr name="Ingwer" amount="1" unit="EL" />pressen und den Saft mit
@@ -684,7 +684,7 @@
 		</part>
 	</recipe>
 	
-	<recipe name="Pizza" amount="3-4 Pizzas" course="Hauptgang" >
+	<recipe name="Pizza" amount="3-4 Pizzas" type="Hauptgang" >
 		<part name="Teig" >
 			<ingr name="Weizenmehl" amount="500" unit="g" />,
 			<ingr name="Wasser (warm)" amount="300" unit="ml" />,
@@ -700,7 +700,7 @@
 		</part>
 	</recipe>
 	
-	<recipe name="Raclette" amount="4 Personen" course="Hauptgang" >
+	<recipe name="Raclette" amount="4 Personen" type="Hauptgang" >
 		<ingr name="Kartoffeln" amount="8" />weich kochen und mit
 		<ingr name="Raclettekäse" amount="600" unit="g" />,
 		<ingr name="Mais" amount="1" unit="Dose" />,
@@ -710,7 +710,7 @@
 		<ingr name="Raclettegewürz" />bestreuen.
 	</recipe>
 	
-	<recipe name="Rhabarberkuchen" amount="8 Personen" course="Kuchen" >
+	<recipe name="Rhabarberkuchen" amount="8 Personen" type="Kuchen" >
 		<part name="Vorbereitung" >
 			<ingr name="Rhabarber" amount="1" unit="kg" />schälen, in Stücke schneiden, zuckern und zur Seite stellen.
 		</part>
@@ -731,7 +731,7 @@
 		</part>
 	</recipe>
 	
-	<recipe name="Rhabarbertarte" amount="8 Personen" course="Kuchen">
+	<recipe name="Rhabarbertarte" amount="8 Personen" type="Kuchen">
 		Den Herd auf 160°C vorheizen.
 		<part name="Rhabarber">
 			<ingr name="Rhabarber" amount="1" unit="kg" /> schälen, in kleine Stücke schneiden, zuckern und 1 Stunden abtropfen lassen.
@@ -753,7 +753,7 @@
 		</part>
 	</recipe>
 	
-	<recipe name="Rinderrouladen" amount="3 Personen" course="Hauptgang" >
+	<recipe name="Rinderrouladen" amount="3 Personen" type="Hauptgang" >
 		<ingr name="Zwiebeln" amount="2" />und
 		<ingr name="Knoblauch" amount="2" unit="Zehen" />in
 		<ingr name="Butter" />andünsten.
@@ -767,13 +767,13 @@
 		<ingr name="Tomatenmark" amount="1" unit="EL" />und zwei Lorbeerblätter zugeben und abgedeckt 2-4 Stunden köcheln lassen. Die Soße einkochen und mit Stärke binden.
 	</recipe>
 	
-	<recipe name="Rindfleischsuppe" amount="3 Personen" course="Suppe"  >
+	<recipe name="Rindfleischsuppe" amount="3 Personen" type="Suppe"  >
 		<ingr name="Kartoffeln" amount="3" />,
 		<ingr name="Suppengrün" amount="1" unit="Bund" />in kleine Stücke schneiden.
 		<ingr name="Tafelspitz" amount="500" unit="g" />in Öl scharf anbraten und aus dem Topf nehmen. Das Gemüse anbraten, Fleisch darauf legen und mit Wasser auffüllen bis das Fleisch bedeckt ist. Zwei Stunden kochen lassen. Kurz vor dem Servieren das Fleisch klein schneiden, die Suppe mit dem Mixstab teilweise pürieren und das Fleisch wieder dazugeben. Kurz weiterkochen lassen.
 	</recipe>
 	
-	<recipe name="Roggenbrötchen" amount="8 Brötchen" course="Backen" >
+	<recipe name="Roggenbrötchen" amount="8 Brötchen" type="Backen" >
 		<ingr name="Roggenmehl" amount="200" unit="g" />,
 		<ingr name="Weizenmehl" amount="200" unit="g" />,
 		<ingr name="Hefe" amount="20" unit="g" />,
@@ -784,7 +784,7 @@
 		<ingr name="Zucker" amount="10" unit="g" />mischen und ca. 10 min durchkneten. Den Teig eine Stunden gehen lassen und 8 Brötchen formen. Den Ofen auf 200°C vorheizen. Die Brötchen nochmals 30-60 min mit einem feuchten Tuch abgedeckt gehen lassen. Eine Tasse Wasser in den Ofen gießen. Die Brötchen mit Mehl bestreuen, quer einschneiden and ca. 15 min ausbacken.
 	</recipe>
 	
-	<recipe name="Sate-Spieße" amount="3 Personen" course="Hauptgang" >
+	<recipe name="Sate-Spieße" amount="3 Personen" type="Hauptgang" >
 		<part name="Fleisch" >
 			<ingr name="Hähnchenbrust" amount="400" unit="g" />in Streifen scheiden, auf Spieße stecken und in
 			<ingr name="heller Sojasoße" amount="3" unit="EL" />und
@@ -800,13 +800,13 @@
 		</part>
 	</recipe>
 	
-	<recipe name="Rote Bete-Apfel-Salat" amount="2 Personen"  course="Salat" >
+	<recipe name="Rote Bete-Apfel-Salat" amount="2 Personen"  type="Salat" >
 		<ingr name="Rote Bete" amount="1" />und
 		<ingr name="Apfel" amount="1" /> würfeln. Mit
 		<ingr name="saure Sahne" amount="1" unit="TL" />, Obstessig, Salz und Pfeffer würzen.
 	</recipe>
 	
-	<recipe name="Sauer-Scharf-Suppe" amount="3-4 Personen" course="Suppe" >
+	<recipe name="Sauer-Scharf-Suppe" amount="3-4 Personen" type="Suppe" >
 		<ingr name="Schweinefleisch" amount="100" unit="g" />klein schneiden und in
 		<ingr name="Sojasoße" amount="1" unit="TL" />,
 		<ingr name="Reiswein" amount="1" unit="TL" />,
@@ -831,7 +831,7 @@
 		<ingr name="Koriander" />zu geben.
 	</recipe>
 	
-	<recipe name="Sauerbraten" amount="3 Personen" course="Hauptgang" >
+	<recipe name="Sauerbraten" amount="3 Personen" type="Hauptgang" >
 		<ingr name="Rinderbug (mager)" amount="750" unit="g" />in
 		<ingr name="Rotwein" amount="0.5" unit="l" />,
 		<ingr name="Weinessig" amount="2" unit="EL" /> und
@@ -842,14 +842,14 @@
 		<ingr name="Preiselbeeren" amount="1" unit="EL" />würzen und mit Mehlbutter binden.
 	</recipe>
 	
-	<recipe name="Schneeballen" amount="3 Personen" course="Beilage" >
+	<recipe name="Schneeballen" amount="3 Personen" type="Beilage" >
 		<ingr name="Kartoffeln" amount="600" unit="g" />kochen, durchdrehen und abkühlen lassen.
 		<ingr name="Eier" amount="2" />,
 		<ingr name="Mehl" amount="200" unit="g" />Salz, Pfeffer, Muskat, Maggi und
 		<ingr name="Schnittlauch" />dazugeben und in kochendem Salzwasser kochen.
 	</recipe>
 	
-	<recipe name="Semmelknödel" amount="3-4 Personen" course="Beilage" >
+	<recipe name="Semmelknödel" amount="3-4 Personen" type="Beilage" >
 		<ingr name="Brötchen" amount="6" />ausschneiden und trocknen lassen.
 		<ingr name="Milch" amount="0.25" unit="l" />warm machen und die Brötchen darin 30 min einweichen. Einen großen Topf mit Salzwasser zum Sieden bringen.
 		<ingr name="Zwiebel" amount="1" />klein schneiden,
@@ -859,7 +859,7 @@
 		<ingr name="Mehl" />dazugeben, bis der zähflüssige Teig sich mit nassen Händen zu Knödeln formen lässt. Ins siedende Wasser geben und 30 min gar ziehen lassen.
 	</recipe>
 	
-	<recipe name="Spaghetti Bolognese" amount="6-8 Personen" course="Hauptgang" >
+	<recipe name="Spaghetti Bolognese" amount="6-8 Personen" type="Hauptgang" >
 		<ingr name="Suppengrün" amount="1" /> würfeln.
 		<ingr name="Zwiebel" amount="3" /> würfeln, in Olivenöl glasig dünsten und dann das Suppengrün mit anbraten.
 		<ingr name="Tomatenmark" amount="4" unit="EL" /> und eine Prise Zucker mit anbraten.
@@ -871,14 +871,14 @@
 		<ingr name="Zitrone" amount="1" />, Salz und Pfeffer würzen. Mindestens eine Stunde köcheln lassen dann nachwürzen.
 	</recipe>
 	
-	<recipe name="Spaghetti Napoli" amount="3 Personen" course="Hauptgang" >
+	<recipe name="Spaghetti Napoli" amount="3 Personen" type="Hauptgang" >
 		<ingr name="Zwiebeln" amount="2" />und
 		<ingr name="Knoblauch" amount="2" unit="Zehen" />klein schneiden und in Olivenöl andünsten.
 		<ingr name="Tomaten" amount="1" unit="kg" />kleinschneiden und dazugeben. Mit Pfeffer, Salz und Oregano würzen. Etwas Wasser dazugeben und bei mittlerer Hitze einkochen.
 		<ingr name="Spaghetti" amount="500" unit="g" />kochen und Soße darüber geben.
 	</recipe>
 	
-	<recipe name="Spaghetti Tonno Al Forno" amount="3 Personen" course="Hauptgang" >
+	<recipe name="Spaghetti Tonno Al Forno" amount="3 Personen" type="Hauptgang" >
 		Den Ofen auf 170°C vorheizen.
 		<ingr name="Zwiebeln" amount="1" />und
 		<ingr name="Knoblauch" amount="1" unit="Zehe" />fein würfeln und in Olivenöl anbraten.
@@ -890,7 +890,7 @@
 		<ingr name="Käse" amount="100" unit="g" />im Ofen überbacken.
 	</recipe>
 	
-	<recipe name="Sushi" amount="3 Personen" course="Hauptgang" >
+	<recipe name="Sushi" amount="3 Personen" type="Hauptgang" >
 		<part name="Sushi-Reis" >
 			<ingr name="Klebreis" amount="400" unit="g" />in 400 ml Wasser aufkochen und bei geringer Hitze dasWasser aufsaugen lassen. In einem flachen Gefäß kaltwerden lassen.
 			<ingr name="Reisessig" amount="50" unit="cl" />mit
@@ -907,7 +907,7 @@
 		</part>
 	</recipe>
 	
-	<recipe name="Thaicurry" amount="3 Personen" course="Alt" >
+	<recipe name="Thaicurry" amount="3 Personen" type="Alt" >
 		<ingr name="Karotten" amount="3" />,
 		<ingr name="Broccoli" amount="500" unit="g" />und
 		<ingr name="Hähnchenbrust" amount="500" unit="g" />in mundgerechte Stücke schneiden.
@@ -917,7 +917,7 @@
 		<ingr name="Kokosmilch" amount="2" unit="Dosen" />zugeben und das Gemüse garen.
 	</recipe>
 	
-	<recipe name="Thunfisch-Lasagne" amount="3-4 Personen" course="Hauptgang" >
+	<recipe name="Thunfisch-Lasagne" amount="3-4 Personen" type="Hauptgang" >
 		Den Ofen auf 170°C vorheizen.
 		<ingr name="Zwiebel" amount="1" />in reichlich Butter andünsten.
 		<ingr name="Mehl" amount="1.5" unit="EL" />dazu geben und mit anschwitzen.
@@ -930,7 +930,7 @@
 		<ingr name="geriebener Käse" amount="100" unit="g" /> über die Lasagne streuen, mit Alufolie abdecken und in den Ofen schieben. Nach 25 min die Folie abnehmen und weitere 10-15 min backen.
 	</recipe>
 	
-	<recipe name="Tomaten-Ciabatta" amount="2 Stück" course="Alt" >
+	<recipe name="Tomaten-Ciabatta" amount="2 Stück" type="Alt" >
 		<ingr name="Tomate" amount="1" />in kleine Stücke schneiden. Die Tomate
 		<ingr name="Mehl" amount="250" unit="g" />,
 		<ingr name="Hefe" amount="20" unit="g" />,
@@ -939,7 +939,7 @@
 		<ingr name="Salz" amount="1" unit="TL" />, Rosmarin und Oregano zu einem Teig kneten und 30 min gehen lassen. Dann zwei Ciabattas formen, 15 min gehen lassen und bei 180°C 15-20 min lang backen.
 	</recipe>
 	
-	<recipe name="Thunfischpaste" amount="6 Personen" course="Dip"  >
+	<recipe name="Thunfischpaste" amount="6 Personen" type="Dip"  >
 		<ingr name="Thunfisch" amount="2" unit="Dosen" />,
 		<ingr name="Zwiebel" amount="1" />,
 		<ingr name="Knoblauch" amount="1" unit="Zehe" />,
@@ -947,7 +947,7 @@
 		<ingr name="Speisequark" amount="1" unit="Pkt." />gut vermengen, mit Salz und Pfeffer abschmecken und am besten eine Nacht durchziehen lassen.
 	</recipe>
 	
-	<recipe name="Tomaten-Käse-Fondue" amount="4 Personen" course="Hauptgang" >
+	<recipe name="Tomaten-Käse-Fondue" amount="4 Personen" type="Hauptgang" >
 		<ingr name="Zwiebel" amount="1" />und
 		<ingr name="Knoblauch" amount="1" unit="Zehe" />fein schneiden und in etwas Öl glasig dünsten.
 		<ingr name="Pizzatomaten" amount="2" unit="Dosen" />dazugeben und unter gelegentlichem Rühren ca. 1 Stunde einkochen. Mit Oregano und Thymian würzen.
@@ -957,7 +957,7 @@
 		<ingr name="junger Gauda" amount="250" unit="g" />einrühren. Mit Salz, Pfeffer und Muskat abschmecken. Dazu gibt's ein Roggenmischbrot in kleine Würfel geschnitten.
 	</recipe>
 	
-	<recipe name="Tomatensuppe" amount="3 Personen" course="Suppe"  >
+	<recipe name="Tomatensuppe" amount="3 Personen" type="Suppe"  >
 		<ingr name="Zwiebel" amount="1" />und
 		<ingr name="Knoblauch" amount="1" unit="Zehe" />würfeln und in Olivenöl anschwitzen.
 		<ingr name="Tomatenmark" amount="2" unit="EL" />dazugeben und mit rösten. Mit
@@ -969,13 +969,13 @@
 		<ingr name="Rosmarin" amount="0.25" unit="TL" />und Pfeffer würzen. Die Suppe durch ein Sieb streichen oder pürieren, wenn die Tomaten verkocht sind.
 	</recipe>
 	
-	<recipe name="Tortilla espanola" amount="1 Tortilla" course="Beilage" >
+	<recipe name="Tortilla espanola" amount="1 Tortilla" type="Beilage" >
 		<ingr name="Kartoffeln" amount="400" unit="g" />in ca. 5mm dicke Stücke schneiden und in reichlich Öl bei geringer Hitze 10 min in einem Topf mit Deckel garen (sie sollen nicht braun werden).
 		<ingr name="Zwiebel" amount="0.5" />in halbe Ringe schneiden und kurz im Öl mitgaren. Das überschüssige Öl abgießen.
 		<ingr name="Eier" amount="5" />leicht schlagen und mit Salz und etwas Pfeffer würzen. Die Kartoffeln und Zwiebeln dazugeben und in einer beschichteten Pfanne bei geringer Hitze mit Deckel garen.
 	</recipe>
 	
-	<recipe name="Versunkener Apfelkuchen" amount="8 Personen" course="Kuchen" >
+	<recipe name="Versunkener Apfelkuchen" amount="8 Personen" type="Kuchen" >
 		Den Ofen auf 180°C vorheizen.
 		<ingr name="Butter" amount="250" unit="g" />,
 		<ingr name="Zucker" amount="220" unit="g" />und
@@ -988,14 +988,14 @@
 		<ingr name="Zitrone" amount="1" />beträufeln. Apfelstücke in den Teig drücken und 40 bis 60 min ausbacken.
 	</recipe>
 	
-	<recipe name="White Russian" amount="1 Glas" course="Cocktail" >
+	<recipe name="White Russian" amount="1 Glas" type="Cocktail" >
 		<ingr name="Wodka" amount="4" unit="cl" />,
 		<ingr name="Kahlua" amount="3" unit="cl" />,
 		<ingr name="Sahne" amount="2" unit="cl" />und
 		<ingr name="Milch" amount="6" unit="cl" />mischen. Eiswürfel dazugeben.
 	</recipe>
 	
-	<recipe name="Wirsingrouladen" amount="4 Personen" course="Hauptgang" >
+	<recipe name="Wirsingrouladen" amount="4 Personen" type="Hauptgang" >
 		12 große Blätter von
 		<ingr name="Wirsing" amount="1" unit="Kopf"/> blanchieren und den Rest hacken.
 		<ingr name="Zwiebeln" amount="2" /> hacken und mit den Wirsingstücken andünsten.

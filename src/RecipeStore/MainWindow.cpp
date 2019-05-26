@@ -1,5 +1,6 @@
 #include "MainWindow.h"
 #include "Settings.h"
+#include "Exceptions.h"
 #include <QMessageBox>
 #include <QFileDialog>
 #include <QDebug>
@@ -7,6 +8,7 @@
 MainWindow::MainWindow(QWidget* parent)
 	: QMainWindow(parent)
 	, ui_()
+	, recipes_()
 {
 	ui_.setupUi(this);
 	setWindowTitle(QApplication::applicationName());
@@ -22,7 +24,19 @@ MainWindow::MainWindow(QWidget* parent)
 
 void MainWindow::loadRecipeCollection(QString filename)
 {
-	qDebug() << filename;
+	//load
+	try
+	{
+		recipes_ = RecipeCollection::loadFromXml(filename);
+	}
+	catch (FileParseException e)
+	{
+		QMessageBox::critical(this, "Error loading recipe collection", "File parse error in XML file:\n" + e.message() );
+		return;
+	}
+
+	//update GUI
+	updateRecipeTree();
 
 	//set last collection for automatic re-load
 	Settings::setString("last_collection", filename);
@@ -47,5 +61,10 @@ void MainWindow::on_actionOpen_triggered(bool)
 	if (file=="") return;
 
 	loadRecipeCollection(file);
+}
+
+void MainWindow::updateRecipeTree()
+{
+	qDebug() << "TODO: " << __FILE__ << __LINE__;
 }
 

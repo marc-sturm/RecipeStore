@@ -3,6 +3,7 @@
 
 #include "ui_MainWindow.h"
 #include <QMainWindow>
+#include "RecipeCollection.h"
 
 
 class MainWindow
@@ -17,8 +18,10 @@ public:
 public slots:
 	void on_actionAbout_triggered(bool);
 	void on_actionOpen_triggered(bool);
+	void updateRecipeTree();
 
 private:
 	Ui::MainWindow ui_;
+	RecipeCollection recipes_;
 };
 #endif // MainWindow_H
