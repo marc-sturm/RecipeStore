@@ -72,6 +72,8 @@
      <string>File</string>
     </property>
     <addaction name="actionOpen"/>
+    <addaction name="actionEditTypes"/>
+    <addaction name="actionEditUnits"/>
     <addaction name="separator"/>
     <addaction name="actionExit"/>
    </widget>
@@ -133,6 +135,16 @@
    </property>
    <property name="shortcut">
     <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionEditTypes">
+   <property name="text">
+    <string>Edit recipe types</string>
+   </property>
+  </action>
+  <action name="actionEditUnits">
+   <property name="text">
+    <string>Edit units</string>
    </property>
   </action>
  </widget>

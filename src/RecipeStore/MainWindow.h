@@ -14,14 +14,20 @@ class MainWindow
 public:
 	MainWindow(QWidget* parent = 0);
 	void loadRecipeCollection(QString filename);
+	QString typesFile() const;
+	QString unitsFile() const;
 
 public slots:
 	void on_actionAbout_triggered(bool);
 	void on_actionOpen_triggered(bool);
+	void on_actionEditTypes_triggered(bool);
+	void on_actionEditUnits_triggered(bool);
 	void updateRecipeTree();
+	void editTextFile(QString filename, QString title);
 
 private:
 	Ui::MainWindow ui_;
+	QString recipes_filename_;
 	RecipeCollection recipes_;
 };
 #endif // MainWindow_H

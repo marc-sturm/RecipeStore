@@ -9,7 +9,7 @@ CONFIG += c++11
 
 QT       +=  core widgets gui xml xmlpatterns
 
-TARGET = PhotoSort
+TARGET = RecipeStore
 TEMPLATE = app
 RC_FILE	 = icon.rc
 

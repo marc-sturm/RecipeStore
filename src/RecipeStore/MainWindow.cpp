@@ -1,6 +1,8 @@
 #include "MainWindow.h"
 #include "Settings.h"
 #include "Exceptions.h"
+#include "GUIHelper.h"
+#include "Helper.h"
 #include <QMessageBox>
 #include <QFileDialog>
 #include <QDebug>
@@ -8,6 +10,7 @@
 MainWindow::MainWindow(QWidget* parent)
 	: QMainWindow(parent)
 	, ui_()
+	, recipes_filename_()
 	, recipes_()
 {
 	ui_.setupUi(this);
@@ -28,6 +31,7 @@ void MainWindow::loadRecipeCollection(QString filename)
 	try
 	{
 		recipes_ = RecipeCollection::loadFromXml(filename);
+		recipes_filename_ = filename;
 	}
 	catch (FileParseException e)
 	{
@@ -40,6 +44,20 @@ void MainWindow::loadRecipeCollection(QString filename)
 
 	//set last collection for automatic re-load
 	Settings::setString("last_collection", filename);
+}
+
+QString MainWindow::typesFile() const
+{
+	if (recipes_filename_.isEmpty()) THROW(ProgrammingException, "Cannot use typesFile() function when no recipe collection is loaded!");
+
+	return QFileInfo(recipes_filename_).absolutePath() + QDir::separator() + "types.txt";
+}
+
+QString MainWindow::unitsFile() const
+{
+	if (recipes_filename_.isEmpty()) THROW(ProgrammingException, "Cannot use unitsFile() function when no recipe collection is loaded!");
+
+	return QFileInfo(recipes_filename_).absolutePath() + QDir::separator() + "units.txt";
 }
 
 void MainWindow::on_actionAbout_triggered(bool)
@@ -63,8 +81,43 @@ void MainWindow::on_actionOpen_triggered(bool)
 	loadRecipeCollection(file);
 }
 
+void MainWindow::on_actionEditTypes_triggered(bool)
+{
+	if (recipes_filename_.isEmpty()) return;
+
+	editTextFile(typesFile(), "Edit recipe types");
+}
+
+void MainWindow::on_actionEditUnits_triggered(bool)
+{
+	if (recipes_filename_.isEmpty()) return;
+
+	editTextFile(unitsFile(), "Edit units");
+}
+
 void MainWindow::updateRecipeTree()
 {
 	qDebug() << "TODO: " << __FILE__ << __LINE__;
+}
+
+void MainWindow::editTextFile(QString filename, QString title)
+{
+	//load file
+	QStringList entries = Helper::loadTextFile(filename, true, '#', true);
+
+	QTextEdit* widget = new QTextEdit(this);
+	widget->setText(entries.join("\n"));
+	auto dlg = GUIHelper::createDialog(widget, title, "", true);
+	if (dlg->exec()==QDialog::Accepted)
+	{
+		entries = widget->toPlainText().split("\n");
+		for(int i=0; i<entries.count(); ++i)
+		{
+			entries[i] = entries[i].trimmed();
+		}
+		entries.removeAll("");
+		entries.sort();
+		Helper::storeTextFile(filename, entries);
+	}
 }
 

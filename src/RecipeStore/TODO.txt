@@ -1,6 +1,4 @@
 Features:
-- Type editor
-- Unit editor
 - View
 - Search
 - Export to HTML
