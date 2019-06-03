@@ -17,7 +17,6 @@
   <xs:attribute name="name" type="xs:string" use="required"/>
   <xs:attribute name="amount" type="xs:string" use="required"/>
   <xs:attribute name="type" type="xs:string" use="required"/>
-  <xs:attribute name="country" type="xs:string" use="optional"/>
 </xs:complexType>
 
 <xs:complexType name="partT" mixed="true">

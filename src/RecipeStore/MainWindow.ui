@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>866</width>
-    <height>809</height>
+    <width>1136</width>
+    <height>932</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -46,6 +46,18 @@
        <enum>Qt::Horizontal</enum>
       </property>
       <widget class="QTreeWidget" name="recipe_selector">
+       <property name="maximumSize">
+        <size>
+         <width>400</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="columnCount">
+        <number>1</number>
+       </property>
+       <attribute name="headerVisible">
+        <bool>false</bool>
+       </attribute>
        <column>
         <property name="text">
          <string notr="true">1</string>
@@ -63,7 +75,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>866</width>
+     <width>1136</width>
      <height>21</height>
     </rect>
    </property>

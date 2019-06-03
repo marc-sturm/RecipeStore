@@ -135,20 +135,6 @@
 		<ingr name="Chorizo" amount="150" unit="g" />in mundgerechte Stücke schneiden.Die Zwiebeln in Olivenöl anschwitzen, die Tomaten und Chorizo dazugeben mit anbraten. Die Kartoffeln und etwas Wasser zugeben. Mit Salz, Pfeffer, Oregano und Rosmarin würzen. Abgedeckt ca. 30 min köcheln lassen, bis die Kartoffeln gar sind.
 	</recipe>
 	
-	<recipe name="Coq au vin" amount="4 Personen" type="Alt"  >
-		<ingr name="Champigons" amount="400" unit="g" />putzen und vierteln,
-		<ingr name="Scharlotten" amount="10" />und
-		<ingr name="Speck" amount="100" unit="g" />würfeln. Charlotten, Champignons und Speck in Butter bei mittlerer Hitze ca. 5 min anbraten.
-		<ingr name="Hähnchenteile" amount="10" />(Schenkel oder Brust) scharf anbraten und mit
-		<ingr name="Mehl" amount="1" unit="EL" />bestäuben. Dann mit
-		<ingr name="Cognac" amount="4" unit="cl" />flambieren und mit
-		<ingr name="Rotwein" amount="750" unit="ml" />ablöschen. Anschließend mit
-		<ingr name="Lorbeerblatt" amount="1" />,
-		<ingr name="Thamian" amount="0.5" unit="TL" />,
-		<ingr name="Rosmarin" amount="0.25" unit="TL" />,
-		<ingr name="Muskat" amount="1" unit="Msp" />, Salz und Pfeffer würzen. Zugedeckt bei schwacher Hitze ca. 45 min schmoren. Die Pilze, Zwiebeln und Speck zugeben und noch mal etwa 15 min schmoren.
-	</recipe>
-	
 	<recipe name="Crepes" amount="12 Stück" type="Dessert" >
 		<ingr name="Mehl" amount="500" unit="g" />,
 		<ingr name="Eier" amount="3" />,
@@ -182,31 +168,6 @@
 		<ingr name="Muskat" amount="0.5" unit="TL" />und
 		<ingr name="Lorbeerblätter" amount="3" />zugeben. Auf kleiner Flamme abgedeckt eine Stunde kochen lassen.
 		<ingr name="Kartoffeln" amount="500" unit="g" />schälen, kleinschneiden und dazugeben. Abgedeckt kochen lassen, bis das Fleisch weich ist, dann die Soße einkochen.
-	</recipe>
-	
-	<recipe name="Empanadas" amount="3 Personen" type="Alt" >
-		<part name="Salsa" >
-			<ingr name="Zwiebel" amount="1" />und
-			<ingr name="Knoblauch" amount="2" unit="Zehen" />schälen, fein hacken und anbraten.
-			<ingr name="passierte Tomaten" amount="500" unit="g" />,
-			<ingr name="Tomatenmark" amount="2" unit="EL" />,
-			<ingr name="Balsamico" amount="2" unit="EL" />,
-			<ingr name="Zucker" amount="1" unit="TL" />,
-			<ingr name="Kreuzkümmel" amount="0.5" unit="TL" />,
-			<ingr name="Kümmel" amount="0.5" unit="TL" />und Chilis dazugeben und bei milder Hitze 10 min zugedeckt köcheln lassen.
-		</part>
-		<part name="Empanadas" >
-			<ingr name="Zwiebel" amount="1" />fein hacken und
-			<ingr name="Tomaten" amount="2" />in kleine Würfel schneiden. Beides in Öl dünsten.
-			<ingr name="Hackfleisch" amount="250" unit="g" />dazugeben und krümelig anbraten.
-			<ingr name="Sultaninen" />,
-			<ingr name="Chilipulver" amount="0.5" unit="TL" />,
-			<ingr name="Kreuzkümmel" amount="0.5" unit="TL" />und
-			<ingr name="Kümmel" amount="0.5" unit="TL" />dazugeben und bei schwacher Hitze ca. 10 min kochen lassen. Vom Feuer nehmen und abkühlen lassen.
-			<ingr name="Blätterteig" amount="500" unit="g" />ausrollen und ca. 15 große Kreise ausstechen. Die Fleischfüllung auf eine Hälfte der Kreise geben. Ränder mit Wasser befeuchten und umklappen.
-			<ingr name="Eigelb" amount="1" />mit
-			<ingr name="Milch" />verquirlen und die Empanadas damit bestreichen. Im Backofen bei 180°C (Umluft) ca. 15 min backen.
-		</part>
 	</recipe>
 	
 	<recipe name="Erdbeermargarita" amount="1 Glas" type="Cocktail" >
@@ -664,26 +625,6 @@
 		<ingr name="Koriander" />bestreuen.
 	</recipe>
 	
-	<recipe name="Pekingente mit Pfannkuchen" amount="3 Personen" type="Alt" >
-		<part name="Ente" >
-			<ingr name="Entenbrüste" amount="3" />waschen und dann die Haut in Rauten einschneiden.
-			<ingr name="Ingwer" amount="1" unit="EL" />pressen und den Saft mit
-			<ingr name="Sojasoße" amount="3" unit="EL" />,
-			<ingr name="Sesamöl" amount="2" unit="TL" />und
-			<ingr name="Zucker (braun)" amount="2" unit="TL" />mischen und das Fleisch darin 45min marinieren lassen. Den Ofen auf 220°C vorheizen. Die Entenbrüste in der Pfanne anbraten (Fleischseite) und dann im Ofen mit Oberhitze ca. 25 min kross braten (Hautseite). In feine Scheiben schneiden.
-		</part>
-		<part name="Soße" >Den Fond vom Braten mit
-			<ingr name="Mirin" amount="75" unit="ml" />ablöschen,
-			<ingr name="Pflaumensoße" amount="200" unit="ml" />und die Reste der Marinade dazugeben und aufkochen.
-		</part>
-		<part name="Beilagen" >
-			<ingr name="Salatgurke" amount="0.5" />schälen und in feine 5cm lange Streifen schneiden.
-			<ingr name="Frühlingszwiebeln" amount="4" />in feine 5cm lange Streifen schneiden.
-			<ingr name="Mehl" amount="220" unit="g" />mit
-			<ingr name="Wasser (heiß)" amount="180" unit="ml" />mischen und kneten. Den Teig in 16 Teile teilen und dann zu Fladen ausrollen, die in einer Pfanne ohne Fett gebacken werden.
-		</part>
-	</recipe>
-	
 	<recipe name="Pizza" amount="3-4 Pizzas" type="Hauptgang" >
 		<part name="Teig" >
 			<ingr name="Weizenmehl" amount="500" unit="g" />,
@@ -907,16 +848,6 @@
 		</part>
 	</recipe>
 	
-	<recipe name="Thaicurry" amount="3 Personen" type="Alt" >
-		<ingr name="Karotten" amount="3" />,
-		<ingr name="Broccoli" amount="500" unit="g" />und
-		<ingr name="Hähnchenbrust" amount="500" unit="g" />in mundgerechte Stücke schneiden.
-		<ingr name="Knoblauch" amount="2" unit="Zehen" />und
-		<ingr name="Ingwer" amount="2" unit="cm" />klein schneiden und mit 
-		<ingr name="Chilipaste" amount="1" unit="EL" />anbaten. Fleisch mit anbraten. Dann das Gemüse und
-		<ingr name="Kokosmilch" amount="2" unit="Dosen" />zugeben und das Gemüse garen.
-	</recipe>
-	
 	<recipe name="Thunfisch-Lasagne" amount="3-4 Personen" type="Hauptgang" >
 		Den Ofen auf 170°C vorheizen.
 		<ingr name="Zwiebel" amount="1" />in reichlich Butter andünsten.
@@ -928,15 +859,6 @@
 		<ingr name="Tomaten" amount="6" />in dünne Scheiben schneiden. Eine Form abwechselnd mit Schichten von Thunfischmasse, Tomaten und
 		<ingr name="Lasagneplatten" amount="175" unit="g" /> füllen.
 		<ingr name="geriebener Käse" amount="100" unit="g" /> über die Lasagne streuen, mit Alufolie abdecken und in den Ofen schieben. Nach 25 min die Folie abnehmen und weitere 10-15 min backen.
-	</recipe>
-	
-	<recipe name="Tomaten-Ciabatta" amount="2 Stück" type="Alt" >
-		<ingr name="Tomate" amount="1" />in kleine Stücke schneiden. Die Tomate
-		<ingr name="Mehl" amount="250" unit="g" />,
-		<ingr name="Hefe" amount="20" unit="g" />,
-		<ingr name="Olivenöl" amount="1" unit="EL" />,
-		<ingr name="Milch" amount="120" unit="ml" />,
-		<ingr name="Salz" amount="1" unit="TL" />, Rosmarin und Oregano zu einem Teig kneten und 30 min gehen lassen. Dann zwei Ciabattas formen, 15 min gehen lassen und bei 180°C 15-20 min lang backen.
 	</recipe>
 	
 	<recipe name="Thunfischpaste" amount="6 Personen" type="Dip"  >

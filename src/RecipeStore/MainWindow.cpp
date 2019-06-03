@@ -44,6 +44,28 @@ void MainWindow::loadRecipeCollection(QString filename)
 
 	//set last collection for automatic re-load
 	Settings::setString("last_collection", filename);
+
+	//check that all types are valid
+	QStringList invalid_types;
+	QStringList valid_types = types();
+	foreach(const Recipe& recipe, recipes_)
+	{
+		QString type = recipe.type();
+		if (!valid_types.contains(type))
+		{
+			if (!invalid_types.contains(type))
+			{
+				invalid_types << type;
+			}
+		}
+	}
+	if (!invalid_types.isEmpty())
+	{
+		QMessageBox::warning(this, "Invalid types", "Invalid types found:\n" + invalid_types.join("\n"));
+	}
+
+	//check that add units are valid
+	//TODO
 }
 
 QString MainWindow::typesFile() const
@@ -53,11 +75,21 @@ QString MainWindow::typesFile() const
 	return QFileInfo(recipes_filename_).absolutePath() + QDir::separator() + "types.txt";
 }
 
+QStringList MainWindow::types() const
+{
+	return Helper::loadTextFile(typesFile(), true, '#', true);
+}
+
 QString MainWindow::unitsFile() const
 {
 	if (recipes_filename_.isEmpty()) THROW(ProgrammingException, "Cannot use unitsFile() function when no recipe collection is loaded!");
 
 	return QFileInfo(recipes_filename_).absolutePath() + QDir::separator() + "units.txt";
+}
+
+QStringList MainWindow::units() const
+{
+	return Helper::loadTextFile(unitsFile(), true, '#', true);
 }
 
 void MainWindow::on_actionAbout_triggered(bool)
@@ -85,22 +117,43 @@ void MainWindow::on_actionEditTypes_triggered(bool)
 {
 	if (recipes_filename_.isEmpty()) return;
 
-	editTextFile(typesFile(), "Edit recipe types");
+	editTextFile(typesFile(), "Edit recipe types", false);
 }
 
 void MainWindow::on_actionEditUnits_triggered(bool)
 {
 	if (recipes_filename_.isEmpty()) return;
 
-	editTextFile(unitsFile(), "Edit units");
+	editTextFile(unitsFile(), "Edit units", true);
 }
 
 void MainWindow::updateRecipeTree()
 {
-	qDebug() << "TODO: " << __FILE__ << __LINE__;
+	ui_.recipe_selector->clear();
+
+	//add type sections
+	foreach(QString type, types())
+	{
+		QTreeWidgetItem* section_item = new QTreeWidgetItem();
+		section_item->setText(0, type);
+		ui_.recipe_selector->addTopLevelItem(section_item);
+
+		//add receipes of the current type
+		foreach(const Recipe& recipe, recipes_)
+		{
+			if (recipe.type()==type)
+			{
+				QTreeWidgetItem* item = new QTreeWidgetItem(section_item);
+				item->setText(0, recipe.name());
+			}
+		}
+	}
+
+	//expand
+	ui_.recipe_selector->expandAll();
 }
 
-void MainWindow::editTextFile(QString filename, QString title)
+void MainWindow::editTextFile(QString filename, QString title, bool sort)
 {
 	//load file
 	QStringList entries = Helper::loadTextFile(filename, true, '#', true);
@@ -116,7 +169,7 @@ void MainWindow::editTextFile(QString filename, QString title)
 			entries[i] = entries[i].trimmed();
 		}
 		entries.removeAll("");
-		entries.sort();
+		if (sort) entries.sort();
 		Helper::storeTextFile(filename, entries);
 	}
 }

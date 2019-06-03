@@ -9,3 +9,4 @@ Neue Rezepte:
 - Burger
 - Kartoffelsuppe - Kartoffel, Karottem, Brühe, Sahne/Schmand, Curcuma, Kreuzkümmel
 - Falafel
+- Pide
