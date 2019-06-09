@@ -2,7 +2,6 @@
 #include "XmlHelper.h"
 #include "Exceptions.h"
 #include <QMessageBox>
-#include <QDomDocument>
 
 RecipeCollection::RecipeCollection()
 	: QList<Recipe>()
@@ -36,19 +35,117 @@ RecipeCollection RecipeCollection::loadFromXml(QString filename)
 	QDomNodeList recipe_nodes = root.elementsByTagName("recipe");
 	for (int i=0; i<recipe_nodes.count(); ++i)
 	{
-		QDomNode recipe_node = recipe_nodes.at(i);
-
-		Recipe recipe;
-		//attributes
-		recipe.setName(recipe_node.attributes().namedItem("name").toAttr().value());
-		recipe.setAmount(recipe_node.attributes().namedItem("amount").toAttr().value());
-		recipe.setType(recipe_node.attributes().namedItem("type").toAttr().value());
-		//parts
-		//TODO
-		//ingredients
-		//TODO
-		output << recipe;
+		output << parseRecipe(recipe_nodes.at(i));
 	}
+
+
+	//sort recipes by name
+	std::sort(output.begin(), output.end(), [](const Recipe& a, const Recipe& b) { return a.name < b.name; });
+
+	return output;
+}
+
+Recipe RecipeCollection::parseRecipe(const QDomNode& node)
+{
+	Recipe output;
+
+	//attributes
+	output.name = node.attributes().namedItem("name").toAttr().value();
+	output.amount = node.attributes().namedItem("amount").toAttr().value();
+	output.type = node.attributes().namedItem("type").toAttr().value();
+
+	//process children
+	QDomNodeList child_nodes = node.childNodes();
+	for (int i=0; i<child_nodes.count(); ++i)
+	{
+		QDomNode child = child_nodes.at(i);
+		QDomNode::NodeType type = child.nodeType();
+		QString name = child.nodeName();
+		bool handled = false;
+
+		//parts + ingredients
+		if (type==QDomNode::ElementNode)
+		{
+			if (name=="part")
+			{
+				output.parts << parsePart(child);
+				handled = true;
+			}
+			else if (name=="ingr")
+			{
+				output.ingredients << parseIngredient(child);
+				handled = true;
+			}
+		}
+
+		//text
+		if (type==QDomNode::TextNode)
+		{
+			QDomText text = child.toText();
+			//TODO
+			handled = true;
+		}
+
+		//not handled > error
+		if (!handled)
+		{
+			THROW(ProgrammingException, "Recipe child '" + name + "' in XML not handled!");
+		}
+	}
+
+	return output;
+}
+
+RecipePart RecipeCollection::parsePart(const QDomNode& node)
+{
+	RecipePart output;
+
+	//attributes
+	output.name = node.attributes().namedItem("name").toAttr().value();
+
+	//process children
+	QDomNodeList child_nodes = node.childNodes();
+	for (int i=0; i<child_nodes.count(); ++i)
+	{
+		QDomNode child = child_nodes.at(i);
+		QDomNode::NodeType type = child.nodeType();
+		QString name = child.nodeName();
+		bool handled = false;
+
+		//parts + ingredients
+		if (type==QDomNode::ElementNode)
+		{
+			if (name=="ingr")
+			{
+				output.ingredients << parseIngredient(child);
+				handled = true;
+			}
+		}
+
+		//text
+		if (type==QDomNode::TextNode)
+		{
+			QDomText text = child.toText();
+			//TODO
+			handled = true;
+		}
+
+		//not handled > error
+		if (!handled)
+		{
+			THROW(ProgrammingException, "Part child '" + name + "' in XML not handled!");
+		}
+	}
+	return output;
+}
+
+RecipeIngredient RecipeCollection::parseIngredient(const QDomNode& node)
+{
+	RecipeIngredient output;
+
+	output.name = node.attributes().namedItem("name").toAttr().value();
+	output.amount = node.attributes().namedItem("amount").toAttr().value();
+	output.unit = node.attributes().namedItem("unit").toAttr().value();
 
 	return output;
 }

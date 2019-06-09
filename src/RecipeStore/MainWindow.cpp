@@ -33,7 +33,7 @@ void MainWindow::loadRecipeCollection(QString filename)
 		recipes_ = RecipeCollection::loadFromXml(filename);
 		recipes_filename_ = filename;
 	}
-	catch (FileParseException e)
+	catch (Exception& e)
 	{
 		QMessageBox::critical(this, "Error loading recipe collection", "File parse error in XML file:\n" + e.message() );
 		return;
@@ -50,22 +50,51 @@ void MainWindow::loadRecipeCollection(QString filename)
 	QStringList valid_types = types();
 	foreach(const Recipe& recipe, recipes_)
 	{
-		QString type = recipe.type();
+		QString type = recipe.type;
 		if (!valid_types.contains(type))
 		{
-			if (!invalid_types.contains(type))
-			{
-				invalid_types << type;
-			}
+			qDebug() << recipe.name << recipe.type;
+			invalid_types << type;
 		}
 	}
+	invalid_types.removeDuplicates();
 	if (!invalid_types.isEmpty())
 	{
-		QMessageBox::warning(this, "Invalid types", "Invalid types found:\n" + invalid_types.join("\n"));
+		QMessageBox::warning(this, "Invalid types", "Invalid recipe types found:\n" + invalid_types.join("\n"));
 	}
 
 	//check that add units are valid
-	//TODO
+	QStringList invalid_units;
+	QStringList valid_units = units();
+	foreach(const Recipe& recipe, recipes_)
+	{
+		foreach(const RecipePart& part, recipe.parts)
+		{
+			foreach(const RecipeIngredient& ingr, part.ingredients)
+			{
+				QString unit = ingr.unit;
+				if (!valid_units.contains(unit))
+				{
+					invalid_units << unit;
+				}
+			}
+		}
+
+		foreach(const RecipeIngredient& ingr, recipe.ingredients)
+		{
+			QString unit = ingr.unit;
+			if (!valid_units.contains(unit))
+			{
+				invalid_units << unit;
+			}
+		}
+	}
+	invalid_units.removeDuplicates();
+	invalid_units.removeAll("");
+	if (!invalid_units.isEmpty())
+	{
+		QMessageBox::warning(this, "Invalid units", "Invalid igredient units found:\n" + invalid_types.join("\n"));
+	}
 }
 
 QString MainWindow::typesFile() const
@@ -141,10 +170,10 @@ void MainWindow::updateRecipeTree()
 		//add receipes of the current type
 		foreach(const Recipe& recipe, recipes_)
 		{
-			if (recipe.type()==type)
+			if (recipe.type==type)
 			{
 				QTreeWidgetItem* item = new QTreeWidgetItem(section_item);
-				item->setText(0, recipe.name());
+				item->setText(0, recipe.name);
 			}
 		}
 	}

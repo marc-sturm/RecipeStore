@@ -2,25 +2,32 @@
 #define RECIPE_H
 
 #include <QString>
+#include <QList>
 
-class Recipe
+
+struct RecipeIngredient
 {
-public:
-	Recipe();
+	QString name;
+	QString amount;
+	QString unit;
+};
 
-	QString name() const;
-	void setName(const QString& value);
+struct RecipePart
+{
+	QString name;
 
-	QString amount() const;
-	void setAmount(const QString& value);
+	QList<RecipeIngredient> ingredients;
+};
 
-	QString type() const;
-	void setType(const QString& value);
+struct Recipe
+{
+	QString name;
+	QString amount;
+	QString type;
 
-protected:
-	QString name_;
-	QString amount_;
-	QString type_;
+	QList<RecipePart> parts;
+
+	QList<RecipeIngredient> ingredients;
 };
 
 #endif // RECIPE_H

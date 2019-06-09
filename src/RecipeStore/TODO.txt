@@ -2,6 +2,7 @@ Features:
 - View
 - Search
 - Export to HTML
+- Store recipes
 - Import from Chefkoch via the API
 - Recipe editor
 
@@ -10,3 +11,4 @@ Neue Rezepte:
 - Kartoffelsuppe - Kartoffel, Karottem, Brühe, Sahne/Schmand, Curcuma, Kreuzkümmel
 - Falafel
 - Pide
+- Ofengemüse

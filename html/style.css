@@ -1,0 +1,55 @@
+
+a {
+	text-decoration: none;
+}
+
+td {
+	background-color: #E5E5E5;
+	vertical-align: top;
+}
+
+img {
+	vertical-align:middle;
+}
+
+form {
+	padding: 0px;
+	margin: 0px;
+}
+
+#google {
+    border-bottom: 1px solid #BBB;
+	background-color: #FFF;
+	text-align: center;
+	padding: 20px;
+	margin: 0px;
+}
+
+
+#dail {clear: both;
+    border-radius: 4px;
+    border: 1px solid #BBB;
+	background-color: #FFF;
+    padding: 5px;
+	margin: 5px;
+    width: 80px;
+    height: 80px;
+	display: inline-block;
+	text-align: center;
+	cursor: pointer;
+}
+
+#dailimg {
+    display: block;
+    margin: auto;
+    height: auto;
+    max-height: 100%;
+    width: auto;
+    max-width: 100%;
+}
+
+a.dec {
+	color: darkred;
+	text-decoration: underline;
+}
+
