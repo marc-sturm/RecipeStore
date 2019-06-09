@@ -3,6 +3,7 @@
 
 #include <QString>
 #include <QList>
+#include <QTextStream>
 
 
 struct RecipeIngredient
@@ -10,6 +11,8 @@ struct RecipeIngredient
 	QString name;
 	QString amount;
 	QString unit;
+
+	void toHTML(QTextStream& stream) const;
 };
 
 struct RecipePart
@@ -17,6 +20,8 @@ struct RecipePart
 	QString name;
 
 	QList<RecipeIngredient> ingredients;
+
+	void toHTML(QTextStream& stream) const;
 };
 
 struct Recipe
@@ -28,6 +33,8 @@ struct Recipe
 	QList<RecipePart> parts;
 
 	QList<RecipeIngredient> ingredients;
+
+	void toHTML(QTextStream& stream) const;
 };
 
 #endif // RECIPE_H

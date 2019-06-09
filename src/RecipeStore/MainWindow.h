@@ -26,6 +26,7 @@ public slots:
 	void on_actionEditUnits_triggered(bool);
 	void updateRecipeTree();
 	void editTextFile(QString filename, QString title, bool sort);
+	void selectedRecipeChanged(QTreeWidgetItem* current ,QTreeWidgetItem* previous);
 
 private:
 	Ui::MainWindow ui_;

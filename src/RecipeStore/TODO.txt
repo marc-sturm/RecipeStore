@@ -1,6 +1,7 @@
 Features:
 - View
 - Search
+- Print
 - Export to HTML
 - Store recipes
 - Import from Chefkoch via the API

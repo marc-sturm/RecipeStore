@@ -16,6 +16,7 @@ MainWindow::MainWindow(QWidget* parent)
 	ui_.setupUi(this);
 	setWindowTitle(QApplication::applicationName());
 	setWindowState(Qt::WindowMaximized);
+	connect(ui_.recipe_selector, SIGNAL(currentItemChanged(QTreeWidgetItem*,QTreeWidgetItem*)), this, SLOT(selectedRecipeChanged(QTreeWidgetItem*,QTreeWidgetItem*)));
 
 	//load last collection if set
 	QString last_collection = Settings::string("last_collection");
@@ -165,15 +166,19 @@ void MainWindow::updateRecipeTree()
 	{
 		QTreeWidgetItem* section_item = new QTreeWidgetItem();
 		section_item->setText(0, type);
+		section_item->setData(0, Qt::UserRole, -1);
 		ui_.recipe_selector->addTopLevelItem(section_item);
 
 		//add receipes of the current type
-		foreach(const Recipe& recipe, recipes_)
+		for (int i=0; i<recipes_.count(); ++i)
 		{
+			const Recipe& recipe = recipes_[i];
+
 			if (recipe.type==type)
 			{
 				QTreeWidgetItem* item = new QTreeWidgetItem(section_item);
 				item->setText(0, recipe.name);
+				item->setData(0, Qt::UserRole, i);
 			}
 		}
 	}
@@ -201,5 +206,36 @@ void MainWindow::editTextFile(QString filename, QString title, bool sort)
 		if (sort) entries.sort();
 		Helper::storeTextFile(filename, entries);
 	}
+}
+
+void MainWindow::selectedRecipeChanged(QTreeWidgetItem* current, QTreeWidgetItem* /*previous*/)
+{
+	//clear browser
+	ui_.browser->clear();
+
+	//recipe type selected > do nothing
+	int index = current->data(0, Qt::UserRole).toInt();
+	if (index==-1)
+	{
+		return;
+	}
+
+
+	QString output;
+	QTextStream stream(&output);
+
+	//show recipe
+	const Recipe& recipe = recipes_[index];
+	stream << "<html>\n";
+	stream << "  <head>\n";
+	stream << "    <style>\n";
+	stream << "      td {background-color: #E5E5E5; vertical-align: top;}>\n";
+	stream << "    </style>\n";
+	stream << "  </head>\n";
+	stream << "  <body>\n";
+	recipe.toHTML(stream);
+	stream << "  </body>\n";
+	stream << "</html>\n";
+	ui_.browser->setText(output);
 }
 
