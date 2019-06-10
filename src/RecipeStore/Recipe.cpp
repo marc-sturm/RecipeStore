@@ -3,7 +3,7 @@
 void Recipe::toHTML(QTextStream& stream) const
 {
 	//recipe header
-	stream << "  <h4>" << name << "</h4>\n";
+	stream << "  <h3>" << name << "</h3>\n";
 	stream << "  <br>\n";
 
 	//amount
@@ -13,29 +13,29 @@ void Recipe::toHTML(QTextStream& stream) const
 
 	//content
 	stream << "  <table>";
-	foreach(const RecipePart& part, parts)
+	foreach(const RecipePart* part, parts)
 	{
-		part.toHTML(stream);
-	}
-	foreach(const RecipeIngredient& ingr, ingredients)
-	{
-		ingr.toHTML(stream);
+		part->toHTML(stream);
 	}
 	stream << "  </table>\n";
 }
 
-void RecipePart::toHTML(QTextStream& stream) const
+RecipeSection::~RecipeSection()
+{
+
+}
+
+void RecipeSection::toHTML(QTextStream& stream) const
 {
 	//section
 	stream << "  <tr>\n";
-	stream << "    <td colspan='3'> <b>" << name << "</b> </td>\n";
+	stream << "    <td colspan='3'> <b>" << text << "</b> </td>\n";
 	stream << "  </tr>\n";
+}
 
-	//content
-	foreach(const RecipeIngredient& ingr, ingredients)
-	{
-		ingr.toHTML(stream);
-	}
+RecipeIngredient::~RecipeIngredient()
+{
+
 }
 
 void RecipeIngredient::toHTML(QTextStream& stream) const
@@ -43,6 +43,25 @@ void RecipeIngredient::toHTML(QTextStream& stream) const
 	stream << "  <tr>\n";
 	stream << "    <td valign='top'><nobr>" << amount << " " << unit  << "</nobr></td>\n";
 	stream << "    <td valign='top'><nobr>" << name  << "</nobr></td>\n";
-	stream << "    <td valign='top'>TODO</td>\n";
+	stream << "    <td valign='top'>" << text  << "</td>\n";
+	stream << "  </tr>\n";
+}
+
+RecipePart::~RecipePart()
+{
+
+}
+
+RecipeText::~RecipeText()
+{
+
+}
+
+void RecipeText::toHTML(QTextStream& stream) const
+{
+	stream << "  <tr>\n";
+	stream << "    <td valign='top'></td>\n";
+	stream << "    <td valign='top'></td>\n";
+	stream << "    <td valign='top'>" << text  << "</td>\n";
 	stream << "  </tr>\n";
 }

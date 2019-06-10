@@ -17,8 +17,9 @@ public:
 
 protected:
 	static Recipe parseRecipe(const QDomNode& node);
-	static RecipePart parsePart(const QDomNode& node);
-	static RecipeIngredient parseIngredient(const QDomNode& node);
+	static RecipeSection* parseSection(const QDomNode& node);
+	static RecipeIngredient* parseIngredient(const QDomNode& node);
+	static RecipeText* parseText(const QDomNode& node);
 };
 
 #endif // RECIPECOLLECTION_H

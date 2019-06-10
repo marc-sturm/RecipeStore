@@ -66,24 +66,21 @@ Recipe RecipeCollection::parseRecipe(const QDomNode& node)
 		//parts + ingredients
 		if (type==QDomNode::ElementNode)
 		{
-			if (name=="part")
+			if (name=="section")
 			{
-				output.parts << parsePart(child);
+				output.parts << parseSection(child);
 				handled = true;
 			}
 			else if (name=="ingr")
 			{
-				output.ingredients << parseIngredient(child);
+				output.parts << parseIngredient(child);
 				handled = true;
 			}
-		}
-
-		//text
-		if (type==QDomNode::TextNode)
-		{
-			QDomText text = child.toText();
-			//TODO
-			handled = true;
+			else if (name=="text")
+			{
+				output.parts << parseText(child);
+				handled = true;
+			}
 		}
 
 		//not handled > error
@@ -96,56 +93,32 @@ Recipe RecipeCollection::parseRecipe(const QDomNode& node)
 	return output;
 }
 
-RecipePart RecipeCollection::parsePart(const QDomNode& node)
+RecipeSection* RecipeCollection::parseSection(const QDomNode& node)
 {
-	RecipePart output;
+	RecipeSection* output = new RecipeSection();
 
-	//attributes
-	output.name = node.attributes().namedItem("name").toAttr().value();
+	output->text = "TODO";
 
-	//process children
-	QDomNodeList child_nodes = node.childNodes();
-	for (int i=0; i<child_nodes.count(); ++i)
-	{
-		QDomNode child = child_nodes.at(i);
-		QDomNode::NodeType type = child.nodeType();
-		QString name = child.nodeName();
-		bool handled = false;
-
-		//parts + ingredients
-		if (type==QDomNode::ElementNode)
-		{
-			if (name=="ingr")
-			{
-				output.ingredients << parseIngredient(child);
-				handled = true;
-			}
-		}
-
-		//text
-		if (type==QDomNode::TextNode)
-		{
-			QDomText text = child.toText();
-			//TODO
-			handled = true;
-		}
-
-		//not handled > error
-		if (!handled)
-		{
-			THROW(ProgrammingException, "Part child '" + name + "' in XML not handled!");
-		}
-	}
 	return output;
 }
 
-RecipeIngredient RecipeCollection::parseIngredient(const QDomNode& node)
+RecipeIngredient* RecipeCollection::parseIngredient(const QDomNode& node)
 {
-	RecipeIngredient output;
+	RecipeIngredient* output = new RecipeIngredient();
 
-	output.name = node.attributes().namedItem("name").toAttr().value();
-	output.amount = node.attributes().namedItem("amount").toAttr().value();
-	output.unit = node.attributes().namedItem("unit").toAttr().value();
+	output->name = node.attributes().namedItem("name").toAttr().value();
+	output->amount = node.attributes().namedItem("amount").toAttr().value();
+	output->unit = node.attributes().namedItem("unit").toAttr().value();
+	output->text = "TODO";
+
+	return output;
+}
+
+RecipeText* RecipeCollection::parseText(const QDomNode& node)
+{
+	RecipeText* output = new RecipeText();
+
+	output->text = "TODO";
 
 	return output;
 }

@@ -5,34 +5,58 @@
 #include <QList>
 #include <QTextStream>
 
-
-struct RecipeIngredient
+//Base class for recipe parts
+class RecipePart
 {
+public:
+	virtual ~RecipePart();
+	virtual void toHTML(QTextStream& stream) const = 0;
+};
+
+class RecipeIngredient
+	: public RecipePart
+{
+public:
+	virtual ~RecipeIngredient();
+
 	QString name;
 	QString amount;
 	QString unit;
+	QString text;
 
-	void toHTML(QTextStream& stream) const;
+	void toHTML(QTextStream& stream) const override;
 };
 
-struct RecipePart
+class RecipeSection
+	: public RecipePart
 {
-	QString name;
+public:
+	virtual ~RecipeSection();
 
-	QList<RecipeIngredient> ingredients;
+	QString text;
 
-	void toHTML(QTextStream& stream) const;
+	void toHTML(QTextStream& stream) const override;
 };
 
-struct Recipe
+class RecipeText
+	: public RecipePart
 {
+public:
+	virtual ~RecipeText();
+
+	QString text;
+
+	void toHTML(QTextStream& stream) const override;
+};
+
+class Recipe
+{
+public:
 	QString name;
 	QString amount;
 	QString type;
 
-	QList<RecipePart> parts;
-
-	QList<RecipeIngredient> ingredients;
+	QList<RecipePart*> parts;
 
 	void toHTML(QTextStream& stream) const;
 };

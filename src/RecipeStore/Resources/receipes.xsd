@@ -9,27 +9,27 @@
   </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="recipeT" mixed="true">
-  <xs:sequence>
-    <xs:element name="part" type="partT" minOccurs="0" maxOccurs="unbounded"/>
+<xs:complexType name="recipeT">
+  <xs:choice minOccurs="1" maxOccurs="unbounded">
+    <xs:element name="text" type="textT" minOccurs="0" maxOccurs="unbounded"/>
+    <xs:element name="section" type="sectionT" minOccurs="0" maxOccurs="unbounded"/>
     <xs:element name="ingr" type="ingrT" minOccurs="0" maxOccurs="unbounded"/>
-  </xs:sequence>
+  </xs:choice>
   <xs:attribute name="name" type="xs:string" use="required"/>
   <xs:attribute name="amount" type="xs:string" use="required"/>
   <xs:attribute name="type" type="xs:string" use="required"/>
 </xs:complexType>
 
-<xs:complexType name="partT" mixed="true">
-  <xs:sequence>
-    <xs:element name="ingr" type="ingrT" minOccurs="0" maxOccurs="unbounded"/>
-  </xs:sequence>
-  <xs:attribute name="name" type="xs:string" use="required"/>
+<xs:complexType name="sectionT" mixed="true">
 </xs:complexType>
 
-<xs:complexType name="ingrT">
+<xs:complexType name="ingrT" mixed="true">
   <xs:attribute name="name" type="xs:string" use="required"/>
   <xs:attribute name="amount" type="xs:decimal" use="optional"/>
   <xs:attribute name="unit" type="xs:string" use="optional"/>
+</xs:complexType>
+
+<xs:complexType name="textT" mixed="true">
 </xs:complexType>
 
 <!-- MAIN ELEMENT -->

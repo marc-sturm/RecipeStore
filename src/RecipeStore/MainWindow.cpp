@@ -69,24 +69,16 @@ void MainWindow::loadRecipeCollection(QString filename)
 	QStringList valid_units = units();
 	foreach(const Recipe& recipe, recipes_)
 	{
-		foreach(const RecipePart& part, recipe.parts)
+		foreach(const RecipePart* part, recipe.parts)
 		{
-			foreach(const RecipeIngredient& ingr, part.ingredients)
+			const RecipeIngredient* ingr = dynamic_cast<const RecipeIngredient*>(part);
+			if (ingr!=nullptr)
 			{
-				QString unit = ingr.unit;
+				QString unit = ingr->unit;
 				if (!valid_units.contains(unit))
 				{
 					invalid_units << unit;
 				}
-			}
-		}
-
-		foreach(const RecipeIngredient& ingr, recipe.ingredients)
-		{
-			QString unit = ingr.unit;
-			if (!valid_units.contains(unit))
-			{
-				invalid_units << unit;
 			}
 		}
 	}
