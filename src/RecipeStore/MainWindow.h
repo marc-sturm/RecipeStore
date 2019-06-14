@@ -24,6 +24,7 @@ public slots:
 	void on_actionOpen_triggered(bool);
 	void on_actionEditTypes_triggered(bool);
 	void on_actionEditUnits_triggered(bool);
+	void on_actionExportHTML_triggered(bool);
 	void updateRecipeTree();
 	void editTextFile(QString filename, QString title, bool sort);
 	void selectedRecipeChanged(QTreeWidgetItem* current ,QTreeWidgetItem* previous);

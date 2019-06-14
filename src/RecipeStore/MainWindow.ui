@@ -64,7 +64,11 @@
         </property>
        </column>
       </widget>
-      <widget class="QTextBrowser" name="browser"/>
+      <widget class="QTextBrowser" name="browser">
+       <property name="openLinks">
+        <bool>false</bool>
+       </property>
+      </widget>
      </widget>
     </item>
    </layout>
@@ -127,6 +131,7 @@
     <bool>false</bool>
    </attribute>
    <addaction name="separator"/>
+   <addaction name="actionExportHTML"/>
   </widget>
   <action name="actionExit">
    <property name="text">
@@ -157,6 +162,18 @@
   <action name="actionEditUnits">
    <property name="text">
     <string>Edit units</string>
+   </property>
+  </action>
+  <action name="actionExportHTML">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/Resources/Export_HTML.png</normaloff>:/Resources/Export_HTML.png</iconset>
+   </property>
+   <property name="text">
+    <string>ExportHTML</string>
+   </property>
+   <property name="toolTip">
+    <string>Export all recipes to a HTML page.</string>
    </property>
   </action>
  </widget>

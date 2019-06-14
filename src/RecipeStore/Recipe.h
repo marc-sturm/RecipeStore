@@ -58,7 +58,7 @@ public:
 
 	QList<RecipePart*> parts;
 
-	void toHTML(QTextStream& stream) const;
+	void toHTML(QTextStream& stream, int recipe_nr=-1) const;
 };
 
 #endif // RECIPE_H

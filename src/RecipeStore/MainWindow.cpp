@@ -129,7 +129,7 @@ void MainWindow::on_actionOpen_triggered(bool)
 		dir = QFileInfo(last_collection).absolutePath();
 	}
 
-	QString file = QFileDialog::getOpenFileName(this, "Open recipe collection", dir, "Recipes (*.xml)");
+	QString file = QFileDialog::getOpenFileName(this, "Open recipe collection", dir, "Recipes (*.xml);;All files (*.*)");
 	if (file=="") return;
 
 	loadRecipeCollection(file);
@@ -147,6 +147,79 @@ void MainWindow::on_actionEditUnits_triggered(bool)
 	if (recipes_filename_.isEmpty()) return;
 
 	editTextFile(unitsFile(), "Edit units", true);
+}
+
+void MainWindow::on_actionExportHTML_triggered(bool)
+{
+	//determine file name
+	QFileInfo file_info(recipes_filename_);
+	QString filename = file_info.absoluteFilePath();
+	filename = filename.left(filename.size()-file_info.suffix().size()); //remove extension
+	filename += "html";
+
+	//open stream
+	QFile file(filename);
+	if (!file.open(QFile::WriteOnly | QFile::Truncate))
+	{
+		QMessageBox::critical(this, "HTML export error", "Could not open file for writing '" + filename + "'!");
+		return;
+	}
+	QTextStream stream(&file);
+	stream.setCodec("UTF-8");
+
+	//add HTML header
+	stream << "<html>\n";
+	stream << "  <head>\n";
+	stream << "    <title>Kochbuch</title>\n";
+	stream << "    <meta charset='utf-8'/>\n";
+	stream << "    <style>\n";
+	stream << "      td {background-color: #E5E5E5; vertical-align: top;}>\n";
+	stream << "    </style>\n";
+	stream << "  </head>\n";
+
+	//add script
+	stream << "  <script language='javascript'>\n";
+	stream << "    function toggle(i) {\n";
+	stream << "      var ele = document.getElementById(\"toggle\" + i);\n";
+	stream << "      var text = document.getElementById(\"displayText\");\n";
+	stream << "      if(ele.style.display == \"block\") {\n";
+	stream << "        ele.style.display = \"none\";\n";
+	stream << "        text.innerHTML = \"show\";\n";
+	stream << "      } else {\n";
+	stream << "        ele.style.display = \"block\";\n";
+	stream << "        text.innerHTML = \"hide\";\n";
+	stream << "      }\n";
+	stream << "    }\n";
+	stream << "  </script>\n";
+
+	//add body
+	stream << "  <body style='margin:5;'>\n";
+	foreach(QString type, types())
+	{
+		//add type
+		stream << "	<font style='font-size: 1.2em; font-weight: bold;'>- " << type << " -</font>\n";
+		stream << "	<br>\n";
+
+		//add receipes of the current type
+		for (int i=0; i<recipes_.count(); ++i)
+		{
+			const Recipe& recipe = recipes_[i];
+
+			if (recipe.type==type)
+			{
+				recipe.toHTML(stream, i);
+				stream << "  <br>\n";
+			}
+		}
+		stream << "  <br>\n";
+	}
+
+	//close open tags
+	stream << "  </body>\n";
+	stream << "</html>\n";
+
+	//show success message
+	QMessageBox::information(this, "HTML export", "HTML export successfully written to:\n"+filename);
 }
 
 void MainWindow::updateRecipeTree()
@@ -220,11 +293,12 @@ void MainWindow::selectedRecipeChanged(QTreeWidgetItem* current, QTreeWidgetItem
 	const Recipe& recipe = recipes_[index];
 	stream << "<html>\n";
 	stream << "  <head>\n";
+	stream << "  <meta charset='utf-8'/>\n";
 	stream << "    <style>\n";
 	stream << "      td {background-color: #E5E5E5; vertical-align: top;}>\n";
 	stream << "    </style>\n";
 	stream << "  </head>\n";
-	stream << "  <body>\n";
+	stream << "  <body style='margin:5;'>\n";
 	recipe.toHTML(stream);
 	stream << "  </body>\n";
 	stream << "</html>\n";

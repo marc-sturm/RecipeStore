@@ -1,14 +1,14 @@
 #include "Recipe.h"
 
-void Recipe::toHTML(QTextStream& stream) const
+void Recipe::toHTML(QTextStream& stream, int recipe_nr) const
 {
 	//recipe header
-	stream << "  <h3>" << name << "</h3>\n";
+	stream << "  <a href='javascript:toggle(" << recipe_nr << ");' style='color: darkred; text-decoration: underline;font-size: 1.1em;' >" << name << "</a>\n";
+	stream << "  <div id='toggle" << recipe_nr << "' style='display: none' >\n";
 	stream << "  <br>\n";
 
 	//amount
 	stream << "  <font>(" << amount << ")</font>\n";
-	stream << "  <br>\n";
 	stream << "  <br>\n";
 
 	//content
@@ -18,6 +18,7 @@ void Recipe::toHTML(QTextStream& stream) const
 		part->toHTML(stream);
 	}
 	stream << "  </table>\n";
+	stream << "  </div>\n";
 }
 
 RecipeSection::~RecipeSection()

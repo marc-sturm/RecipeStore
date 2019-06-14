@@ -97,7 +97,7 @@ RecipeSection* RecipeCollection::parseSection(const QDomNode& node)
 {
 	RecipeSection* output = new RecipeSection();
 
-	output->text = "TODO";
+	output->text = node.toElement().text();
 
 	return output;
 }
@@ -109,7 +109,7 @@ RecipeIngredient* RecipeCollection::parseIngredient(const QDomNode& node)
 	output->name = node.attributes().namedItem("name").toAttr().value();
 	output->amount = node.attributes().namedItem("amount").toAttr().value();
 	output->unit = node.attributes().namedItem("unit").toAttr().value();
-	output->text = "TODO";
+	output->text = node.toElement().text();
 
 	return output;
 }
@@ -118,7 +118,7 @@ RecipeText* RecipeCollection::parseText(const QDomNode& node)
 {
 	RecipeText* output = new RecipeText();
 
-	output->text = "TODO";
+	output->text = node.toElement().text();
 
 	return output;
 }
