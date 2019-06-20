@@ -6,6 +6,8 @@
 #include <QMessageBox>
 #include <QFileDialog>
 #include <QDebug>
+#include <QPrinter>
+#include <QPrintDialog>
 
 MainWindow::MainWindow(QWidget* parent)
 	: QMainWindow(parent)
@@ -17,6 +19,7 @@ MainWindow::MainWindow(QWidget* parent)
 	setWindowTitle(QApplication::applicationName());
 	setWindowState(Qt::WindowMaximized);
 	connect(ui_.recipe_selector, SIGNAL(currentItemChanged(QTreeWidgetItem*,QTreeWidgetItem*)), this, SLOT(selectedRecipeChanged(QTreeWidgetItem*,QTreeWidgetItem*)));
+	connect(ui_.search_panel, SIGNAL(searchTextChanged(QString)), this, SLOT(applySearchTerms(QString)));
 
 	//load last collection if set
 	QString last_collection = Settings::string("last_collection");
@@ -69,9 +72,9 @@ void MainWindow::loadRecipeCollection(QString filename)
 	QStringList valid_units = units();
 	foreach(const Recipe& recipe, recipes_)
 	{
-		foreach(const RecipePart* part, recipe.parts)
+		foreach(const QSharedPointer<RecipePart>& part, recipe.parts)
 		{
-			const RecipeIngredient* ingr = dynamic_cast<const RecipeIngredient*>(part);
+			const RecipeIngredient* ingr = dynamic_cast<const RecipeIngredient*>(part.data());
 			if (ingr!=nullptr)
 			{
 				QString unit = ingr->unit;
@@ -222,6 +225,23 @@ void MainWindow::on_actionExportHTML_triggered(bool)
 	QMessageBox::information(this, "HTML export", "HTML export successfully written to:\n"+filename);
 }
 
+void MainWindow::on_actionPrint_triggered(bool)
+{
+	//check that recipe is selected
+	if (ui_.browser->toPlainText().trimmed().isEmpty()) return;
+
+	//create printer
+	QPrinter printer(QPrinter::HighResolution);
+	printer.setFullPage(true);
+
+	//show dialog
+	QPrintDialog dlg(&printer, this);
+	if (dlg.exec() == QDialog::Accepted)
+	{
+		ui_.browser->print(&printer);
+	}
+}
+
 void MainWindow::updateRecipeTree()
 {
 	ui_.recipe_selector->clear();
@@ -252,6 +272,52 @@ void MainWindow::updateRecipeTree()
 	ui_.recipe_selector->expandAll();
 }
 
+void MainWindow::applySearchTerms(QString search_text)
+{
+	//expand
+	ui_.recipe_selector->expandAll();
+
+	//init
+	QList<QTreeWidgetItem*> shown_items;
+	QStringList search_terms = search_text.simplified().split(" ");
+
+	//iterate through types
+	for(int t=0; t<ui_.recipe_selector->topLevelItemCount(); ++t)
+	{
+		QTreeWidgetItem* type_item = ui_.recipe_selector->topLevelItem(t);
+
+		//iterate through recipes
+		for(int c=0; c<type_item->childCount(); ++c)
+		{
+			QTreeWidgetItem* recipe_item = type_item->child(c);
+			int index = recipe_item->data(0, Qt::UserRole).toInt();
+			const Recipe& recipe = recipes_[index];
+
+			//check if recipe matches
+			if (recipe.matchesSearchTerms(search_terms))
+			{
+				recipe_item->setHidden(false);
+				shown_items << recipe_item;
+			}
+			else
+			{
+				recipe_item->setHidden(true);
+			}
+		}
+	}
+
+	//select first entry
+	if (shown_items.isEmpty())
+	{
+		ui_.recipe_selector->clearSelection();
+		ui_.browser->clear();
+	}
+	else
+	{
+		ui_.recipe_selector->setCurrentItem(shown_items[0]);
+	}
+}
+
 void MainWindow::editTextFile(QString filename, QString title, bool sort)
 {
 	//load file
@@ -278,13 +344,12 @@ void MainWindow::selectedRecipeChanged(QTreeWidgetItem* current, QTreeWidgetItem
 	//clear browser
 	ui_.browser->clear();
 
+	//nothing selected > do nothing
+	if (current==nullptr) return;
+
 	//recipe type selected > do nothing
 	int index = current->data(0, Qt::UserRole).toInt();
-	if (index==-1)
-	{
-		return;
-	}
-
+	if (index==-1) return;
 
 	QString output;
 	QTextStream stream(&output);

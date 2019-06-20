@@ -93,18 +93,18 @@ Recipe RecipeCollection::parseRecipe(const QDomNode& node)
 	return output;
 }
 
-RecipeSection* RecipeCollection::parseSection(const QDomNode& node)
+QSharedPointer<RecipeSection> RecipeCollection::parseSection(const QDomNode& node)
 {
-	RecipeSection* output = new RecipeSection();
+	QSharedPointer<RecipeSection> output(new RecipeSection());
 
 	output->text = node.toElement().text();
 
 	return output;
 }
 
-RecipeIngredient* RecipeCollection::parseIngredient(const QDomNode& node)
+QSharedPointer<RecipeIngredient> RecipeCollection::parseIngredient(const QDomNode& node)
 {
-	RecipeIngredient* output = new RecipeIngredient();
+	QSharedPointer<RecipeIngredient> output(new RecipeIngredient());
 
 	output->name = node.attributes().namedItem("name").toAttr().value();
 	output->amount = node.attributes().namedItem("amount").toAttr().value();
@@ -114,9 +114,9 @@ RecipeIngredient* RecipeCollection::parseIngredient(const QDomNode& node)
 	return output;
 }
 
-RecipeText* RecipeCollection::parseText(const QDomNode& node)
+QSharedPointer<RecipeText> RecipeCollection::parseText(const QDomNode& node)
 {
-	RecipeText* output = new RecipeText();
+	QSharedPointer<RecipeText> output(new RecipeText());
 
 	output->text = node.toElement().text();
 

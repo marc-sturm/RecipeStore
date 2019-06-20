@@ -7,7 +7,7 @@
 #c++11 support
 CONFIG += c++11
 
-QT       +=  core widgets gui xml xmlpatterns
+QT       +=  core widgets gui xml xmlpatterns printsupport
 
 TARGET = RecipeStore
 TEMPLATE = app

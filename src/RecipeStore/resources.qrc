@@ -3,5 +3,6 @@
         <file>Resources/Icon.png</file>
         <file>Resources/receipes.xsd</file>
         <file>Resources/Export_HTML.png</file>
+        <file>Resources/Print.png</file>
     </qresource>
 </RCC>

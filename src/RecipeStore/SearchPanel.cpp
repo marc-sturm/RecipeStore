@@ -1,14 +1,25 @@
 #include "SearchPanel.h"
-#include "ui_SearchPanel.h"
+#include <QDebug>
 
 SearchPanel::SearchPanel(QWidget *parent) :
 	QWidget(parent),
-	ui(new Ui::SearchPanel)
+	ui_()
 {
-	ui->setupUi(this);
+	ui_.setupUi(this);
+	connect(ui_.recipe_text, SIGNAL(textChanged(QString)), this, SLOT(textChanged(QString)));
+	connect(&timer_, SIGNAL(timeout()), this, SLOT(textChangeDone()));
+
+	timer_.setSingleShot(true);
+	timer_.setInterval(500);
 }
 
-SearchPanel::~SearchPanel()
+void SearchPanel::textChanged(QString text)
 {
-	delete ui;
+	search_text_ = text;
+	timer_.start();
+}
+
+void SearchPanel::textChangeDone()
+{
+	emit searchTextChanged(search_text_);
 }

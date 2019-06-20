@@ -1,6 +1,5 @@
 Features:
-- Search
-- Print
+- Read-only online recipe source (from INI file)
 - Store recipes
 - Import from Chefkoch via the API
 - Recipe editor
@@ -11,3 +10,5 @@ Neue Rezepte:
 - Falafel
 - Pide
 - Ofengemüse
+- Gegrillte Aubergine in Tomatensauce
+- Gefüllte Zucchini (Reis und Hack)

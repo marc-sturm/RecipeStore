@@ -132,6 +132,7 @@
    </attribute>
    <addaction name="separator"/>
    <addaction name="actionExportHTML"/>
+   <addaction name="actionPrint"/>
   </widget>
   <action name="actionExit">
    <property name="text">
@@ -174,6 +175,21 @@
    </property>
    <property name="toolTip">
     <string>Export all recipes to a HTML page.</string>
+   </property>
+  </action>
+  <action name="actionPrint">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/Resources/Print.png</normaloff>:/Resources/Print.png</iconset>
+   </property>
+   <property name="text">
+    <string>Print</string>
+   </property>
+   <property name="toolTip">
+    <string>Print current recipe.</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+P</string>
    </property>
   </action>
  </widget>

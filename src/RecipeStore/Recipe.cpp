@@ -1,5 +1,29 @@
 #include "Recipe.h"
 
+bool Recipe::matchesSearchTerm(const QString& term) const
+{
+	//search recipe name
+	if (name.contains(term, Qt::CaseInsensitive)) return true;
+
+	//search text
+	foreach(const QSharedPointer<RecipePart>& part, parts)
+	{
+		if (part->matchesSearchTerm(term)) return true;
+	}
+
+	return false;
+}
+
+bool Recipe::matchesSearchTerms(const QStringList& terms) const
+{
+	foreach(const QString& term, terms)
+	{
+		if (!matchesSearchTerm(term)) return false;
+	}
+
+	return true;
+}
+
 void Recipe::toHTML(QTextStream& stream, int recipe_nr) const
 {
 	//recipe header
@@ -13,7 +37,7 @@ void Recipe::toHTML(QTextStream& stream, int recipe_nr) const
 
 	//content
 	stream << "  <table>";
-	foreach(const RecipePart* part, parts)
+	foreach(const QSharedPointer<RecipePart>& part, parts)
 	{
 		part->toHTML(stream);
 	}
@@ -23,7 +47,6 @@ void Recipe::toHTML(QTextStream& stream, int recipe_nr) const
 
 RecipeSection::~RecipeSection()
 {
-
 }
 
 void RecipeSection::toHTML(QTextStream& stream) const
@@ -34,9 +57,13 @@ void RecipeSection::toHTML(QTextStream& stream) const
 	stream << "  </tr>\n";
 }
 
+bool RecipeSection::matchesSearchTerm(const QString& term) const
+{
+	return text.contains(term, Qt::CaseInsensitive);
+}
+
 RecipeIngredient::~RecipeIngredient()
 {
-
 }
 
 void RecipeIngredient::toHTML(QTextStream& stream) const
@@ -48,14 +75,17 @@ void RecipeIngredient::toHTML(QTextStream& stream) const
 	stream << "  </tr>\n";
 }
 
+bool RecipeIngredient::matchesSearchTerm(const QString& term) const
+{
+	return name.contains(term, Qt::CaseInsensitive) || text.contains(term, Qt::CaseInsensitive);
+}
+
 RecipePart::~RecipePart()
 {
-
 }
 
 RecipeText::~RecipeText()
 {
-
 }
 
 void RecipeText::toHTML(QTextStream& stream) const
@@ -65,4 +95,9 @@ void RecipeText::toHTML(QTextStream& stream) const
 	stream << "    <td valign='top'></td>\n";
 	stream << "    <td valign='top'>" << text  << "</td>\n";
 	stream << "  </tr>\n";
+}
+
+bool RecipeText::matchesSearchTerm(const QString& term) const
+{
+	return text.contains(term, Qt::CaseInsensitive);
 }
