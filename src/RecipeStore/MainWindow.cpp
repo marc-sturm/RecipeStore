@@ -29,12 +29,21 @@ MainWindow::MainWindow(QWidget* parent)
 	}
 }
 
+MainWindow::~MainWindow()
+{
+	if (!recipes_filename_.isEmpty())
+	{
+		recipes_.store(recipes_filename_);
+	}
+}
+
 void MainWindow::loadRecipeCollection(QString filename)
 {
 	//load
 	try
 	{
-		recipes_ = RecipeCollection::loadFromXml(filename);
+		recipes_ = RecipeCollection::load(filename);
+		recipes_.sort();
 		recipes_filename_ = filename;
 	}
 	catch (Exception& e)

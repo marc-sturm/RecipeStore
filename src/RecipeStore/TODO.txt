@@ -1,14 +1,14 @@
 Features:
-- Read-only online recipe source (from INI file)
-- Store recipes
 - Import from Chefkoch via the API
 - Recipe editor
 
 Neue Rezepte:
 - Burger
-- Kartoffelsuppe - Kartoffel, Karottem, Brühe, Sahne/Schmand, Curcuma, Kreuzkümmel
+- Nudelsuppe
+- Kartoffelsuppe - Kartoffel, Karotten, Brühe, Sahne/Schmand, Curcuma, Kreuzkümmel
 - Falafel
 - Pide
 - Ofengemüse
 - Gegrillte Aubergine in Tomatensauce
-- Gefüllte Zucchini (Reis und Hack)
+- Aubergine mit Hack/Reis in Tomatensoße
+- Sommerrollen

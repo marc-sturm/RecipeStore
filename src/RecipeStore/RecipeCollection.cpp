@@ -1,4 +1,5 @@
 #include "RecipeCollection.h"
+#include "Helper.h"
 #include "XmlHelper.h"
 #include "Exceptions.h"
 #include <QMessageBox>
@@ -8,7 +9,7 @@ RecipeCollection::RecipeCollection()
 {
 }
 
-RecipeCollection RecipeCollection::loadFromXml(QString filename)
+RecipeCollection RecipeCollection::load(QString filename)
 {
 	RecipeCollection output;
 
@@ -38,11 +39,40 @@ RecipeCollection RecipeCollection::loadFromXml(QString filename)
 		output << parseRecipe(recipe_nodes.at(i));
 	}
 
-
-	//sort recipes by name
-	std::sort(output.begin(), output.end(), [](const Recipe& a, const Recipe& b) { return a.name < b.name; });
-
 	return output;
+}
+
+void RecipeCollection::store(QString filename) const
+{
+	//store
+	auto file = Helper::openFileForWriting(filename);
+	QTextStream stream(file.data());
+	stream.setCodec("UTF-8");
+
+	stream << "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>\n";
+	stream << "<recipecollection>\n";
+	foreach(const Recipe& recipe, *this)
+	{
+		recipe.toXML(stream);
+	}
+	stream << "</recipecollection>\n";
+
+	file->close();
+
+	//check that it's well-formed
+	QString xml_errors = XmlHelper::isValidXml(filename, ":/Resources/receipes.xsd");
+	if (!xml_errors.isEmpty())
+	{
+		THROW(FileParseException, xml_errors);
+	}
+}
+
+void RecipeCollection::sort()
+{
+	std::sort(begin(), end(), [](const Recipe& a, const Recipe& b)
+	{
+		return a.name < b.name;
+	});
 }
 
 Recipe RecipeCollection::parseRecipe(const QDomNode& node)

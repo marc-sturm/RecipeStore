@@ -13,6 +13,7 @@ class MainWindow
 
 public:
 	MainWindow(QWidget* parent = 0);
+	~MainWindow();
 	void loadRecipeCollection(QString filename);
 	QString typesFile() const;
 	QStringList types() const;

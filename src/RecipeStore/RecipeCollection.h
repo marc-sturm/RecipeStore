@@ -12,8 +12,13 @@ class RecipeCollection
 public:
 	RecipeCollection();
 
-	//Load recipe list from XML file
-	static RecipeCollection loadFromXml(QString filename);
+	//Load recipes from XML file
+	static RecipeCollection load(QString filename);
+	//Store recipes to XML file
+	void store(QString filename) const;
+
+	//Sort by recipe name
+	void sort();
 
 protected:
 	static Recipe parseRecipe(const QDomNode& node);
