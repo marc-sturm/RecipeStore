@@ -4,5 +4,6 @@
         <file>Resources/receipes.xsd</file>
         <file>Resources/Export_HTML.png</file>
         <file>Resources/Print.png</file>
+        <file>Resources/ImportChefkock.png</file>
     </qresource>
 </RCC>

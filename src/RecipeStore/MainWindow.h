@@ -27,6 +27,7 @@ public slots:
 	void on_actionEditUnits_triggered(bool);
 	void on_actionExportHTML_triggered(bool);
 	void on_actionPrint_triggered(bool);
+	void on_actionImportChefkoch_triggered(bool);
 	void updateRecipeTree();
 	void applySearchTerms(QString search_text);
 	void editTextFile(QString filename, QString title, bool sort);

@@ -3,6 +3,7 @@
 #include "Exceptions.h"
 #include "GUIHelper.h"
 #include "Helper.h"
+#include "ChefkochImportDialog.h"
 #include <QMessageBox>
 #include <QFileDialog>
 #include <QDebug>
@@ -248,6 +249,21 @@ void MainWindow::on_actionPrint_triggered(bool)
 	if (dlg.exec() == QDialog::Accepted)
 	{
 		ui_.browser->print(&printer);
+	}
+}
+
+void MainWindow::on_actionImportChefkoch_triggered(bool)
+{
+	if (recipes_filename_.isEmpty()) THROW(ProgrammingException, "Cannot use Chefkoch import when no recipe collection is loaded!");
+
+	ChefkochImportDialog dlg(this, types());
+
+	if (dlg.exec()==QDialog::Accepted)
+	{
+		recipes_ << dlg.recipe();
+		recipes_.store(recipes_filename_);
+
+		updateRecipeTree();
 	}
 }
 

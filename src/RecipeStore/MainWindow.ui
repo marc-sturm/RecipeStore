@@ -131,6 +131,7 @@
     <bool>false</bool>
    </attribute>
    <addaction name="separator"/>
+   <addaction name="actionImportChefkoch"/>
    <addaction name="actionExportHTML"/>
    <addaction name="actionPrint"/>
   </widget>
@@ -190,6 +191,15 @@
    </property>
    <property name="shortcut">
     <string>Ctrl+P</string>
+   </property>
+  </action>
+  <action name="actionImportChefkoch">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/Resources/ImportChefkock.png</normaloff>:/Resources/ImportChefkock.png</iconset>
+   </property>
+   <property name="text">
+    <string>Import from Chefkoch.de</string>
    </property>
   </action>
  </widget>

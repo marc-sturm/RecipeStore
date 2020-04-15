@@ -137,10 +137,10 @@
 	</recipe>
 
 	<recipe name="Curry Mussaman-Art" amount="4 Personen" type="Hauptgang">
-		<ingr name="Rindfleisch" amount="1" unit="kg">in Würfel schneiden und in Öl anbraten bis es leicht braun ist.</ingr>
+		<ingr name="Rindergulasch" amount="1" unit="kg">in Öl anbraten bis es leicht braun ist.</ingr>
 		<ingr name="Madras Currypaste" amount="3" unit="EL">mit anbraten.</ingr>
-		<ingr name="Kokosmilch" amount="900" unit="ml">,</ingr>
-		<ingr name="Palmzucker" amount="3" unit="EL">,</ingr>
+		<ingr name="Kokosmilch" amount="800" unit="ml">,</ingr>
+		<ingr name="Zucker" amount="3" unit="EL">,</ingr>
 		<ingr name="Fischsoße" amount="3" unit="EL">,</ingr>
 		<ingr name="Limettensaft" amount="3" unit="EL">,</ingr>
 		<ingr name="Zimtstangen" amount="2">,</ingr>
@@ -149,7 +149,7 @@
 		<ingr name="Kadamomsamen" amount="6">,</ingr>
 		<ingr name="Muskat" amount="0.5" unit="TL">und</ingr>
 		<ingr name="Lorbeerblätter" amount="3">zugeben. Auf kleiner Flamme abgedeckt eine Stunde kochen lassen.</ingr>
-		<ingr name="Kartoffeln" amount="500" unit="g">schälen, kleinschneiden und dazugeben. Abgedeckt kochen lassen, bis das Fleisch weich ist, dann die Soße einkochen.</ingr>
+		<ingr name="Kartoffeln" amount="500" unit="g">schälen, kleinschneiden und dazugeben. Abgedeckt kochen lassen, bis das Fleisch weich ist, dann die Soße einkochen. Dazu gibt es Klebreis.</ingr>
 	</recipe>
 
 	<recipe name="Currywurst" amount="4 Personen" type="Hauptgang">
@@ -308,7 +308,8 @@
 		<ingr name="Rindergulasch" amount="500" unit="g">anbraten.</ingr>
 		<ingr name="Zwiebeln" amount="500" unit="g">schneiden, zusammen mit</ingr>
 		<ingr name="Tomatenmark" amount="1" unit="EL">zugeben und alles zusammen weiterbraten. Mit</ingr>
-		<ingr name="Rotwein" amount="150" unit="ml">ablöschen und zugedeckt 2-3 Stunden köcheln lassen (bei Bedarf etwas Wasser zugeben). Mit Salz und Pfeffer abschmecken.</ingr>
+		<ingr name="Rotwein" amount="150" unit="ml">und</ingr>
+		<ingr name="Rinderfond" amount="350" unit="ml"> ablöschen. Mit Lorbeer, Kümmel und Sternanis würzen. Zugedeckt 2-3 Stunden köcheln lassen, dann mit Salz und Pfeffer abschmecken.</ingr>
 	</recipe>
 
 	<recipe name="Gurkensalat süß-sauer-scharf" amount="3 Personen" type="Salat">
@@ -363,7 +364,9 @@
 		<ingr name="Mehl" amount="20" unit="g"> anschwitzen und mit der Brühe ablöschen. Hähnchen, Möhren,</ingr>
 		<ingr name="Champignons" amount="200" unit="g">,</ingr>
 		<ingr name="Erbsen" amount="200" unit="g"> und</ingr>
-		<ingr name="Schnittlauch" amount="1" unit="Bund"> dazugeben. Mit Salz, Pfeffer, Zucker, Zitronensaft und Wein abschmecken.</ingr>
+		<ingr name="Schnittlauch" amount="1" unit="Bund"> dazugeben. Mit Salz, Pfeffer, Zucker und Zitronensaft abschmecken.</ingr>
+		<ingr name="Eigelb" amount="1">mit</ingr>
+		<ingr name="Sahne" amount="200" unit="ml">mischen und vor dem Servieren dazugeben.</ingr>
 	</recipe>
 
 	<recipe name="Kaiserschmarren" amount="2 Personen" type="Hauptgang">
@@ -514,14 +517,14 @@
 		<ingr name="Maronen" amount="250" unit="g">kreuzförmig einschneiden und in eine Schüssel mit Wasser legen, bis der Ofen heiß ist. 20-25min im Ofen rösten, dann eine Minute in einer heißen Pfanne rösten für den typischen Geruch.</ingr>
 	</recipe>
 
-	<recipe name="Mehlknödel" amount="2-3 Personen" type="Hauptgang">
-		<ingr name="Kartoffeln" amount="4">in 1cm dicke Spalten schneiden und in einem großen Topf kochen.</ingr>
-		<ingr name="Speck" amount="50" unit="g">auslassen, mit</ingr>
-		<ingr name="Sahne" amount="200" unit="ml">ablöschen, dann mit Salz, Pfeffer und Muskat würzen und auf kleiner Flamme einkochen lassen.</ingr>
-		<ingr name="Speisequark" amount="250" unit="g">,</ingr>
-		<ingr name="Milch" amount="100" unit="ml">,</ingr>
-		<ingr name="Ei" amount="1">und</ingr>
-		<ingr name="Weizenmehl" amount="225" unit="g">mischen. Mit Salz, Pfeffer, Muskat und Maggi würzen und mit ins Wasser geben, wenn die Kartoffeln fast fertig sind.</ingr>
+	<recipe name="Mehlknödel" amount="4 Personen" type="Hauptgang">
+		<ingr name="Kartoffeln" amount="8">in 1cm dicke Spalten schneiden und in einem großen Topf kochen.</ingr>
+		<ingr name="Speck" amount="100" unit="g">auslassen, mit</ingr>
+		<ingr name="Sahne" amount="400" unit="ml">ablöschen, dann mit Salz, Pfeffer und Muskat würzen und auf kleiner Flamme einkochen lassen.</ingr>
+		<ingr name="Speisequark" amount="500" unit="g">,</ingr>
+		<ingr name="Milch" amount="200" unit="ml">,</ingr>
+		<ingr name="Ei" amount="2">und</ingr>
+		<ingr name="Weizenmehl" amount="450" unit="g">mischen. Mit Salz, Pfeffer, Muskat und Maggi würzen und mit ins Wasser geben, wenn die Kartoffeln fast fertig sind.</ingr>
 	</recipe>
 
 	<recipe name="Mexikanischer Reis" amount="6 Personen" type="Beilage">
@@ -589,8 +592,7 @@
 		<ingr name="Lauchzwiebeln" amount="2" unit="Bund">in kleine Ringe schneiden.</ingr>
 		<ingr name="Reisnudeln" amount="300" unit="g">kochen.</ingr>
 		<ingr name="Hähnchenbrust" amount="400" unit="g">klein schneiden, in einer großen Pfanne anbraten und beiseite stellen.</ingr>
-		<ingr name="Palmzucker" amount="1" unit="EL">mit etwas Wasser erhitzen und zergehen lassen.</ingr>
-		<ingr name="Tamarindenpaste" amount="1" unit="EL">,</ingr>
+		<ingr name="Zucker" amount="1" unit="EL">mit etwas Wasser erhitzen und zergehen lassen.</ingr>
 		<ingr name="dunkle Sojasoße" amount="3" unit="EL">,</ingr>
 		<ingr name="helle Sojasoße" amount="3" unit="EL">und</ingr>
 		<ingr name="Fischsoße" amount="2" unit="EL">dazugeben, kurz aufkochen. Reisnudeln Fleisch und Soße in eine große Pfanne geben und kurz anbraten. Die Lauchzwiebeln und</ingr>
@@ -704,7 +706,7 @@
 		<ingr name="geröstete Erdnüsse" amount="200" unit="g">abwaschen in einem Mixer zerkleinern.</ingr>
 		<ingr name="rote Currypaste" amount="1" unit="EL">in Öl anrösten.</ingr>
 		<ingr name="Kokosmilch" amount="400" unit="ml">,</ingr>
-		<ingr name="Palmzucker" amount="1" unit="EL">,</ingr>
+		<ingr name="Zucker" amount="1" unit="EL">,</ingr>
 		<ingr name="Fischsoße" amount="1" unit="EL">, den Saft von</ingr>
 		<ingr name="Limette" amount="1">und die Erdnüssen zugeben. Die Soße 10 bis 15 min köcheln lassen. In der Zeit die Fleischspeiße anbraten.</ingr>
 	</recipe>

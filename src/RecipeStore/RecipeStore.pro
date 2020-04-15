@@ -17,15 +17,18 @@ SOURCES += main.cpp\
         MainWindow.cpp \
     SearchPanel.cpp \
     RecipeCollection.cpp \
-    Recipe.cpp
+    Recipe.cpp \
+    ChefkochImportDialog.cpp
 
 HEADERS  += MainWindow.h \
     SearchPanel.h \
     RecipeCollection.h \
-    Recipe.h
+    Recipe.h \
+    ChefkochImportDialog.h
 
 FORMS    += MainWindow.ui \
-    SearchPanel.ui
+    SearchPanel.ui \
+    ChefkochImportDialog.ui
 
 #include cppCORE library
 INCLUDEPATH += $$PWD/../../src/cppCORE
