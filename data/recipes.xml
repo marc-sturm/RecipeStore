@@ -103,7 +103,6 @@
 	</recipe>
 
 	<recipe name="Butter Chicken" amount="4 Portionen" type="Hauptgang">
-	
 		<text>Den Ofen auf 200°C Ober-/Unterhitze vorheizen.</text>
 		<section>Fleisch</section>
 		<ingr name="Hähnchenbrust" amount="500" unit="g">in 3 cm große Stücke schneiden.</ingr>
@@ -115,8 +114,7 @@
 		<ingr name="Cayennepfeffer" amount="1" unit="TL"></ingr>
 		<ingr name="Joghurt" amount="150" unit="g">und</ingr>
 		<ingr name="Garam Masala" amount="1" unit="EL"> zu einer Mariande mischen und das Fleisch mindestens eine Stunde einlegen. Besser ist es, das Fleisch bereits am Vortag zu marinieren und über Nacht in den Kühlschrank zu stellen. Das Fleisch in einer Auflaufform für 30 Minuten garen</ingr>
-
-		<section>Soße</section>		
+		<section>Soße</section>
 		<ingr name="Zwiebel" amount="1"></ingr>
 		<ingr name="Ingwer" amount="3" unit="cm"> und </ingr>
 		<ingr name="Knoblauch" amount="1" unit="Zehe">hacken und andünsten.</ingr>
@@ -584,24 +582,6 @@
 		<ingr name="rotes Miso" amount="1" unit="EL">mir etwas Brühe vermischen, dann zur Suppe geben.</ingr>
 	</recipe>
 
-	<recipe name="Zucchini mit Hackfleisch und Feta gefüllt " amount="4 Personen" type="Hauptgang">
-		<text>Den Ofen auf 180°C vorheizen.</text>
-		<ingr name="Zucchini (25cm)" amount="4"> in zwei Hälften schneiden und aushölen.</ingr>
-		<ingr name="Zwiebel" amount="2">und</ingr>
-		<ingr name="Knoblauch" amount="2" unit="Zehen">hacken und in Öl andünsten.</ingr>
-		<ingr name="Petersilie" amount="0.5" unit="Bund">,</ingr>
-		<ingr name="Thymian" amount="4" unit="TL">,</ingr>
-		<ingr name="Feta" amount="200" unit="g"> und </ingr>
-		<ingr name="Rinderhack" amount="500" unit="g"> dazu geben und gut mischen. Die Zucchinis damit füllen.</ingr>
-		<ingr name="Zwiebel" amount="2">hacken und </ingr>
-		<ingr name="Lorbeerblätter" amount="2">zerbröseln und zusammen in Öl anschwitzen.</ingr>
-		<ingr name="gehackte Tomaten" amount="2" unit="Dosen">,</ingr>
-		<ingr name="Thymian" amount="2" unit="TL">und</ingr>
-		<ingr name="Rosmarin" amount="1" unit="TL">dazugeben und kurz köcheln lassen. Mit Salz und Chili abschmecken. Die Soße in eine ofenfeste Form geben und die Zucchinis darauf setzen. 45 Minuten bei Umluft garen.</ingr>
-		<ingr name="gehackte Tomaten" amount="2" unit="Dosen">,</ingr>
-		<text>Sollte die Masse noch zu feucht sein, kann man ruhig Semmelbrösel hinzugeben. Die Masse dann 20 Minuten ziehen lassen. Danach kleine Bratlinge daraus formen und sie im heißen Öl anbraten. Wer mag, paniert die Bratlinge vor dem Braten mit etwas Paniermehl.</text>
-	</recipe>
-
 	<recipe name="Mohnkuchen" amount="8 Personen" type="Kuchen">
 		<section>Teig</section>
 		<ingr name="Mehl" amount="430" unit="g">in eine Schüssel geben und eine Mulde formen.</ingr>
@@ -843,6 +823,17 @@
 		<ingr name="Käse" amount="100" unit="g">im Ofen überbacken.</ingr>
 	</recipe>
 
+	<recipe name="Spätzle mit Linsen" amount="4 Personen" type="Hauptgang">
+		<ingr name="Mehl" amount="2" unit="EL"> min Butter zu einer Mehlschwitze anschwitzen.</ingr>
+		<ingr name="Linsen mit Suppengrün" amount="500" unit="g">,</ingr>
+		<ingr name="Speckwürfel" amount="100" unit="g">,</ingr>
+		<ingr name="Tomatenmark" amount="2" unit="EL">,</ingr>
+		<ingr name="Balsamico" amount="1" unit="EL">und</ingr>
+		<ingr name="Bratensoße" amount="1" unit="Pkt.">zugeben, mit Salz/Pfeffer abschmecken und etwas köcheln lassen.</ingr>
+		<ingr name="Wiener/Debreziner" amount="4">dazugeben zum Erwärmen.</ingr>
+		<ingr name="Spätzle" amount="500" unit="g">garen.</ingr>
+	</recipe>
+
 	<recipe name="Sushi" amount="3 Personen" type="Hauptgang">
 		<section>Sushi-Reis</section>
 		<ingr name="Klebreis" amount="400" unit="g">in 400 ml Wasser aufkochen und bei geringer Hitze dasWasser aufsaugen lassen. In einem flachen Gefäß kaltwerden lassen.</ingr>
@@ -944,15 +935,49 @@
 		<text>Die Hackmasse in die Wirsingblätter wickeln und in einer großen Pfanne mit Deckel zusammen mit Tomatenmark und Brühe/Wein 45 min schmoren.</text>
 	</recipe>
 
-	<recipe name="Spätzle mit Linsen" amount="4 Personen" type="Hauptgang">
-		<ingr name="Mehl" amount="2" unit="EL"> min Butter zu einer Mehlschwitze anschwitzen.</ingr>
-		<ingr name="Linsen mit Suppengrün" amount="500" unit="g">,</ingr>
-		<ingr name="Speckwürfel" amount="100" unit="g">,</ingr>
-		<ingr name="Tomatenmark" amount="2" unit="EL">,</ingr>
-		<ingr name="Balsamico" amount="1" unit="EL">und</ingr>
-		<ingr name="Bratensoße" amount="1" unit="Pkt.">zugeben, mit Salz/Pfeffer abschmecken und etwas köcheln lassen.</ingr>
-		<ingr name="Wiener/Debreziner" amount="4">dazugeben zum Erwärmen.</ingr>
-		<ingr name="Spätzle" amount="500" unit="g">garen.</ingr>
+	<recipe name="Zucchini mit Hackfleisch und Feta gefüllt" amount="4 Personen" type="Hauptgang">
+		<text>Den Ofen auf 180°C vorheizen.</text>
+		<ingr name="Zucchini (25cm)" amount="4"> in zwei Hälften schneiden und aushölen.</ingr>
+		<ingr name="Zwiebel" amount="2">und</ingr>
+		<ingr name="Knoblauch" amount="2" unit="Zehen">hacken und in Öl andünsten.</ingr>
+		<ingr name="Petersilie" amount="0.5" unit="Bund">,</ingr>
+		<ingr name="Thymian" amount="4" unit="TL">,</ingr>
+		<ingr name="Feta" amount="200" unit="g"> und </ingr>
+		<ingr name="Rinderhack" amount="500" unit="g"> dazu geben und gut mischen. Die Zucchinis damit füllen.</ingr>
+		<ingr name="Zwiebel" amount="2">hacken und </ingr>
+		<ingr name="Lorbeerblätter" amount="2">zerbröseln und zusammen in Öl anschwitzen.</ingr>
+		<ingr name="gehackte Tomaten" amount="2" unit="Dosen">,</ingr>
+		<ingr name="Thymian" amount="2" unit="TL">und</ingr>
+		<ingr name="Rosmarin" amount="1" unit="TL">dazugeben und kurz köcheln lassen. Mit Salz und Chili abschmecken. Die Soße in eine ofenfeste Form geben und die Zucchinis darauf setzen. 45 Minuten bei Umluft garen.</ingr>
+		<ingr name="gehackte Tomaten" amount="2" unit="Dosen">,</ingr>
+		<text>Sollte die Masse noch zu feucht sein, kann man ruhig Semmelbrösel hinzugeben. Die Masse dann 20 Minuten ziehen lassen. Danach kleine Bratlinge daraus formen und sie im heißen Öl anbraten. Wer mag, paniert die Bratlinge vor dem Braten mit etwas Paniermehl.</text>
+	</recipe>
+
+	<recipe name="Rote Beete-Feta-Salat" amount="3 Personen" type="Salat">
+		<ingr name="Rote Beete, vorgegart" amount="500" unit="g">,</ingr>
+		<ingr name="Feta" amount="200" unit="g">und</ingr>
+		<ingr name="Frühlingszwiebeln" amount="2">kleinschneiden. Mit</ingr>
+		<ingr name="Salz" amount="1" unit="TL">,</ingr>
+		<ingr name="Zucker" amount="2" unit="TL">,</ingr>
+		<ingr name="Rapsöl" amount="2" unit="EL"> und</ingr>
+		<ingr name="Obstessig" amount="2" unit="EL">mischen und etwas marinieren lassen.</ingr>
+	</recipe>
+
+	<recipe name="Falafel-Dürüm" amount="4 Personen" type="Hauptgang">
+		<section>Soße</section>
+		<ingr name="Knoblauch" amount="1" unit="Zehe"> sehr fein hacken und mit</ingr>
+		<ingr name="Joghurt" amount="150" unit="g">,</ingr>
+		<ingr name="Mayonnaise" amount="150" unit="g">,</ingr>
+		<ingr name="Petersilie" amount="0.25" unit="Bund">,</ingr>
+		<ingr name="Zitronensaft" amount="1" unit="EL">,</ingr>
+		<ingr name="Zucker" amount="2" unit="TL">, Salz, etwas Korianderpulver, etwas Kreuzkümmel und etwas Chili mischen.</ingr>
+		<section>Rest</section>
+		<ingr name="Trockenmischung Falafel (DM)" amount="2" unit="Pkt.">nach Anleitung zubereiten.</ingr>
+		<ingr name="Dürüm" unit="Pkt.">mit den Falafel, der Soße, </ingr>
+		<ingr name="Tomaten" amount="2">und</ingr>
+		<ingr name="Eisbergsalat">füllen.</ingr>
 	</recipe>
 	
+
+
 </recipecollection>

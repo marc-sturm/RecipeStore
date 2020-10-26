@@ -5,11 +5,9 @@ Features:
   - When done, validate it and replace it in the recipe collection
 
 Neue Rezepte:
-- Rote Beete Salat mit Feta und Fühlingszwiebel
-- Falafel
-- Kartoffelsuppe - Kartoffel, Karotten, Brühe, Sahne/Schmand, Curcuma, Kreuzkümmel
 - Nudelsuppe
 - Burger
+- Kartoffelsuppe - Kartoffel, Karotten, Brühe, Sahne/Schmand, Curcuma, Kreuzkümmel
 - Ofengemüse
 - Sommerrollen
 
