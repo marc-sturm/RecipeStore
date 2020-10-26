@@ -50,6 +50,17 @@
 		<ingr name="Saurer Sahne" amount="100" unit="g">mischen und dazugeben. Mit Salz, Pfeffer und Petersilie würzen.</ingr>
 	</recipe>
 
+	<recipe name="Blumenkohl-Bratlinge" amount="4 Personen" type="Hauptgang">
+		<ingr name="Blumenkohl" amount="250" unit="g">grob raspeln und </ingr>
+		<ingr name="Zwiebel" amount="1"> hacken. Beides vermischen mit </ingr>
+		<ingr name="Haferflocken" amount="100" unit="g">,</ingr>
+		<ingr name="Ei" amount="1">,</ingr>
+		<ingr name="Sesam" amount="25" unit="g">,</ingr>
+		<ingr name="geriebener Emmentaler" amount="100" unit="g">und</ingr>
+		<ingr name="Quark" amount="50" unit="g">.</ingr>
+		<text>Sollte die Masse noch zu feucht sein, kann man ruhig Semmelbrösel hinzugeben. Die Masse dann 20 Minuten ziehen lassen. Danach kleine Bratlinge daraus formen und sie im heißen Öl anbraten. Wer mag, paniert die Bratlinge vor dem Braten mit etwas Paniermehl.</text>
+	</recipe>
+
 	<recipe name="Bohnen-Thunfisch-Salat" amount="3 Personen" type="Salat">
 		<ingr name="Kidneybohnen" amount="1" unit="Dose">abtropfen und waschen,</ingr>
 		<ingr name="Thunfisch (im Saft)" amount="1" unit="Dose">dazugeben,</ingr>
@@ -91,25 +102,32 @@
 		<ingr name="Baguette" amount="1"> in scheiben schneiden, im Backofen toasten und mit den Tomaten belegen.</ingr>
 	</recipe>
 
-	<recipe name="Butter Chicken" amount="4 Personen" type="Hauptgang">
-		<section>Einlegen</section>
-		<ingr name="Hühnerbrust" amount="1" unit="kg"> klein schneiden und über Nacht marinieren in folgender Marinade:</ingr>
-		<ingr name="Ingwer" amount="2" unit="cm"> und</ingr>
-		<ingr name="Knoblauch" amount="3" unit="Zehen"> reiben.</ingr>
-		<ingr name="Mandeln" amount="75" unit="g"> hacken.</ingr>
-		<ingr name="Tomaten" amount="400" unit="g"> klein schneiden.</ingr>
-		<ingr name="Joghurt" amount="150" unit="g"> dazu geben.</ingr>
-		<ingr name="Piment" amount="0.25" unit="TL">,</ingr>
-		<ingr name="Nelke" amount="0.25" unit="TL">,</ingr>
-		<ingr name="Zimt" amount="0.25" unit="TL">,</ingr>
-		<ingr name="Kadamom" amount="0.25" unit="TL">,</ingr>
-		<ingr name="Garam Masala" amount="1" unit="TL">und</ingr>
-		<ingr name="Salz" amount="1" unit="TL"> dazu geben.</ingr>
-		<section>Kochen</section>
-		<ingr name="Ghee" amount="5" unit="EL"> in einem Topf heiß machen.</ingr>
-		<ingr name="Zwiebeln" amount="2"> hacken und glasig dünsten. Das eingelegte Fleisch dazugeben.</ingr>
-		<ingr name="Koriander" amount="1" unit="Bund"> hacken und dazu geben.</ingr>
-		<ingr name="Creme Fraiche" amount="4" unit="EL"> dazugeben und eine Stunde schmoren.</ingr>
+	<recipe name="Butter Chicken" amount="4 Portionen" type="Hauptgang">
+	
+		<text>Den Ofen auf 200°C Ober-/Unterhitze vorheizen.</text>
+		<section>Fleisch</section>
+		<ingr name="Hähnchenbrust" amount="500" unit="g">in 3 cm große Stücke schneiden.</ingr>
+		<ingr name="Ingwer" amount="3" unit="cm"> und </ingr>
+		<ingr name="Knoblauch" amount="1" unit="Zehe">hacken. Mit</ingr>
+		<ingr name="Paprikapulver" amount="1" unit="TL">,</ingr>
+		<ingr name="Zitronensaft" amount="1" unit="EL">,</ingr>
+		<ingr name="Salz" amount="1" unit="TL">,</ingr>
+		<ingr name="Cayennepfeffer" amount="1" unit="TL"></ingr>
+		<ingr name="Joghurt" amount="150" unit="g">und</ingr>
+		<ingr name="Garam Masala" amount="1" unit="EL"> zu einer Mariande mischen und das Fleisch mindestens eine Stunde einlegen. Besser ist es, das Fleisch bereits am Vortag zu marinieren und über Nacht in den Kühlschrank zu stellen. Das Fleisch in einer Auflaufform für 30 Minuten garen</ingr>
+
+		<section>Soße</section>		
+		<ingr name="Zwiebel" amount="1"></ingr>
+		<ingr name="Ingwer" amount="3" unit="cm"> und </ingr>
+		<ingr name="Knoblauch" amount="1" unit="Zehe">hacken und andünsten.</ingr>
+		<ingr name="passierte Tomaten" amount="500" unit="g">,</ingr>
+		<ingr name="Salz" amount="1" unit="TL">und </ingr>
+		<ingr name="Cayennepfeffer" amount="1" unit="TL">dazugeben und 20 Minuten köchen lassen.</ingr>
+		<ingr name="Butter" amount="4" unit="EL">,</ingr>
+		<ingr name="Zimt" amount="1" unit="TL">,</ingr>
+		<ingr name="Honig" amount="1" unit="EL"> und </ingr>
+		<ingr name="Sahne" amount="150" unit="ml"> zugeben und nochmal kurz köchen lassen.</ingr>
+		<ingr name="Koriandergrün" amount="0.5" unit="Bund">hacken und über Fleisch und Söße steuen.</ingr>
 	</recipe>
 
 	<recipe name="Chili con Carne" amount="5 Personen" type="Hauptgang">
@@ -338,7 +356,7 @@
 		<section>Tzaziki</section>
 		<ingr name="Salatgurke" amount="0.5">reiben, salzen und beiseite stellen.</ingr>
 		<ingr name="Knoblauch" amount="2" unit="Zehen">pressen, zu</ingr>
-		<ingr name="griechischem Joghurt" amount="250" unit="g">(oder 125g Joghurt und 125g Quark) geben. Den Gurkensaft abgießen, die Gurke dazugeben und mit Salz und Pfeffer abschmecken. Gut durchziehen lassen.</ingr>
+		<ingr name="griechischem Joghurt" amount="250" unit="g">(oder 100g Creme fraich und 150g Quark) geben. Den Gurkensaft abgießen, die Gurke dazugeben und mit Salz und Pfeffer abschmecken. Gut durchziehen lassen.</ingr>
 	</recipe>
 
 	<recipe name="Hähnchen süß-sauer" amount="3 Personen" type="Hauptgang">
@@ -527,6 +545,18 @@
 		<ingr name="Weizenmehl" amount="450" unit="g">mischen. Mit Salz, Pfeffer, Muskat und Maggi würzen und mit ins Wasser geben, wenn die Kartoffeln fast fertig sind.</ingr>
 	</recipe>
 
+	<recipe name="Mexikaner" amount="1 Flasche" type="Cocktail">
+		<ingr name="Vodka" amount="400" unit="ml">,</ingr>
+		<ingr name="Tomatensaft" amount="1" unit="Liter">,</ingr>
+		<ingr name="Sangrita Pikant" amount="0.25" unit="Liter">,</ingr>
+		<ingr name="Pfeffer" amount="1" unit="EL">,</ingr>
+		<ingr name="Salz" amount="1" unit="TL">,</ingr>
+		<ingr name="Zucker" amount="1" unit="TL">,</ingr>
+		<ingr name="Zitronensaft" amount="3" unit="EL"> mischen. Mit</ingr>
+		<ingr name="Tabasco"> und </ingr>
+		<ingr name="Cayennepfeffer">abschmecken.</ingr>
+	</recipe>
+
 	<recipe name="Mexikanischer Reis" amount="6 Personen" type="Beilage">
 		<ingr name="Zwiebel" amount="1">,</ingr>
 		<ingr name="Knoblauch" amount="1" unit="Zehe">und</ingr>
@@ -552,6 +582,24 @@
 		<ingr name="Eier" amount="2">verquirlen und langsam dazugeben. Hitze runterdrehen, bis es nicht mehr kocht.</ingr>
 		<ingr name="weißes Miso" amount="1" unit="EL">und</ingr>
 		<ingr name="rotes Miso" amount="1" unit="EL">mir etwas Brühe vermischen, dann zur Suppe geben.</ingr>
+	</recipe>
+
+	<recipe name="Zucchini mit Hackfleisch und Feta gefüllt " amount="4 Personen" type="Hauptgang">
+		<text>Den Ofen auf 180°C vorheizen.</text>
+		<ingr name="Zucchini (25cm)" amount="4"> in zwei Hälften schneiden und aushölen.</ingr>
+		<ingr name="Zwiebel" amount="2">und</ingr>
+		<ingr name="Knoblauch" amount="2" unit="Zehen">hacken und in Öl andünsten.</ingr>
+		<ingr name="Petersilie" amount="0.5" unit="Bund">,</ingr>
+		<ingr name="Thymian" amount="4" unit="TL">,</ingr>
+		<ingr name="Feta" amount="200" unit="g"> und </ingr>
+		<ingr name="Rinderhack" amount="500" unit="g"> dazu geben und gut mischen. Die Zucchinis damit füllen.</ingr>
+		<ingr name="Zwiebel" amount="2">hacken und </ingr>
+		<ingr name="Lorbeerblätter" amount="2">zerbröseln und zusammen in Öl anschwitzen.</ingr>
+		<ingr name="gehackte Tomaten" amount="2" unit="Dosen">,</ingr>
+		<ingr name="Thymian" amount="2" unit="TL">und</ingr>
+		<ingr name="Rosmarin" amount="1" unit="TL">dazugeben und kurz köcheln lassen. Mit Salz und Chili abschmecken. Die Soße in eine ofenfeste Form geben und die Zucchinis darauf setzen. 45 Minuten bei Umluft garen.</ingr>
+		<ingr name="gehackte Tomaten" amount="2" unit="Dosen">,</ingr>
+		<text>Sollte die Masse noch zu feucht sein, kann man ruhig Semmelbrösel hinzugeben. Die Masse dann 20 Minuten ziehen lassen. Danach kleine Bratlinge daraus formen und sie im heißen Öl anbraten. Wer mag, paniert die Bratlinge vor dem Braten mit etwas Paniermehl.</text>
 	</recipe>
 
 	<recipe name="Mohnkuchen" amount="8 Personen" type="Kuchen">
@@ -802,12 +850,12 @@
 		<ingr name="Salz" amount="2" unit="TL">und</ingr>
 		<ingr name="Zucker" amount="4" unit="TL">erhitzen, bis sich Salz und Zucker aufgelöst haben.Den Essig über den Reis geben.</ingr>
 		<section>Zubereitung</section>
-		<ingr name="Noriblätter" amount="8">auf die Matte legen. Eine passende Menge Reis aufeinem Teil des Noriblattes ausgebreiten und den innereAbschnitt mit Zutaten belegt. Mit der Matte eingerollen.Das Ende des Noriblattes mit etwas Essig bestreichenund damit die Rolle zusammenkleben. Die Rolle inmehrere Teile schneiden und mit</ingr>
+		<ingr name="Noriblätter" amount="8">auf die Matte legen. Eine passende Menge Reis auf einem Teil des Noriblattes ausgebreiten und den innereAbschnitt mit Zutaten belegt. Mit der Matte eingerollen.Das Ende des Noriblattes mit etwas Essig bestreichenund damit die Rolle zusammenkleben. Die Rolle inmehrere Teile schneiden und mit</ingr>
 		<ingr name="Wasabi">,</ingr>
 		<ingr name="eingelegtem Ingwer">und</ingr>
 		<ingr name="heller Sojasoße">servieren.</ingr>
 		<section>Mögliche Zutaten</section>
-		<text>Thunfisch, Lachs, Krabben, Gurke, Karotte, Kresse,Sesam, Avocado</text>
+		<text>Thunfisch, Lachs, Aal (Unagi), Gurke, Kresse,Sesam, Avocado</text>
 	</recipe>
 
 	<recipe name="Thunfisch-Lasagne" amount="3-4 Personen" type="Hauptgang">
@@ -834,7 +882,7 @@
 	<recipe name="Tomaten-Käse-Fondue" amount="4 Personen" type="Hauptgang">
 		<ingr name="Zwiebel" amount="1">und</ingr>
 		<ingr name="Knoblauch" amount="1" unit="Zehe">fein schneiden und in etwas Öl glasig dünsten.</ingr>
-		<ingr name="Pizzatomaten" amount="2" unit="Dosen">dazugeben und unter gelegentlichem Rühren ca. 1 Stunde einkochen. Mit Oregano und Thymian würzen.</ingr>
+		<ingr name="gehackte Tomaten" amount="2" unit="Dosen">dazugeben und unter gelegentlichem Rühren ca. 1 Stunde einkochen. Mit Oregano und Thymian würzen.</ingr>
 		<ingr name="trockener Weißwein" amount="250" unit="ml">zugeben, aufkochen und langsam</ingr>
 		<ingr name="Gruyere" amount="250" unit="g">,</ingr>
 		<ingr name="Appenzeller" amount="250" unit="g">und</ingr>
@@ -896,4 +944,15 @@
 		<text>Die Hackmasse in die Wirsingblätter wickeln und in einer großen Pfanne mit Deckel zusammen mit Tomatenmark und Brühe/Wein 45 min schmoren.</text>
 	</recipe>
 
+	<recipe name="Spätzle mit Linsen" amount="4 Personen" type="Hauptgang">
+		<ingr name="Mehl" amount="2" unit="EL"> min Butter zu einer Mehlschwitze anschwitzen.</ingr>
+		<ingr name="Linsen mit Suppengrün" amount="500" unit="g">,</ingr>
+		<ingr name="Speckwürfel" amount="100" unit="g">,</ingr>
+		<ingr name="Tomatenmark" amount="2" unit="EL">,</ingr>
+		<ingr name="Balsamico" amount="1" unit="EL">und</ingr>
+		<ingr name="Bratensoße" amount="1" unit="Pkt.">zugeben, mit Salz/Pfeffer abschmecken und etwas köcheln lassen.</ingr>
+		<ingr name="Wiener/Debreziner" amount="4">dazugeben zum Erwärmen.</ingr>
+		<ingr name="Spätzle" amount="500" unit="g">garen.</ingr>
+	</recipe>
+	
 </recipecollection>

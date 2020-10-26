@@ -22,12 +22,8 @@ MainWindow::MainWindow(QWidget* parent)
 	connect(ui_.recipe_selector, SIGNAL(currentItemChanged(QTreeWidgetItem*,QTreeWidgetItem*)), this, SLOT(selectedRecipeChanged(QTreeWidgetItem*,QTreeWidgetItem*)));
 	connect(ui_.search_panel, SIGNAL(searchTextChanged(QString)), this, SLOT(applySearchTerms(QString)));
 
-	//load last collection if set
-	QString last_collection = Settings::string("last_collection");
-	if (last_collection!="")
-	{
-		loadRecipeCollection(last_collection);
-	}
+	//load recipes from data folder
+	loadRecipeCollection(Settings::string("data_dir") + QDir::separator() + "recipes.xml");
 }
 
 MainWindow::~MainWindow()
@@ -49,82 +45,13 @@ void MainWindow::loadRecipeCollection(QString filename)
 	}
 	catch (Exception& e)
 	{
+		recipes_.clear();
 		QMessageBox::critical(this, "Error loading recipe collection", "File parse error in XML file:\n" + e.message() );
 		return;
 	}
 
 	//update GUI
 	updateRecipeTree();
-
-	//set last collection for automatic re-load
-	Settings::setString("last_collection", filename);
-
-	//check that all types are valid
-	QStringList invalid_types;
-	QStringList valid_types = types();
-	foreach(const Recipe& recipe, recipes_)
-	{
-		QString type = recipe.type;
-		if (!valid_types.contains(type))
-		{
-			qDebug() << recipe.name << recipe.type;
-			invalid_types << type;
-		}
-	}
-	invalid_types.removeDuplicates();
-	if (!invalid_types.isEmpty())
-	{
-		QMessageBox::warning(this, "Invalid types", "Invalid recipe types found:\n" + invalid_types.join("\n"));
-	}
-
-	//check that add units are valid
-	QStringList invalid_units;
-	QStringList valid_units = units();
-	foreach(const Recipe& recipe, recipes_)
-	{
-		foreach(const QSharedPointer<RecipePart>& part, recipe.parts)
-		{
-			const RecipeIngredient* ingr = dynamic_cast<const RecipeIngredient*>(part.data());
-			if (ingr!=nullptr)
-			{
-				QString unit = ingr->unit;
-				if (!valid_units.contains(unit))
-				{
-					invalid_units << unit;
-				}
-			}
-		}
-	}
-	invalid_units.removeDuplicates();
-	invalid_units.removeAll("");
-	if (!invalid_units.isEmpty())
-	{
-		QMessageBox::warning(this, "Invalid units", "Invalid igredient units found:\n" + invalid_types.join("\n"));
-	}
-}
-
-QString MainWindow::typesFile() const
-{
-	if (recipes_filename_.isEmpty()) THROW(ProgrammingException, "Cannot use typesFile() function when no recipe collection is loaded!");
-
-	return QFileInfo(recipes_filename_).absolutePath() + QDir::separator() + "types.txt";
-}
-
-QStringList MainWindow::types() const
-{
-	return Helper::loadTextFile(typesFile(), true, '#', true);
-}
-
-QString MainWindow::unitsFile() const
-{
-	if (recipes_filename_.isEmpty()) THROW(ProgrammingException, "Cannot use unitsFile() function when no recipe collection is loaded!");
-
-	return QFileInfo(recipes_filename_).absolutePath() + QDir::separator() + "units.txt";
-}
-
-QStringList MainWindow::units() const
-{
-	return Helper::loadTextFile(unitsFile(), true, '#', true);
 }
 
 void MainWindow::on_actionAbout_triggered(bool)
@@ -134,15 +61,7 @@ void MainWindow::on_actionAbout_triggered(bool)
 
 void MainWindow::on_actionOpen_triggered(bool)
 {
-	//determine dir
-	QString dir = QApplication::applicationDirPath();
-	QString last_collection = Settings::string("last_collection");
-	if (QFile::exists(last_collection))
-	{
-		dir = QFileInfo(last_collection).absolutePath();
-	}
-
-	QString file = QFileDialog::getOpenFileName(this, "Open recipe collection", dir, "Recipes (*.xml);;All files (*.*)");
+	QString file = QFileDialog::getOpenFileName(this, "Open recipe collection", QApplication::applicationDirPath(), "Recipes (*.xml);;All files (*.*)");
 	if (file=="") return;
 
 	loadRecipeCollection(file);
@@ -150,16 +69,12 @@ void MainWindow::on_actionOpen_triggered(bool)
 
 void MainWindow::on_actionEditTypes_triggered(bool)
 {
-	if (recipes_filename_.isEmpty()) return;
-
-	editTextFile(typesFile(), "Edit recipe types", false);
+	editTextFile(Settings::string("data_dir") + QDir::separator() + "types.txt", "Edit recipe types", false);
 }
 
 void MainWindow::on_actionEditUnits_triggered(bool)
 {
-	if (recipes_filename_.isEmpty()) return;
-
-	editTextFile(unitsFile(), "Edit units", true);
+	editTextFile(Settings::string("data_dir") + QDir::separator() + "units.txt", "Edit units", true);
 }
 
 void MainWindow::on_actionExportHTML_triggered(bool)
@@ -207,7 +122,7 @@ void MainWindow::on_actionExportHTML_triggered(bool)
 
 	//add body
 	stream << "  <body style='margin:5;'>\n";
-	foreach(QString type, types())
+	foreach(QString type, RecipeCollection::validTypes())
 	{
 		//add type
 		stream << "	<font style='font-size: 1.2em; font-weight: bold;'>- " << type << " -</font>\n";
@@ -254,9 +169,7 @@ void MainWindow::on_actionPrint_triggered(bool)
 
 void MainWindow::on_actionImportChefkoch_triggered(bool)
 {
-	if (recipes_filename_.isEmpty()) THROW(ProgrammingException, "Cannot use Chefkoch import when no recipe collection is loaded!");
-
-	ChefkochImportDialog dlg(this, types());
+	ChefkochImportDialog dlg(this);
 
 	if (dlg.exec()==QDialog::Accepted)
 	{
@@ -272,7 +185,7 @@ void MainWindow::updateRecipeTree()
 	ui_.recipe_selector->clear();
 
 	//add type sections
-	foreach(QString type, types())
+	foreach(QString type, RecipeCollection::validTypes())
 	{
 		QTreeWidgetItem* section_item = new QTreeWidgetItem();
 		section_item->setText(0, type);

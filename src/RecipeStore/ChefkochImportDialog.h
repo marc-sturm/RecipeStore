@@ -11,7 +11,7 @@ class ChefkochImportDialog
 	Q_OBJECT
 
 public:
-	ChefkochImportDialog(QWidget *parent, QStringList types);
+	ChefkochImportDialog(QWidget *parent);
 	const Recipe& recipe() const;
 
 private slots:

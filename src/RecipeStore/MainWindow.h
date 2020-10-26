@@ -15,10 +15,6 @@ public:
 	MainWindow(QWidget* parent = 0);
 	~MainWindow();
 	void loadRecipeCollection(QString filename);
-	QString typesFile() const;
-	QStringList types() const;
-	QString unitsFile() const;
-	QStringList units() const;
 
 public slots:
 	void on_actionAbout_triggered(bool);

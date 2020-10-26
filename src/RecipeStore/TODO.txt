@@ -1,20 +1,17 @@
 Features:
-- Import from Chefkoch
-    - Schupfnudel - Bohnen - Pfanne (miaka-li) - halb so viel Creme fraiche
-    - Danielas Mexikaner (Batgirlkiel)
-    - Tsaziki (Gearly)
-    - Indisches Butter Chicken aus dem Ofen (VanessaV)
-    - Blumenkohl - Haferflocken - Bratlinge (karatecat)
-    - Pide mit Spinat, Käse und Ei (r3sa)
 - Recipe editor
+  - Use normal text editor
+  - Open recipe text
+  - When done, validate it and replace it in the recipe collection
 
 Neue Rezepte:
-- Burger
-- Falafel
-- Nudelsuppe
-- Kartoffelsuppe - Kartoffel, Karotten, Brühe, Sahne/Schmand, Curcuma, Kreuzkümmel
-- Ofengemüse
-- Gegrillte Aubergine in Tomatensauce
-- Aubergine mit Hack/Reis in Tomatensoße
-- Sommerrollen
 - Rote Beete Salat mit Feta und Fühlingszwiebel
+- Falafel
+- Kartoffelsuppe - Kartoffel, Karotten, Brühe, Sahne/Schmand, Curcuma, Kreuzkümmel
+- Nudelsuppe
+- Burger
+- Ofengemüse
+- Sommerrollen
+
+Import aus Chefkoch
+? Pide mit Spinat, Käse und Ei (r3sa)

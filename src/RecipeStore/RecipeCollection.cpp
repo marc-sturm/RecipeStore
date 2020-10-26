@@ -2,6 +2,7 @@
 #include "Helper.h"
 #include "XmlHelper.h"
 #include "Exceptions.h"
+#include <QDir>
 #include <QMessageBox>
 
 RecipeCollection::RecipeCollection()
@@ -9,15 +10,14 @@ RecipeCollection::RecipeCollection()
 {
 }
 
-RecipeCollection RecipeCollection::load(QString filename)
+RecipeCollection RecipeCollection::load(QString filename, bool validate_file)
 {
 	RecipeCollection output;
 
 	//check XML is valid
-	QString xml_errors = XmlHelper::isValidXml(filename, ":/Resources/receipes.xsd");
-	if (!xml_errors.isEmpty())
+	if (validate_file)
 	{
-		THROW(FileParseException, xml_errors);
+		validate(filename);
 	}
 
 	//load XML
@@ -29,7 +29,6 @@ RecipeCollection RecipeCollection::load(QString filename)
 	QDomDocument dom;
 	dom.setContent(&file);
 	file.close();
-
 
 	//parse XML
 	QDomElement root = dom.documentElement();
@@ -58,13 +57,6 @@ void RecipeCollection::store(QString filename) const
 	stream << "</recipecollection>\n";
 
 	file->close();
-
-	//check that it's well-formed
-	QString xml_errors = XmlHelper::isValidXml(filename, ":/Resources/receipes.xsd");
-	if (!xml_errors.isEmpty())
-	{
-		THROW(FileParseException, xml_errors);
-	}
 }
 
 void RecipeCollection::sort()
@@ -73,6 +65,60 @@ void RecipeCollection::sort()
 	{
 		return a.name < b.name;
 	});
+}
+
+void RecipeCollection::validate(QString filename)
+{
+	//check XML schema is ok
+	QString xml_errors = XmlHelper::isValidXml(filename, ":/Resources/receipes.xsd");
+	if (!xml_errors.isEmpty())
+	{
+		THROW(FileParseException, xml_errors);
+	}
+
+	//load
+	RecipeCollection recipes;
+	recipes.load(filename, false);
+
+	//check recipe types
+	QStringList invalid_types;
+	QStringList valid_types = validTypes();
+	foreach(const Recipe& recipe, recipes)
+	{
+		if (!valid_types.contains(recipe.type))
+		{
+			invalid_types << recipe.type;
+		}
+	}
+	invalid_types.removeDuplicates();
+	if (!invalid_types.isEmpty())
+	{
+		THROW(FileParseException, "Invalid recipe types found:\n" + invalid_types.join("\n"));
+	}
+
+	//check ingredient units
+	QStringList invalid_units;
+	QStringList valid_units = validUnits();
+	foreach(const Recipe& recipe, recipes)
+	{
+		foreach(const QSharedPointer<RecipePart>& part, recipe.parts)
+		{
+			const RecipeIngredient* ingr = dynamic_cast<const RecipeIngredient*>(part.data());
+			if (ingr!=nullptr)
+			{
+				if (!valid_units.contains(ingr->unit))
+				{
+					invalid_units << ingr->unit;
+				}
+			}
+		}
+	}
+	invalid_units.removeDuplicates();
+	invalid_units.removeAll("");
+	if (!invalid_units.isEmpty())
+	{
+		THROW(FileParseException, "Invalid igredient units found:\n" + invalid_units.join("\n"));
+	}
 }
 
 Recipe RecipeCollection::parseRecipe(const QDomNode& node)
@@ -151,4 +197,14 @@ QSharedPointer<RecipeText> RecipeCollection::parseText(const QDomNode& node)
 	output->text = node.toElement().text();
 
 	return output;
+}
+
+QStringList RecipeCollection::validTypes()
+{
+	return Helper::loadTextFile(Settings::string("data_dir") + QDir::separator() + "types.txt", true, '#', true);
+}
+
+QStringList RecipeCollection::validUnits()
+{
+	return Helper::loadTextFile(Settings::string("data_dir") + QDir::separator() + "units.txt", true, '#', true);
 }
