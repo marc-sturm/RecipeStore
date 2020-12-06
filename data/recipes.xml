@@ -949,8 +949,6 @@
 		<ingr name="gehackte Tomaten" amount="2" unit="Dosen">,</ingr>
 		<ingr name="Thymian" amount="2" unit="TL">und</ingr>
 		<ingr name="Rosmarin" amount="1" unit="TL">dazugeben und kurz köcheln lassen. Mit Salz und Chili abschmecken. Die Soße in eine ofenfeste Form geben und die Zucchinis darauf setzen. 45 Minuten bei Umluft garen.</ingr>
-		<ingr name="gehackte Tomaten" amount="2" unit="Dosen">,</ingr>
-		<text>Sollte die Masse noch zu feucht sein, kann man ruhig Semmelbrösel hinzugeben. Die Masse dann 20 Minuten ziehen lassen. Danach kleine Bratlinge daraus formen und sie im heißen Öl anbraten. Wer mag, paniert die Bratlinge vor dem Braten mit etwas Paniermehl.</text>
 	</recipe>
 
 	<recipe name="Rote Beete-Feta-Salat" amount="3 Personen" type="Salat">
