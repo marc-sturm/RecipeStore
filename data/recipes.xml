@@ -976,6 +976,12 @@
 		<ingr name="Eisbergsalat">füllen.</ingr>
 	</recipe>
 	
-
+	<recipe name="Pfannkuchen" amount="3 Personen" type="Hauptgang">
+		<ingr name="Eier" amount="2">,</ingr>
+		<ingr name="Milch" amount="200" unit="ml">,</ingr>
+		<ingr name="Mehl" amount="200" unit="g"> und </ingr>
+		<ingr name="Mineralwasser" amount="60" unit="ml"> mit einer Prise Zucker und Salz zu einem glatten Teig verrühren. In einer beschichteten Pfanne in Öl ausbacken. Optional: Schnittlauch, Apfel, Zucker und Zimt.</ingr>
+	</recipe>
+	
 
 </recipecollection>
