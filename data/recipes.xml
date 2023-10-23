@@ -146,10 +146,11 @@
 		<ingr name="Chorizo" amount="150" unit="g">in mundgerechte Stücke schneiden.Die Zwiebeln in Olivenöl anschwitzen, die Tomaten und Chorizo dazugeben mit anbraten. Die Kartoffeln und etwas Wasser zugeben. Mit Salz, Pfeffer, Oregano und Rosmarin würzen. Abgedeckt ca. 30 min köcheln lassen, bis die Kartoffeln gar sind.</ingr>
 	</recipe>
 
-	<recipe name="Crepes" amount="12 Stück" type="Dessert">
-		<ingr name="Mehl" amount="500" unit="g">,</ingr>
-		<ingr name="Eier" amount="3">,</ingr>
-		<ingr name="Milch" amount="750" unit="ml">und eine Prise Salz mischen und eine Stunde ruhen lassen.</ingr>
+	<recipe name="Crepes" amount="8 Stück" type="Dessert">
+		<ingr name="Mehl" amount="350" unit="g">,</ingr>
+		<ingr name="Eier" amount="2">,</ingr>
+		<ingr name="Milch" amount="300" unit="ml">und eine Prise Salz zu einer homogenen Masse durchrühren. </ingr>
+		<ingr name="Milch" amount="200" unit="ml">dazugeben, nochmal durchrühren und eine Stunde ruhen lassen.</ingr>
 	</recipe>
 
 	<recipe name="Curry Mussaman-Art" amount="4 Personen" type="Hauptgang">
@@ -235,13 +236,13 @@
 		<ingr name="Fisch" amount="200" unit="g">würfeln und in der Suppe 10 min gar ziehen lassen.</ingr>
 	</recipe>
 
-	<recipe name="Flammkuchen" amount="4 Flammkuchen" type="Hauptgang">
-		<ingr name="Weizenmehl" amount="300" unit="g">,</ingr>
-		<ingr name="Wasser (warm)" amount="175" unit="ml">,</ingr>
-		<ingr name="Hefe" amount="20" unit="g">,</ingr>
+	<recipe name="Flammkuchen" amount="6-8 Flammkuchen" type="Hauptgang">
+		<ingr name="Weizenmehl" amount="600" unit="g">,</ingr>
+		<ingr name="Wasser (warm)" amount="350" unit="ml">,</ingr>
+		<ingr name="Hefe" amount="40" unit="g">,</ingr>
 		<ingr name="Zucker" amount="2" unit="TL">und</ingr>
-		<ingr name="Salz" amount="1" unit="TL">verkneten, bis der Teig nicht mehr an der Schüssel haftet. Mindestens 1 Std. abgedeckt gehen lassen und in vier Teile aufteilen.</ingr>
-		<ingr name="Creme Fraiche" amount="500" unit="g">gewürzt mit Salz, reichlich Pfeffer und Muskat vermischt mit</ingr>
+		<ingr name="Salz" amount="2" unit="TL">verkneten, bis der Teig nicht mehr an der Schüssel haftet. Mindestens 1 Std. abgedeckt gehen lassen und in vier Teile aufteilen.</ingr>
+		<ingr name="Creme Fraiche" amount="600" unit="g">gewürzt mit Salz, reichlich Pfeffer und Muskat vermischt mit</ingr>
 		<ingr name="Sahne" amount="100" unit="ml">,</ingr>
 		<ingr name="Geräucherter Schinken" amount="100" unit="g">in Stücke geschnitten und</ingr>
 		<ingr name="Zwiebeln" amount="2">klein geschnitten belegen und so heiß wie möglich, am besten auf einem Stein, backen.</ingr>
@@ -629,17 +630,17 @@
 		<ingr name="Koriander">bestreuen.</ingr>
 	</recipe>
 
-	<recipe name="Pizza" amount="3-4 Pizzas" type="Hauptgang">
-		<section>Teig</section>
-		<ingr name="Weizenmehl" amount="500" unit="g">,</ingr>
-		<ingr name="Wasser (warm)" amount="300" unit="ml">,</ingr>
-		<ingr name="Hefe" amount="4" unit="g">und</ingr>
-		<ingr name="Salz" amount="10" unit="g">10 min verkneten und dann 30 min abdedeckt gehen lassen. Den Ofen mit Ober- und Unterhitze vorheizen so heiß es geht. Den Teig in 3 oder 4 Teile teilen und dünn ausrollen.</ingr>
+	<recipe name="Pizza" amount="8 Pizzas" type="Hauptgang">
+		<section>Teig (am Tag vorher)</section>
+		<ingr name="Weizenmehl" amount="600" unit="g">,</ingr>
+		<ingr name="Wasser" amount="625" unit="ml">,</ingr>
+		<ingr name="Hefe" amount="10" unit="g">und</ingr>
+		<ingr name="Salz" amount="40" unit="g">verrühren und 20 min abdedeckt ruhen lassen.</ingr>
+		<ingr name="Weizenmehl" amount="400" unit="g">unterrühren, 5 min kneten und dann 1 bis 24 Stunden abdedeckt ruhen lassen.</ingr>
 		<section>Soße</section>
-		<ingr name="Tomaten" amount="1" unit="Dose">pürieren und mit Knoblauch, Oregano, Petersilie, frischem Basilikum, Salz und Pfeffer abschmecken.</ingr>
+		<ingr name="Tomaten" amount="2" unit="Dose">mit Knoblauch, Oregano, Petersilie und frischem Basilikum pürieren. Mit Salz und Pfeffer abschmecken.</ingr>
 		<section>Belag</section>
-		<ingr name="Gouda" amount="200" unit="g"> und</ingr>
-		<ingr name="Mozarella" amount="1"> reiben. Den Teig mit etwas Olivenöl einpinseln, mit Käse bestreuen und belegen, z.B. mit Salami, Thunfisch, Zwiebeln, Kochschinken, gekochtes Ei, Rucola, Paramaschinken, Parmesan, ...</ingr>
+		<ingr name="Gouda/Mozarella" amount="750" unit="g">und z.B. Salami, Thunfisch, Zwiebeln, Kochschinken, Ei, Rucola, Paramaschinken, Parmesan, ...</ingr>
 	</recipe>
 
 	<recipe name="Raclette" amount="4 Personen" type="Hauptgang">
