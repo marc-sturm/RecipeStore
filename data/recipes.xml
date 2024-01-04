@@ -1,5 +1,37 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <recipecollection>
+
+	<recipe name="Asiatische Glasnudelsuppe" amount="6 Personen" type="Hauptgang">
+		<section>Drogeneier (am Tag vorher)</section>
+		<ingr name="Eier" amount="6">ca. 7 Minuten kochen und dann in Eiswasser abschrecken.</ingr>
+		<ingr name="Lauchzwiebel" amount="1">und</ingr>
+		<ingr name="Knoblauch" amount="2" unit="Zehen">fein schneiden und mit </ingr>
+		<ingr name="Sojasoße" amount="80" unit="ml">,</ingr>
+		<ingr name="Wasser" amount="160" unit="ml">,</ingr>
+		<ingr name="Zucker" amount="2" unit="EL">,</ingr>
+		<ingr name="geröstetem Sesam" amount="2" unit="EL">mischen und die Eier darin im Kühlschrank marinieren.</ingr>
+		
+		<section>Karotten</section>
+		<ingr name="Karotten" amount="2"> in Stücke schneiden, mit heißem Wasser überbrühen und etwas zeihen lassen. Mit</ingr>
+		<ingr name="Sesamöl" amount="1" unit="EL">und Sesam marinieren.</ingr>
+		
+		<section>Brühe</section>
+		<ingr name="Ingwer" amount="4" unit="cm">,</ingr>
+		<ingr name="Lauchzwiebeln (weißer Teil)" amount="1" unit="Bund">und</ingr>
+		<ingr name="Knoblauch" amount="2" unit="Zehen">fein schneiden und in Öl andünsten.</ingr>
+		<ingr name="Wasser" amount="1.2" unit="l">,</ingr>
+		<ingr name="Dahibrühe" amount="2" unit="Päckchen"> und die Marinade der Eiern dazugeben und köcheln lassen.</ingr>
+		
+		<section>Lauchzwiebel</section>		
+		<ingr name="Lauchzwiebeln (grüner Teil)" amount="1" unit="Bund">in feine Ringe schneiden.</ingr>
+		
+		<section>Pilze</section>		
+		<ingr name="Champignons" amount="8"> in Stücke schneiden, anbraten und etwas Sojasoße und Wasser ablöschen und ziehen lassen.</ingr>
+		
+		<section>Nudeln</section>		
+		<ingr name="Reisnudeln" amount="250" unit="g">garen, in die Brühe legen und mit den Toppings garnieren.</ingr>
+	</recipe>
+	
 	<recipe name="Asiatischer Reis" amount="6 Personen" type="Beilage">
 		<ingr name="Reis" amount="250" unit="g">in einen Topf mit</ingr>
 		<ingr name="Wasser" amount="650" unit="ml">geben. Mit</ingr>
