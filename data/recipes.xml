@@ -226,7 +226,7 @@
 		<section>Fleisch</section>
 		<ingr name="Hähnchenbrust" amount="500" unit="g">(in Stücken geschnitten) und</ingr>
 		<ingr name="Zwiebeln" amount="2">(in Ringe geschnitten) in</ingr>
-		<ingr name="dunkler Sojasoße" amount="2" unit="EL">,</ingr>
+		<ingr name="Sojasoße" amount="4" unit="EL">,</ingr>
 		<ingr name="Olivenöl" amount="3" unit="EL">und dem Saft von</ingr>
 		<ingr name="Zitrone" amount="0.5">eine Stunden marinieren und anschließend scharf anbraten.</ingr>
 		<section>Salsa</section>
@@ -273,9 +273,9 @@
 		<ingr name="Wasser (warm)" amount="350" unit="ml">,</ingr>
 		<ingr name="Hefe" amount="40" unit="g">,</ingr>
 		<ingr name="Zucker" amount="2" unit="TL">und</ingr>
-		<ingr name="Salz" amount="2" unit="TL">verkneten, bis der Teig nicht mehr an der Schüssel haftet. Mindestens 1 Std. abgedeckt gehen lassen und in vier Teile aufteilen.</ingr>
+		<ingr name="Salz" amount="2" unit="TL">verkneten, bis der Teig nicht mehr an der Schüssel haftet. Mindestens 1 Std. abgedeckt gehen lassen und in 6-8 Teile aufteilen.</ingr>
 		<ingr name="Creme Fraiche" amount="600" unit="g">gewürzt mit Salz, reichlich Pfeffer und Muskat vermischt mit</ingr>
-		<ingr name="Sahne" amount="100" unit="ml">,</ingr>
+		<ingr name="Sahne" amount="200" unit="ml">,</ingr>
 		<ingr name="Geräucherter Schinken" amount="100" unit="g">in Stücke geschnitten und</ingr>
 		<ingr name="Zwiebeln" amount="2">klein geschnitten belegen und so heiß wie möglich, am besten auf einem Stein, backen.</ingr>
 	</recipe>
@@ -572,14 +572,14 @@
 		<ingr name="Sahne" amount="400" unit="ml">ablöschen, dann mit Salz, Pfeffer und Muskat würzen und auf kleiner Flamme einkochen lassen.</ingr>
 		<ingr name="Speisequark" amount="500" unit="g">,</ingr>
 		<ingr name="Milch" amount="200" unit="ml">,</ingr>
-		<ingr name="Ei" amount="2">und</ingr>
-		<ingr name="Weizenmehl" amount="450" unit="g">mischen. Mit Salz, Pfeffer, Muskat und Maggi würzen und mit ins Wasser geben, wenn die Kartoffeln fast fertig sind.</ingr>
+		<ingr name="Ei" amount="2">Salz, Pfeffer, Muskat und Maggi vermischen.</ingr>
+		<ingr name="Weizenmehl" amount="450" unit="g"> unterrühren. Die Knödel mit einem Löffel abstechen ins Wasser geben, wenn die Kartoffeln fast fertig sind.</ingr>
 	</recipe>
 
 	<recipe name="Mexikaner" amount="1 Flasche" type="Cocktail">
-		<ingr name="Vodka" amount="400" unit="ml">,</ingr>
-		<ingr name="Tomatensaft" amount="1" unit="Liter">,</ingr>
-		<ingr name="Sangrita Pikant" amount="0.25" unit="Liter">,</ingr>
+		<ingr name="Vodka" amount="250" unit="ml">,</ingr>
+		<ingr name="Tomatensaft" amount="500" unit="ml">,</ingr>
+		<ingr name="Sangrita Pikant" amount="200" unit="ml">,</ingr>
 		<ingr name="Pfeffer" amount="1" unit="EL">,</ingr>
 		<ingr name="Salz" amount="1" unit="TL">,</ingr>
 		<ingr name="Zucker" amount="1" unit="TL">,</ingr>
@@ -764,9 +764,9 @@
 		<ingr name="heller Sojasoße" amount="3" unit="EL">und</ingr>
 		<ingr name="Koriander">marinieren.</ingr>
 		<section>Soße</section>
-		<ingr name="geröstete Erdnüsse" amount="200" unit="g">abwaschen in einem Mixer zerkleinern.</ingr>
-		<ingr name="rote Currypaste" amount="1" unit="EL">in Öl anrösten.</ingr>
-		<ingr name="Kokosmilch" amount="400" unit="ml">,</ingr>
+		<ingr name="Erdnussbutter (chunky)" amount="150" unit="g">abwaschen in einem Mixer zerkleinern.</ingr>
+		<ingr name="rote Currypaste" amount="2" unit="TL">in Öl anrösten.</ingr>
+		<ingr name="Kokosmilch" amount="800" unit="ml">,</ingr>
 		<ingr name="Zucker" amount="1" unit="EL">,</ingr>
 		<ingr name="Fischsoße" amount="1" unit="EL">, den Saft von</ingr>
 		<ingr name="Limette" amount="1">und die Erdnüssen zugeben. Die Soße 10 bis 15 min köcheln lassen. In der Zeit die Fleischspeiße anbraten.</ingr>
@@ -857,13 +857,11 @@
 	</recipe>
 
 	<recipe name="Spätzle mit Linsen" amount="4 Personen" type="Hauptgang">
-		<ingr name="Mehl" amount="2" unit="EL"> min Butter zu einer Mehlschwitze anschwitzen.</ingr>
+		<ingr name="Mehl" amount="2" unit="EL"> mit Butter zu einer Mehlschwitze anschwitzen.</ingr>
 		<ingr name="Linsen mit Suppengrün" amount="500" unit="g">,</ingr>
-		<ingr name="Speckwürfel" amount="100" unit="g">,</ingr>
 		<ingr name="Tomatenmark" amount="2" unit="EL">,</ingr>
 		<ingr name="Balsamico" amount="1" unit="EL">und</ingr>
 		<ingr name="Bratensoße" amount="1" unit="Pkt.">zugeben, mit Salz/Pfeffer abschmecken und etwas köcheln lassen.</ingr>
-		<ingr name="Wiener/Debreziner" amount="4">dazugeben zum Erwärmen.</ingr>
 		<ingr name="Spätzle" amount="500" unit="g">garen.</ingr>
 	</recipe>
 
