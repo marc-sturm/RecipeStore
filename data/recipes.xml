@@ -965,7 +965,21 @@
 		<ingr name="Ei" amount="1"> dazugeben und mit Salz, Pfeffer, Muskat, Petersilie und Pakrikapulver würzen.</ingr>
 		<text>Die Hackmasse in die Wirsingblätter wickeln und in einer großen Pfanne mit Deckel zusammen mit Tomatenmark und Brühe/Wein 45 min schmoren.</text>
 	</recipe>
-
+	
+	<recipe name="Wirsingrouladen (vegetarisch)" amount="4 Personen" type="Hauptgang">
+		<text>16 große Blätter von</text>
+		<ingr name="Wirsing" amount="1" unit="Kopf"> blanchieren und den Rest hacken.</ingr>
+		<ingr name="Couscous" amount="250" unit="g"> in </ingr>
+		<ingr name="Gemüsebrühe" amount="500" unit="ml"> quellen lassen. </ingr>
+		<ingr name="Zwiebeln" amount="2"> und </ingr>
+		<ingr name="Knoblauch" amount="2" unit="Zehen"> hacken und mit den Wirsingstücken andünsten. Mit dem Couscous und </ingr>
+		<ingr name="Eiern" amount="2"> mischen. Mit Salz, Pfeffer, Muskat, Petersilie und Pakrikapulver würzen. Die Wirsingblätter damit füllen und von allen Seiten anbraten.</ingr>
+		<ingr name="Gemüsebrühe" amount="500" unit="ml"> und </ingr>
+		<ingr name="passierte Tomaten" amount="400" unit="ml">, </ingr>
+		<ingr name="Thymian" amount="1" unit="TL"> und </ingr>
+		<ingr name="Petersilie" amount="4" unit="TL"> dazugeben und mindestens 30 Minuten schmoren lassen.</ingr>
+	</recipe>
+	
 	<recipe name="Zucchini mit Hackfleisch und Feta gefüllt" amount="4 Personen" type="Hauptgang">
 		<text>Den Ofen auf 180°C vorheizen.</text>
 		<ingr name="Zucchini (25cm)" amount="4"> in zwei Hälften schneiden und aushölen.</ingr>
