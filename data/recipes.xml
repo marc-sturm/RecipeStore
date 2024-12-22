@@ -1028,5 +1028,20 @@
 		<ingr name="Mineralwasser" amount="60" unit="ml"> mit einer Prise Zucker und Salz zu einem glatten Teig verrühren. In einer beschichteten Pfanne in Öl ausbacken. Optional: Schnittlauch, Apfel, Zucker und Zimt.</ingr>
 	</recipe>
 	
+	<recipe name="Chiliöl" amount="500ml" type="Dip">
+		<ingr name="Ingwer" amount="2" unit="cm">,</ingr>
+		<ingr name="Knoblauchzehen" amount="4"> und</ingr>
+		<ingr name="Frühlingszwiebeln" amount="3"> fein hacken.</ingr>	
+		<ingr name="Sternanis" amount="2">,</ingr>
+		<ingr name="Nelken" amount="0.25" unit="TL">,</ingr>
+		<ingr name="Zimtstange" amount="1">,</ingr>
+		<ingr name="Kadamom" amount="0.25" unit="TL">,</ingr>
+		<ingr name="Lorbeerblätter" amount="2">und</ingr>
+		<ingr name="Pfefferkörner" amount="1" unit="TL">in der Pfanne anrösten.</ingr>
+		<ingr name="Rapsöl" amount="500" unit="ml"> und das Gemüse zugeben. Erhitzen bis sich Blasen bilden und 15 Minuten köcheln lassen.</ingr>
+		<ingr name="koreanisches Chilipulver (gochugaru)" amount="2" unit="EL">,</ingr>
+		<ingr name="Sesam" amount="4" unit="EL">und</ingr>
+		<ingr name="Salz" amount="2" unit="TL">in einen Topf geben und das Öl durch ein Sieb dazu geben. Zimt und Sternanis mit in den Topf geben. Ablühlen lassen und in ein Glas füllen.</ingr>
+	</recipe>
 
 </recipecollection>
