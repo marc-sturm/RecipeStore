@@ -15,7 +15,7 @@ public:
 	RecipeCollection();
 
 	//Load recipes from XML file
-	static RecipeCollection load(QString filename, bool validate_file=true);
+	void load(QString filename, bool validate_file=true);
 	//Store recipes to XML file
 	void store(QString filename) const;
 
@@ -28,6 +28,13 @@ public:
 	static QStringList validTypes();
 	//Returns the valid ingredient units
 	static QStringList validUnits();
+
+	//XML header/footer
+	static QString xmlHeader() { return "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>\n<recipecollection>\n"; }
+	static QString xmlFooter() { return "</recipecollection>\n"; }
+	//HTML header/footer
+	static QString htmlHeader();
+	static QString htmlFooter();
 
 protected:
 	static Recipe parseRecipe(const QDomNode& node);

@@ -13,7 +13,7 @@ public:
 	virtual ~RecipePart();
 	virtual bool matchesSearchTerm(const QString& term) const = 0;
 	virtual void toHTML(QTextStream& stream) const = 0;
-	virtual void toXML(QTextStream& stream) const = 0;
+	virtual void toXML(QTextStream& stream, QString prefix) const = 0;
 };
 
 class RecipeIngredient
@@ -23,7 +23,7 @@ public:
 	virtual ~RecipeIngredient();
 	bool matchesSearchTerm(const QString& term) const override;
 	void toHTML(QTextStream& stream) const override;
-	void toXML(QTextStream& stream) const override;
+	void toXML(QTextStream& stream, QString prefix) const override;
 
 	QString name;
 	QString amount;
@@ -38,7 +38,7 @@ public:
 	virtual ~RecipeSection();
 	bool matchesSearchTerm(const QString& term) const override;
 	void toHTML(QTextStream& stream) const override;
-	void toXML(QTextStream& stream) const override;
+	void toXML(QTextStream& stream, QString prefix) const override;
 
 	QString text;
 };
@@ -50,7 +50,7 @@ public:
 	virtual ~RecipeText();
 	bool matchesSearchTerm(const QString& term) const override;
 	void toHTML(QTextStream& stream) const override;
-	void toXML(QTextStream& stream) const override;
+	void toXML(QTextStream& stream, QString prefix) const override;
 
 	QString text;
 };
@@ -61,7 +61,7 @@ public:
 	bool matchesSearchTerm(const QString& term) const;
 	bool matchesSearchTerms(const QStringList& terms) const;
 	void toHTML(QTextStream& stream, int recipe_nr=-1) const;
-	void toXML(QTextStream& stream) const;
+	void toXML(QTextStream& stream, QString prefix) const;
 
 	QString name;
 	QString amount;

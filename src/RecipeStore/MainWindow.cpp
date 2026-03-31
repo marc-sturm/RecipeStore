@@ -9,6 +9,7 @@
 #include <QDebug>
 #include <QPrinter>
 #include <QPrintDialog>
+#include "RecipeEditor.h"
 
 MainWindow::MainWindow(QWidget* parent)
 	: QMainWindow(parent)
@@ -20,14 +21,11 @@ MainWindow::MainWindow(QWidget* parent)
 	setWindowTitle(QApplication::applicationName());
 	setWindowState(Qt::WindowMaximized);
 	connect(ui_.recipe_selector, SIGNAL(currentItemChanged(QTreeWidgetItem*,QTreeWidgetItem*)), this, SLOT(selectedRecipeChanged(QTreeWidgetItem*,QTreeWidgetItem*)));
+	connect(ui_.recipe_selector, SIGNAL(itemDoubleClicked(QTreeWidgetItem*,int)), this, SLOT(editRecipeChanged(QTreeWidgetItem*,int)));
 	connect(ui_.search_panel, SIGNAL(searchTextChanged(QString)), this, SLOT(applySearchTerms(QString)));
 
 	//load recipes from data folder
 	loadRecipeCollection(Settings::string("data_dir") + QDir::separator() + "recipes.xml");
-}
-
-MainWindow::~MainWindow()
-{
 }
 
 void MainWindow::loadRecipeCollection(QString filename)
@@ -35,7 +33,7 @@ void MainWindow::loadRecipeCollection(QString filename)
 	//load
 	try
 	{
-		recipes_ = RecipeCollection::load(filename);
+		recipes_.load(filename);
 		recipes_.sort();
 		recipes_filename_ = filename;
 	}
@@ -170,9 +168,7 @@ void MainWindow::on_actionImportChefkoch_triggered(bool)
 	if (dlg.exec()==QDialog::Accepted)
 	{
 		recipes_ << dlg.recipe();
-		recipes_.store(recipes_filename_);
-
-		updateRecipeTree();
+		storeRecipesAndUpdateGUI();
 	}
 }
 
@@ -290,17 +286,51 @@ void MainWindow::selectedRecipeChanged(QTreeWidgetItem* current, QTreeWidgetItem
 
 	//show recipe
 	const Recipe& recipe = recipes_[index];
-	stream << "<html>\n";
-	stream << "  <head>\n";
-	stream << "  <meta charset='utf-8'/>\n";
-	stream << "    <style>\n";
-	stream << "      td {background-color: #E5E5E5; vertical-align: top;}>\n";
-	stream << "    </style>\n";
-	stream << "  </head>\n";
-	stream << "  <body style='margin:5;'>\n";
+	stream << RecipeCollection::htmlHeader();
 	recipe.toHTML(stream);
-	stream << "  </body>\n";
-	stream << "</html>\n";
+	stream << RecipeCollection::htmlFooter();
 	ui_.browser->setText(output);
+}
+
+void MainWindow::editRecipeChanged(QTreeWidgetItem *item, int /*col*/)
+{
+	//determine recipe
+	int index = item->data(0, Qt::UserRole).toInt();
+	if (index==-1) return;
+	const Recipe& recipe = recipes_[index];
+
+	//show editor
+	RecipeEditor* dlg = new RecipeEditor(this, recipe);
+	if(dlg->exec() != QDialog::Accepted) return;
+
+	//store recipe
+	recipes_[index] = dlg->recipe();
+	storeRecipesAndUpdateGUI();
+}
+
+void MainWindow::closeEvent(QCloseEvent *event)
+{
+	if (recipes_changed_)
+	{
+		if (QMessageBox::question(this, "Create HTML?", "Recipes changed.\nDo you want to convert them to HTML?")==QMessageBox::Yes)
+		{
+			on_actionExportHTML_triggered(true);
+		}
+	}
+
+	QMainWindow::closeEvent(event);
+}
+
+void MainWindow::storeRecipesAndUpdateGUI()
+{
+	//sort and store
+	recipes_.sort();
+	recipes_.store(recipes_filename_);
+
+	//change flag to ask user about HTML export when the application closes
+	recipes_changed_ = true;
+
+	//update tree
+	updateRecipeTree();
 }
 

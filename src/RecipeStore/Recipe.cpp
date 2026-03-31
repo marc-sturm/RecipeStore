@@ -45,16 +45,16 @@ void Recipe::toHTML(QTextStream& stream, int recipe_nr) const
 	stream << "  </div>\n";
 }
 
-void Recipe::toXML(QTextStream& stream) const
+void Recipe::toXML(QTextStream& stream, QString prefix = "  ") const
 {
-	stream << "\t<recipe name=\"" << name << "\" amount=\"" << amount << "\" type=\"" << type << "\">\n";
+	stream << prefix << "<recipe name=\"" << name << "\" amount=\"" << amount << "\" type=\"" << type << "\">\n";
 
 	foreach(const QSharedPointer<RecipePart>& part, parts)
 	{
-		part->toXML(stream);
+		part->toXML(stream, prefix);
 	}
 
-	stream << "\t</recipe>\n\n";
+	stream << prefix << "</recipe>\n\n";
 }
 
 RecipeSection::~RecipeSection()
@@ -69,9 +69,10 @@ void RecipeSection::toHTML(QTextStream& stream) const
 	stream << "  </tr>\n";
 }
 
-void RecipeSection::toXML(QTextStream& stream) const
+void RecipeSection::toXML(QTextStream& stream, QString prefix) const
 {
-	stream << "\t\t<section>" << text << "</section>\n";
+	stream << "\n";
+	stream << prefix << "  <section>" << text << "</section>\n";
 }
 
 bool RecipeSection::matchesSearchTerm(const QString& term) const
@@ -92,9 +93,9 @@ void RecipeIngredient::toHTML(QTextStream& stream) const
 	stream << "  </tr>\n";
 }
 
-void RecipeIngredient::toXML(QTextStream& stream) const
+void RecipeIngredient::toXML(QTextStream& stream, QString prefix) const
 {
-	stream << "\t\t<ingr name=\"" << name << "\"";
+	stream << prefix << "  <ingr name=\"" << name << "\"";
 	if (!amount.isEmpty()) stream << " amount=\"" << amount << "\"";
 	if (!unit.isEmpty()) stream << " unit=\"" << unit << "\"";
 	stream << ">" << text << "</ingr>\n";
@@ -122,9 +123,9 @@ void RecipeText::toHTML(QTextStream& stream) const
 	stream << "  </tr>\n";
 }
 
-void RecipeText::toXML(QTextStream& stream) const
+void RecipeText::toXML(QTextStream& stream, QString prefix) const
 {
-	stream << "\t\t<text>" << text << "</text>\n";
+	stream << prefix << "  <text>" << text << "</text>\n";
 }
 
 bool RecipeText::matchesSearchTerm(const QString& term) const

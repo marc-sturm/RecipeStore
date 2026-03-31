@@ -10,9 +10,10 @@ RecipeCollection::RecipeCollection()
 {
 }
 
-RecipeCollection RecipeCollection::load(QString filename, bool validate_file)
+void RecipeCollection::load(QString filename, bool validate_file)
 {
-	RecipeCollection output;
+	//remove all existing recipes
+	clear();
 
 	//check XML is valid
 	if (validate_file)
@@ -35,10 +36,8 @@ RecipeCollection RecipeCollection::load(QString filename, bool validate_file)
 	QDomNodeList recipe_nodes = root.elementsByTagName("recipe");
 	for (int i=0; i<recipe_nodes.count(); ++i)
 	{
-		output << parseRecipe(recipe_nodes.at(i));
+		append(parseRecipe(recipe_nodes.at(i)));
 	}
-
-	return output;
 }
 
 void RecipeCollection::store(QString filename) const
@@ -48,14 +47,12 @@ void RecipeCollection::store(QString filename) const
 	QTextStream stream(file.data());
 	stream.setEncoding(QStringConverter::Utf8);
 
-	stream << "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>\n";
-	stream << "<recipecollection>\n";
+	stream << xmlHeader();
 	foreach(const Recipe& recipe, *this)
 	{
-		recipe.toXML(stream);
+		recipe.toXML(stream, "  ");
 	}
-	stream << "</recipecollection>\n";
-
+	stream << xmlFooter();
 	file->close();
 }
 
@@ -207,4 +204,26 @@ QStringList RecipeCollection::validTypes()
 QStringList RecipeCollection::validUnits()
 {
 	return Helper::loadTextFile(Settings::string("data_dir") + QDir::separator() + "units.txt", true, '#', true);
+}
+
+QString RecipeCollection::htmlHeader()
+{
+	QStringList lines;
+	lines << "<html>";
+	lines << "  <head>";
+	lines << "  <meta charset='utf-8'/>";
+	lines << "    <style>";
+	lines << "      td {background-color: #E5E5E5; vertical-align: top;}>";
+	lines << "    </style>";
+	lines << "  </head>";
+	lines << "  <body style='margin:5;'>";
+	return lines.join("\n");
+}
+
+QString RecipeCollection::htmlFooter()
+{
+	QStringList lines;
+	lines << "  </body>";
+	lines << "</html>";
+	return lines.join("\n");
 }

@@ -1,15 +1,6 @@
-Features:
-- Recipe editor
-  - Use normal text editor
-  - Open recipe text
-  - When done, validate it and replace it in the recipe collection
-
 Neue Rezepte:
 - Nudelsuppe
 - Burger
 - Kartoffelsuppe - Kartoffel, Karotten, Brühe, Sahne/Schmand, Curcuma, Kreuzkümmel
 - Ofengemüse
 - Sommerrollen
-
-Import aus Chefkoch
-? Pide mit Spinat, Käse und Ei (r3sa)

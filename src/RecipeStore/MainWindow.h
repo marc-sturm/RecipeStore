@@ -13,7 +13,6 @@ class MainWindow
 
 public:
 	MainWindow(QWidget* parent = 0);
-	~MainWindow();
 	void loadRecipeCollection(QString filename);
 
 public slots:
@@ -28,11 +27,15 @@ public slots:
 	void applySearchTerms(QString search_text);
 	void editTextFile(QString filename, QString title, bool sort);
 	void selectedRecipeChanged(QTreeWidgetItem* current ,QTreeWidgetItem* previous);
+	void editRecipeChanged(QTreeWidgetItem* item, int col);
 
+protected:
+	void closeEvent(QCloseEvent *event) override;
+	void storeRecipesAndUpdateGUI();
 private:
 	Ui::MainWindow ui_;
 	QString recipes_filename_;
 	RecipeCollection recipes_;
-	int recipe_selected_;
+	bool recipes_changed_ = false;
 };
 #endif // MainWindow_H

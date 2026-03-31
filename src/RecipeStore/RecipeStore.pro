@@ -9,18 +9,21 @@ RC_FILE	 = icon.rc
 
 SOURCES += main.cpp\
     MainWindow.cpp \
+    RecipeEditor.cpp \
     SearchPanel.cpp \
     RecipeCollection.cpp \
     Recipe.cpp \
     ChefkochImportDialog.cpp
 
 HEADERS  += MainWindow.h \
+    RecipeEditor.h \
     SearchPanel.h \
     RecipeCollection.h \
     Recipe.h \
     ChefkochImportDialog.h
 
 FORMS    += MainWindow.ui \
+    RecipeEditor.ui \
     SearchPanel.ui \
     ChefkochImportDialog.ui
 
