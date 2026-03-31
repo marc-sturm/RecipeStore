@@ -10,6 +10,7 @@ RecipeEditor::RecipeEditor(QWidget *parent, const Recipe &recipe)
 	, recipe_(recipe)
 {
 	ui_.setupUi(this);
+	setWindowFlags(Qt::Dialog | Qt::CustomizeWindowHint | Qt::WindowTitleHint | Qt::WindowMaximizeButtonHint);
 	GUIHelper::styleSplitter(ui_.splitter);
 	setWindowTitle("Edit '" + recipe.name + "'");
 	setWindowState(Qt::WindowMaximized);

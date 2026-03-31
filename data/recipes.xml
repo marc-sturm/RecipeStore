@@ -241,6 +241,38 @@
     <ingr name="Grillwürste" amount="6"> anbraten und die Soße darüber geben.</ingr>
   </recipe>
 
+  <recipe name="Dal mit Naan" amount="4 Personen" type="Hauptgang">
+
+    <section>Naan</section>
+    <ingr name="Milch" amount="150" unit="ml">,</ingr>
+    <ingr name="Joghurt" amount="150" unit="ml">,</ingr>
+    <ingr name="Öl" amount="2" unit="EL">,</ingr>
+    <ingr name="Ei" amount="1">(geschlagen),</ingr>
+    <ingr name="Zucker" amount="2" unit="EL">,</ingr>
+    <ingr name="Trochenhefe" amount="2" unit="TL">und </ingr>
+    <ingr name="Backpulver" amount="1" unit="TL">mischen.</ingr>
+    <ingr name="Mehl" amount="500" unit="g">dazugeben und 10 Minuten kneten. An einem warmen Ort 1 Stunde gehen lassen.,</ingr>
+    <text>Den Teig in 6 Kugeln teilen, ausrollen und bei 250°C auf dem Pizzastein backen.</text>
+
+    <section>Dal</section>
+    <ingr name="rote Linsen" amount="500" unit="g">waschen und in ??? ml heißer Gemüsebrühe quellen lassen.</ingr>
+    <ingr name="Zweibeln" amount="2">,</ingr>
+    <ingr name="Knoblauch" amount="2" unit="Zehen">und</ingr>
+    <ingr name="Ingwer" amount="2" unit="cm">fein hacken und in einem Topf mit etwas Öl glasig braten.</ingr>
+    <text>Hitze runter drehen, </text>
+    <ingr name="Korianderpulver" amount="1" unit="TL">,</ingr>
+    <ingr name="Kurkumapulver" amount="1" unit="TL">,</ingr>
+    <ingr name="Kreuzkümmel" amount="1" unit="TL">,</ingr>
+    <ingr name="Curry" amount="1" unit="TL">und</ingr>
+    <ingr name="Korianderpulver" amount="2" unit="TL"> zugeben und kurz mit anbraten.</ingr>
+    <ingr name="Koriandergrün" amount="1" unit="Bund">hacken und mit </ingr>
+    <ingr name="passierte Tomaten" amount="400" unit="ml"> und den Linsen dazu geben und ca 30 Minuten köcheln lassen.</ingr>
+    <text>Kurz vor dem Servieren</text>
+    <ingr name="Salz" amount="2" unit="TL">,</ingr>
+    <ingr name="Butter" amount="50" unit="g">und</ingr>
+    <ingr name="Garam Masala" amount="1" unit="TL">unterrühren.</ingr>
+  </recipe>
+
   <recipe name="Erdbeermargarita" amount="1 Glas" type="Cocktail">
     <ingr name="Cointreau" amount="2" unit="cl">,</ingr>
     <ingr name="Zitronensaft" amount="2" unit="cl">,</ingr>
@@ -1072,7 +1104,27 @@
     <ingr name="Petersilie" amount="4" unit="TL"> dazugeben und mit Salz, Pfeffer und Zucker abschmecken. Mindestens 30 Minuten schmoren lassen.</ingr>
   </recipe>
 
-  <recipe name="Zucchini mit Hackfleisch und Feta gefüllt" amount="4 Personen" type="Hauptgang">
+  <recipe name="Zucchini gefüllt mit Couscous und Feta" amount="4 Personen" type="Hauptgang">
+    <text>Den Ofen auf 180°C vorheizen.</text>
+
+    <section>Zucchini</section>
+    <ingr name="Zucchini (25cm)" amount="4"> waschen, in zwei Hälften schneiden und aushölen.</ingr>
+    <ingr name="Couscous" amount="250" unit="g"> in </ingr>
+    <ingr name="Gemüsebrühe" amount="500" unit="ml"> quellen lassen. </ingr>
+    <ingr name="Zwiebeln" amount="2"> und </ingr>
+    <ingr name="Knoblauch" amount="2" unit="Zehen"> fein hacken und andünsten. Mit dem Couscous und </ingr>
+    <ingr name="Feta" amount="200" unit="g"> (zerbröselt) und </ingr>
+    <ingr name="Eiern" amount="2"> mischen. Mit Salz, Pfeffer, Muskat, Petersilie und Pakrikapulver würzen. Die Zucchini damit füllen.</ingr>
+
+    <section>Soße</section>
+    <ingr name="Zwiebel" amount="2">und</ingr>
+    <ingr name="Knoblauch" amount="2" unit="Zehen">grob hacken,</ingr>
+    <ingr name="Lorbeerblätter" amount="2">zerbröseln und zusammen in Öl anschwitzen.</ingr>
+    <ingr name="Petersilie" amount="0.5" unit="Bund">,</ingr>
+    <ingr name="gehackte Tomaten" amount="2" unit="Dosen">dazugeben und kurz köcheln lassen. Mit  Salz, Pfefferm, Zucker und Chili abschmecken. Die Soße in eine ofenfeste Form geben und die Zucchinis darauf setzen. 45 Minuten bei Umluft garen.</ingr>
+  </recipe>
+
+  <recipe name="Zucchini gefüllt mit Hackfleisch und Feta" amount="4 Personen" type="Hauptgang">
     <text>Den Ofen auf 180°C vorheizen.</text>
     <ingr name="Zucchini (25cm)" amount="4"> in zwei Hälften schneiden und aushölen.</ingr>
     <ingr name="Zwiebel" amount="2">und</ingr>

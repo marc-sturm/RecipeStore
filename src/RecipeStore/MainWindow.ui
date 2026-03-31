@@ -43,7 +43,7 @@
        </sizepolicy>
       </property>
       <property name="orientation">
-       <enum>Qt::Horizontal</enum>
+       <enum>Qt::Orientation::Horizontal</enum>
       </property>
       <widget class="QTreeWidget" name="recipe_selector">
        <property name="maximumSize">
@@ -80,7 +80,7 @@
      <x>0</x>
      <y>0</y>
      <width>1136</width>
-     <height>21</height>
+     <height>22</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
@@ -106,11 +106,14 @@
    <property name="windowTitle">
     <string>toolBar</string>
    </property>
+   <property name="toolTip">
+    <string>Import from Chefkoch, or just create a new recipe</string>
+   </property>
    <property name="movable">
     <bool>false</bool>
    </property>
    <property name="allowedAreas">
-    <set>Qt::AllToolBarAreas</set>
+    <set>Qt::ToolBarArea::AllToolBarAreas</set>
    </property>
    <property name="iconSize">
     <size>
@@ -119,7 +122,7 @@
     </size>
    </property>
    <property name="toolButtonStyle">
-    <enum>Qt::ToolButtonFollowStyle</enum>
+    <enum>Qt::ToolButtonStyle::ToolButtonFollowStyle</enum>
    </property>
    <property name="floatable">
     <bool>false</bool>

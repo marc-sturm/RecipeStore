@@ -61,12 +61,19 @@
       </spacer>
      </item>
      <item>
+      <widget class="QPushButton" name="pushButton">
+       <property name="text">
+        <string>Cancel</string>
+       </property>
+      </widget>
+     </item>
+     <item>
       <widget class="QPushButton" name="store_btn">
        <property name="enabled">
         <bool>false</bool>
        </property>
        <property name="text">
-        <string>Store</string>
+        <string>Ok</string>
        </property>
       </widget>
      </item>
@@ -75,5 +82,22 @@
   </layout>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>RecipeEditor</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>880</x>
+     <y>619</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>215</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

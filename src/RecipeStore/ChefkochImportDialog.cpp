@@ -59,44 +59,50 @@ void ChefkochImportDialog::okButtonPressed()
 		}
 
 		//ingredients and section
-		for (int i=first_tab; i<=last_tab; ++i)
+		if (first_tab!=-1 && last_tab!=-1)
 		{
-			QString line = lines[i];
-			if (line.contains("\t"))
+			for (int i=first_tab; i<=last_tab; ++i)
 			{
-				QSharedPointer<RecipeIngredient> part(new RecipeIngredient());
-
-				QStringList parts = line.split("\t");
-				part->name = parts[1].trimmed();
-
-				QStringList parts2 = parts[0].trimmed().split(" ");
-				QString amount = parts2[0].trimmed();
-				if (amount=="½") amount = "0.5";
-				if (amount=="¼") amount = "0.25";
-				if (amount=="¾") amount = "0.75";
-				part->amount = amount;
-				if (parts2.count()==2)
+				QString line = lines[i];
+				if (line.contains("\t"))
 				{
-					part->unit = parts2[1].trimmed();
+					QSharedPointer<RecipeIngredient> part(new RecipeIngredient());
+
+					QStringList parts = line.split("\t");
+					part->name = parts[1].trimmed();
+
+					QStringList parts2 = parts[0].trimmed().split(" ");
+					QString amount = parts2[0].trimmed();
+					if (amount=="½") amount = "0.5";
+					if (amount=="¼") amount = "0.25";
+					if (amount=="¾") amount = "0.75";
+					part->amount = amount;
+					if (parts2.count()==2)
+					{
+						part->unit = parts2[1].trimmed();
+					}
+
+					recipe_.parts << part;
 				}
+				else
+				{
+					 QSharedPointer<RecipeSection> part(new RecipeSection());
 
-				recipe_.parts << part;
-			}
-			else
-			{
-				 QSharedPointer<RecipeSection> part(new RecipeSection());
+					 part->text = line.trimmed();
 
-				 part->text = line.trimmed();
-
-				 recipe_.parts << part;
+					 recipe_.parts << part;
+				}
 			}
 		}
 
 		//description
 		QStringList desc;
-		for (int i=start_desc; i<=end_desc; ++i)
+		if (start_desc!=-1 && end_desc!=-1)
 		{
-			desc << lines[i].trimmed();
+			for (int i=start_desc; i<=end_desc; ++i)
+			{
+				desc << lines[i].trimmed();
+			}
 		}
 
 		QSharedPointer<RecipeText> part(new RecipeText());
