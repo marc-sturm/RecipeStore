@@ -46,7 +46,7 @@ void RecipeCollection::store(QString filename) const
 	//store
 	auto file = Helper::openFileForWriting(filename);
 	QTextStream stream(file.data());
-	stream.setCodec("UTF-8");
+	stream.setEncoding(QStringConverter::Utf8);
 
 	stream << "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>\n";
 	stream << "<recipecollection>\n";

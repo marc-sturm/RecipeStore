@@ -89,7 +89,7 @@ void MainWindow::on_actionExportHTML_triggered(bool)
 		return;
 	}
 	QTextStream stream(&file);
-	stream.setCodec("UTF-8");
+	stream.setEncoding(QStringConverter::Utf8);
 
 	//add HTML header
 	stream << "<html>\n";

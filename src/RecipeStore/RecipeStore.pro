@@ -1,20 +1,14 @@
-#-------------------------------------------------
-#
-# Project created by QtCreator 2019-05-26T08:13:34
-#
-#-------------------------------------------------
-
 #c++11 support
 CONFIG += c++11
 
-QT       +=  core widgets gui xml xmlpatterns printsupport
+QT +=  core widgets gui xml printsupport
 
 TARGET = RecipeStore
 TEMPLATE = app
 RC_FILE	 = icon.rc
 
 SOURCES += main.cpp\
-        MainWindow.cpp \
+    MainWindow.cpp \
     SearchPanel.cpp \
     RecipeCollection.cpp \
     Recipe.cpp \
@@ -41,6 +35,10 @@ LIBS += -L$$PWD/../../bin -lcppXML
 #include cppGUI library
 INCLUDEPATH += $$PWD/../../src/cppGUI
 LIBS += -L$$PWD/../../bin -lcppGUI
+
+#include libxml2
+INCLUDEPATH += $$PWD/../../libxml2/include/
+LIBS += -L$$PWD/../../libxml2/libs/ -lxml2
 
 #copy EXE to bin folder
 DESTDIR = $$PWD/../../bin
